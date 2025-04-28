@@ -1,26 +1,86 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: 230 230 230; /* #e6e6e6 in rgb */
+  --background: 15 15 15; /* #0f0f0f in rgb */
+  --accent: 212 175 55; /* #d4af37 in rgb */
+  --muted-text: 163 163 163; /* #a3a3a3 in rgb */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Always use dark mode by default */
+body {
+  @apply bg-background text-text;
+  font-family: var(--font-manrope), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-accent;
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+  
+  a {
+    @apply text-accent hover:text-accent-hover transition-colors;
+  }
+
+  p {
+    @apply mb-4 leading-relaxed;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6;
+  }
+  
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent 
+           text-base font-medium rounded-md shadow-sm bg-accent text-black 
+           hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-offset-2 
+           focus:ring-accent transition-colors;
+  }
+  
+  .page-title {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold mb-8 mt-12 text-text-accent;
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+  
+  .section-title {
+    @apply text-2xl sm:text-3xl font-bold mb-6 text-text-accent;
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+  
+  .artwork-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  /* Custom animations for homepage */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  @keyframes textGlow0 {
+    0% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 10px rgba(212,175,55,0.5); }
+    50% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 20px rgba(212,175,55,0.8); }
+    100% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 10px rgba(212,175,55,0.5); }
+  }
+  
+  @keyframes textGlow1 {
+    0% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 10px rgba(255,255,255,0.5); }
+    50% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 20px rgba(255,255,255,0.8); }
+    100% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 10px rgba(255,255,255,0.5); }
+  }
+  
+  @keyframes textGlow2 {
+    0% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 15px rgba(230,230,230,0.4); }
+    70% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 25px rgba(230,230,230,0.7); }
+    100% { text-shadow: -1px -1px 0 rgba(0,0,0,0.7), 1px -1px 0 rgba(0,0,0,0.7), -1px 1px 0 rgba(0,0,0,0.7), 1px 1px 0 rgba(0,0,0,0.7), 0 0 15px rgba(230,230,230,0.4); }
+  }
 }
