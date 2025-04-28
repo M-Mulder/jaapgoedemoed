@@ -95,7 +95,7 @@ export default function Composition2017Page() {
           <p>
             The work was executed over a three-month period, with significant intervals of contemplation between 
             active painting sessions. This measured approach allowed me to respond to the emerging composition with 
-            greater clarity and intentionality, making decisions that reinforced the work's internal logic while 
+            greater clarity and intentionality, making decisions that reinforced the work&apos;s internal logic while 
             maintaining a sense of intuitive rightness.
           </p>
           
