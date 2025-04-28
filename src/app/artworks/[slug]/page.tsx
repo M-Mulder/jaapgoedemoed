@@ -18,7 +18,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ArtworkPage({ params }: { params: { slug: string } }) {
+// Define the props interface to match Next.js App Router expectations
+type Props = {
+  params: { slug: string }
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
+
+export default function ArtworkPage({ params }: Props) {
   const artwork = artworks.find(artwork => artwork.slug === params.slug);
   
   if (!artwork) {

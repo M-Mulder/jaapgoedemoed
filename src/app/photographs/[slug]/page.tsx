@@ -18,7 +18,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function PhotographPage({ params }: { params: { slug: string } }) {
+// Define the props interface to match Next.js App Router expectations
+type Props = {
+  params: { slug: string }
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
+
+export default function PhotographPage({ params }: Props) {
   const photograph = photographs.find(photo => photo.slug === params.slug);
   
   if (!photograph) {
