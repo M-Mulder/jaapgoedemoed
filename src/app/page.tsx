@@ -217,7 +217,7 @@ export default function Home() {
             
             <p className="text-lg md:text-xl px-12 font-mono uppercase tracking-wider"
                style={{ color: contrastMode === 'dark' ? '#0f0f0f' : '#e6e6e6' }}>
-              Contemporary artist exploring architectural space, memory, and perception
+              Dutch artist creating geometric abstractions through pentagonal patterns and dimensional constructions
             </p>
           </div>
           
@@ -326,12 +326,11 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="section-title mb-8">About the Artist</h2>
             <p className="text-lg text-text mb-6">
-              Jaap Goedemoed is a contemporary artist whose work spans painting, mixed media, and photography. 
-              His practice explores themes of architectural space, memory, and the interplay between built and natural environments.
+              Jaap Goedemoed is an Amsterdam-based artist known for his distinctive geometric abstractions and innovative use of materials. 
+              His works explore mathematical patterns, particularly pentagonal tessellations, creating intricate structures that balance precision with artistic intuition.
             </p>
             <p className="text-lg text-text mb-8">
-              Based in Amsterdam, Goedemoed has developed a distinctive approach that bridges abstraction and representation, 
-              often beginning with photographic documentation that is then transformed through painting and mixed media processes.
+              With a background influenced by both ethnographic art and modernist traditions, Goedemoed creates three-dimensional constructions using diverse materials including wood, matches, and porcupine quills, resulting in works of remarkable complexity and visual harmony.
             </p>
             <Link href="/biography" className="text-accent hover:text-accent-hover text-lg">
               Read full biography →

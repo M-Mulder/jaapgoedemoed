@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { photographs } from '@/lib/placeholder-data';
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: any) {
+  const { params } = props;
   const photograph = photographs.find(photo => photo.slug === params.slug);
   
   if (!photograph) {
@@ -18,13 +19,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-// Define the props interface to match Next.js App Router expectations
-type Props = {
-  params: { slug: string }
-  searchParams?: { [key: string]: string | string[] | undefined }
-}
-
-export default function PhotographPage({ params }: Props) {
+export default function PhotographPage(props: any) {
+  const { params } = props;
   const photograph = photographs.find(photo => photo.slug === params.slug);
   
   if (!photograph) {

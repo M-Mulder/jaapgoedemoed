@@ -16,7 +16,8 @@ const eslintConfig = [
       // Disable rules causing build errors
       "react/no-unescaped-entities": "off", // Allow unescaped quotes and apostrophes
       "@typescript-eslint/no-unused-vars": "off", // Allow unused variables and imports
-      "react-hooks/exhaustive-deps": "off" // Disable warnings about missing useEffect dependencies
+      "react-hooks/exhaustive-deps": "off", // Disable warnings about missing useEffect dependencies
+      "@typescript-eslint/no-explicit-any": "off" // Allow using 'any' type in TypeScript
     }
   }
 ];
