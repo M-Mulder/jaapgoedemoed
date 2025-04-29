@@ -97,11 +97,11 @@ export default function Home() {
     }
   }, [currentArtworkIndex, featuredArtworks]);
   
-  // Auto-rotate artworks every 2 seconds (without dependency on currentArtworkIndex to prevent stopping)
+  // Auto-rotate artworks every 4 seconds (without dependency on currentArtworkIndex to prevent stopping)
   useEffect(() => {
     const timer = setInterval(() => {
       nextArtwork();
-    }, 2000);
+    }, 4000);
     
     return () => clearInterval(timer);
   }, [nextArtwork]); // Only depend on the memoized nextArtwork function
