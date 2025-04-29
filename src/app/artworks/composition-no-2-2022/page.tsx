@@ -13,7 +13,7 @@ export default function CompositionNo2Page() {
       {/* Header section */}
       <div className="bg-background py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg')] bg-no-repeat bg-cover blur-xl"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/2022/10/Composition-no.2-29-sept-2022-om-14-1-scaled.jpg')] bg-no-repeat bg-cover blur-xl"></div>
         </div>
         
         <div className="container-wide relative z-10">
@@ -33,7 +33,7 @@ export default function CompositionNo2Page() {
           
           <div className="relative aspect-square my-8 shadow-lg">
             <Image 
-              src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+              src="/2022/10/FL-werk-1992-zonder-glas-21-okt-2022-2048x849.jpg"
               alt="1993 Frank Lodeizen – 25 x 35 cm"
               fill
               className="object-cover rounded-md"
@@ -70,7 +70,7 @@ export default function CompositionNo2Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/10/Nieuw-werk-in-wording-in-atelier-5-april-2022-1-2048x1476.jpg"
                   alt="Early construction with pentagonal pattern"
                   fill
                   className="object-cover rounded-md"
@@ -84,7 +84,7 @@ export default function CompositionNo2Page() {
               </div>
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/10/The-studio-28-October-2022-at-early-evening-1-2048x1463.jpg"
                   alt="Pentagonal boxes painted white"
                   fill
                   className="object-cover rounded-md"
@@ -104,7 +104,7 @@ export default function CompositionNo2Page() {
             
             <div className="relative aspect-video my-8 shadow-lg">
               <Image 
-                src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                src="/2022/10/Nieuw-werk-in-wording-in-atelier-23-juli-2022-2048x2048.jpg"
                 alt="All boxes filled with match duckboards"
                 fill
                 className="object-cover rounded-md"
@@ -140,7 +140,7 @@ export default function CompositionNo2Page() {
             
             <div className="relative aspect-square my-8 shadow-lg">
               <Image 
-                src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                src="/2022/10/Nieuw-werk-ontwerp-op-papier-28-juli-2022-1320x1321.jpg"
                 alt="Study on paper using a print in grey tones"
                 fill
                 className="object-cover rounded-md"
@@ -164,7 +164,7 @@ export default function CompositionNo2Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/10/The-work-was-finalised-on-18th-of-August-2022.-2048x2048.jpg"
                   alt="The finalized artwork"
                   fill
                   className="object-cover rounded-md"
@@ -178,7 +178,7 @@ export default function CompositionNo2Page() {
               </div>
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/10/Nieuw-werk-in-atelier-2-13-augustus-2022-van-opzij-1536x2048.jpg"
                   alt="Sideview of the artwork"
                   fill
                   className="object-cover rounded-md"
@@ -212,8 +212,8 @@ export default function CompositionNo2Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
-                  alt="Frank Lodeizen artwork depicting tobacco curls"
+                  src="/2022/10/A-50-gram-packet-of-the-Van-Nelle.jpg"
+                  alt="A 50 gram packet of the Van Nelle"
                   fill
                   className="object-cover rounded-md"
                   sizes="(max-width: 768px) 100vw, 400px"
@@ -226,7 +226,7 @@ export default function CompositionNo2Page() {
               </div>
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/10/Nieuw-werk-lucifers-resten-JG-2022-30x40cm-1320x1720.jpg"
                   alt="JG spin-off artwork with matches"
                   fill
                   className="object-cover rounded-md"

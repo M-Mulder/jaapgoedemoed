@@ -12,9 +12,9 @@ export default function PorcupineArtworksPage() {
     <div className="min-h-screen">
       {/* Header section */}
       <div className="bg-background py-20 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg')] bg-no-repeat bg-cover blur-xl"></div>
-        </div>
+          <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full bg-[url('/2022/03/Porcupine-I-5-March-2021-finale-werk-2048x2039.jpg')] bg-no-repeat bg-cover blur-xl"></div>
+          </div>
         
         <div className="container-wide relative z-10">
           <h1 className="page-title text-center">The Making of Two Porcupine Artworks</h1>
@@ -37,7 +37,7 @@ export default function PorcupineArtworksPage() {
 
           <div className="relative aspect-square my-8 shadow-lg">
             <Image 
-              src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+              src="/2022/03/Porcupine-I-17-Nov-2020.jpg"
               alt="The making of the first porcupine artwork"
               fill
               className="object-cover rounded-md"
@@ -81,7 +81,7 @@ export default function PorcupineArtworksPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/03/Porcupine-I-15-January-2021bewerkt-2048x2048.jpg"
                   alt="On 15 January 2021 all blocks were fixed to the canvas"
                   fill
                   className="object-cover rounded-md"
@@ -95,7 +95,7 @@ export default function PorcupineArtworksPage() {
               </div>
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/03/Porcupine-I-5-March-2021-finale-werk-2048x2039.jpg"
                   alt="Final appearance with blue box frame"
                   fill
                   className="object-cover rounded-md"
@@ -152,7 +152,7 @@ export default function PorcupineArtworksPage() {
             
             <div className="relative aspect-video my-8 shadow-lg">
               <Image 
-                src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                src="/2022/03/Porcupine-II-May-2021-500-pennen-1-2048x1371.jpg"
                 alt="500 porcupine quills arranged by pattern"
                 fill
                 className="object-cover rounded-md"
@@ -180,7 +180,7 @@ export default function PorcupineArtworksPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/03/Afbeeldingen-voor-The-Making-of-two-porcupine-artworks-3-2046x2048.jpg"
                   alt="Quill boxes not yet fixed to canvas"
                   fill
                   className="object-cover rounded-md"
@@ -194,7 +194,7 @@ export default function PorcupineArtworksPage() {
               </div>
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/03/Afbeeldingen-voor-The-Making-of-two-porcupine-artworks-4.jpg"
                   alt="Background surfaces preparation"
                   fill
                   className="object-cover rounded-md"
@@ -240,7 +240,7 @@ export default function PorcupineArtworksPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/03/Porcupine-II-6-December-2021-2048x2048.jpg"
                   alt="Work in progress with colored boxes"
                   fill
                   className="object-cover rounded-md"
@@ -254,7 +254,7 @@ export default function PorcupineArtworksPage() {
               </div>
               <div className="relative aspect-square shadow-lg">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2022/03/Porcupine-II-23-December-2021-2048x2048.jpg"
                   alt="Almost complete artwork stage"
                   fill
                   className="object-cover rounded-md"
@@ -278,7 +278,7 @@ export default function PorcupineArtworksPage() {
             
             <div className="relative aspect-square my-8 shadow-lg">
               <Image 
-                src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                src="/2022/03/Composition-2022-Procupine-Boogie-Woogie-II-scaled.jpg"
                 alt="The completed artwork"
                 fill
                 className="object-cover rounded-md"

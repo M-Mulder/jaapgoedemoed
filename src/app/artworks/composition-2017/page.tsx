@@ -13,7 +13,7 @@ export default function Composition2017Page() {
       {/* Header section */}
       <div className="bg-background py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg')] bg-no-repeat bg-cover blur-xl"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/2020/05/6-Composition-2017-Final-state-003-1320x1320.jpg')] bg-no-repeat bg-cover blur-xl"></div>
         </div>
         
         <div className="container-wide relative z-10">
@@ -31,7 +31,7 @@ export default function Composition2017Page() {
             <div className="lg:w-1/2">
               <div className="relative aspect-square shadow-xl">
                 <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
+                  src="/2020/05/6-Composition-2017-Final-state-003-1320x1320.jpg"
                   alt="Composition 2017 by Jaap Goedemoed"
                   fill
                   className="object-cover"
@@ -99,8 +99,21 @@ export default function Composition2017Page() {
             maintaining a sense of intuitive rightness.
           </p>
           
+          <div className="my-8">
+            <div className="aspect-[3/2] relative shadow-lg">
+              <Image 
+                src="/2020/05/6-Composition-2017-Final-state-side-view-002-1320x1987.jpg"
+                alt="Composition 2017 side view showing depth and texture"
+                fill
+                className="object-cover rounded"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="mt-2 text-sm text-center text-white/70">Side view showing the three-dimensional aspects and textural details of the work</p>
+          </div>
+          
           <p>
-            Composition the has been exhibited internationally, including at the 2018 Geometric Abstraction Biennale 
+            Composition 2017 has been exhibited internationally, including at the 2018 Geometric Abstraction Biennale 
             in Rotterdam, where it was noted for its distinctive approach to pentagonal structures and sophisticated 
             color relationships.
           </p>

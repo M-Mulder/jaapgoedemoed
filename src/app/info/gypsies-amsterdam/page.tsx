@@ -13,7 +13,7 @@ export default function GypsiesAmsterdamPage() {
       {/* Header section */}
       <div className="bg-background py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg')] bg-no-repeat bg-cover blur-xl"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/2021/04/Zigeuners-in-Amsterdam-FL-JG-1a1.jpg')] bg-no-repeat bg-cover blur-xl"></div>
         </div>
         
         <div className="container-wide relative z-10">
@@ -64,27 +64,145 @@ export default function GypsiesAmsterdamPage() {
           <h2 className="text-3xl font-serif text-center mb-12 text-text-accent">Zigeuners in Amsterdam Series</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-              <div key={num} className="group relative aspect-[40/56.5] bg-background-light rounded-md shadow-md overflow-hidden">
-                <Image 
-                  src="/2020/05/6-Composition-2017-Final-state-003-1024x1024.jpg"
-                  alt={`Zigeuners in Amsterdam 1989/2021 - Frank Lodeizen/Jaap Goedemoed (no.${num})`}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                
-                {/* Overlay with caption on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
-                  <div className="p-4">
-                    <h3 className="text-lg font-serif text-text-accent">Zigeuners in Amsterdam (no.{num})</h3>
-                    <p className="text-text-muted mt-1">1989/2021 - Frank Lodeizen/Jaap Goedemoed</p>
-                    <p className="text-text-muted mt-1">Screen print with acrylic and Arabic gum coloring</p>
-                    <p className="text-text-muted">40 x 56.5 cm</p>
-                  </div>
+            <div className="group relative aspect-[40/56.5] bg-background-light rounded-md shadow-md overflow-hidden">
+              <Image 
+                src="/2021/04/Zigeuners-in-Amsterdam-FL-JG-1a1.jpg"
+                alt="Zigeuners in Amsterdam 1989/2021 - Frank Lodeizen/Jaap Goedemoed (no.1)"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              
+              {/* Overlay with caption on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
+                <div className="p-4">
+                  <h3 className="text-lg font-serif text-text-accent">Zigeuners in Amsterdam (no.1)</h3>
+                  <p className="text-text-muted mt-1">1989/2021 - Frank Lodeizen/Jaap Goedemoed</p>
+                  <p className="text-text-muted mt-1">Screen print with acrylic and Arabic gum coloring</p>
+                  <p className="text-text-muted">40 x 56.5 cm</p>
                 </div>
               </div>
-            ))}
+            </div>
+            
+            <div className="group relative aspect-[40/56.5] bg-background-light rounded-md shadow-md overflow-hidden">
+              <Image 
+                src="/2021/04/Zigeuners-in-Amsterdam-Fl-JG-2-2-april-20212.jpg"
+                alt="Zigeuners in Amsterdam 1989/2021 - Frank Lodeizen/Jaap Goedemoed (no.2)"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              
+              {/* Overlay with caption on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
+                <div className="p-4">
+                  <h3 className="text-lg font-serif text-text-accent">Zigeuners in Amsterdam (no.2)</h3>
+                  <p className="text-text-muted mt-1">1989/2021 - Frank Lodeizen/Jaap Goedemoed</p>
+                  <p className="text-text-muted mt-1">Screen print with acrylic and Arabic gum coloring</p>
+                  <p className="text-text-muted">40 x 56.5 cm</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative aspect-[40/56.5] bg-background-light rounded-md shadow-md overflow-hidden">
+              <Image 
+                src="/2021/04/Zigeuners-in-Amsterdam-Fl-JG-3-2-april-20213.jpg"
+                alt="Zigeuners in Amsterdam 1989/2021 - Frank Lodeizen/Jaap Goedemoed (no.3)"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              
+              {/* Overlay with caption on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
+                <div className="p-4">
+                  <h3 className="text-lg font-serif text-text-accent">Zigeuners in Amsterdam (no.3)</h3>
+                  <p className="text-text-muted mt-1">1989/2021 - Frank Lodeizen/Jaap Goedemoed</p>
+                  <p className="text-text-muted mt-1">Screen print with acrylic and Arabic gum coloring</p>
+                  <p className="text-text-muted">40 x 56.5 cm</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative aspect-[40/56.5] bg-background-light rounded-md shadow-md overflow-hidden">
+              <Image 
+                src="/2021/04/Zigeuners-in-Amsterdam-Fl-JG-4-2-april-20214.jpg"
+                alt="Zigeuners in Amsterdam 1989/2021 - Frank Lodeizen/Jaap Goedemoed (no.4)"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              
+              {/* Overlay with caption on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
+                <div className="p-4">
+                  <h3 className="text-lg font-serif text-text-accent">Zigeuners in Amsterdam (no.4)</h3>
+                  <p className="text-text-muted mt-1">1989/2021 - Frank Lodeizen/Jaap Goedemoed</p>
+                  <p className="text-text-muted mt-1">Screen print with acrylic and Arabic gum coloring</p>
+                  <p className="text-text-muted">40 x 56.5 cm</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative aspect-[40/56.5] bg-background-light rounded-md shadow-md overflow-hidden">
+              <Image 
+                src="/2021/04/Zigeuners-in-Amsterdam-Fl-JG-5-2-april-20215.jpg"
+                alt="Zigeuners in Amsterdam 1989/2021 - Frank Lodeizen/Jaap Goedemoed (no.5)"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              
+              {/* Overlay with caption on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
+                <div className="p-4">
+                  <h3 className="text-lg font-serif text-text-accent">Zigeuners in Amsterdam (no.5)</h3>
+                  <p className="text-text-muted mt-1">1989/2021 - Frank Lodeizen/Jaap Goedemoed</p>
+                  <p className="text-text-muted mt-1">Screen print with acrylic and Arabic gum coloring</p>
+                  <p className="text-text-muted">40 x 56.5 cm</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative aspect-[40/56.5] bg-background-light rounded-md shadow-md overflow-hidden">
+              <Image 
+                src="/2021/04/Zigeuners-in-Amsterdam-Fl-JG-6a-2-april-20216.jpg"
+                alt="Zigeuners in Amsterdam 1989/2021 - Frank Lodeizen/Jaap Goedemoed (no.6)"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              
+              {/* Overlay with caption on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
+                <div className="p-4">
+                  <h3 className="text-lg font-serif text-text-accent">Zigeuners in Amsterdam (no.6)</h3>
+                  <p className="text-text-muted mt-1">1989/2021 - Frank Lodeizen/Jaap Goedemoed</p>
+                  <p className="text-text-muted mt-1">Screen print with acrylic and Arabic gum coloring</p>
+                  <p className="text-text-muted">40 x 56.5 cm</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="group relative aspect-[40/56.5] bg-background-light rounded-md shadow-md overflow-hidden">
+              <Image 
+                src="/2021/04/Zigeuners-in-Amsterdam-Fl-JG-7-2-april-20217.jpg"
+                alt="Zigeuners in Amsterdam 1989/2021 - Frank Lodeizen/Jaap Goedemoed (no.7)"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+              
+              {/* Overlay with caption on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end">
+                <div className="p-4">
+                  <h3 className="text-lg font-serif text-text-accent">Zigeuners in Amsterdam (no.7)</h3>
+                  <p className="text-text-muted mt-1">1989/2021 - Frank Lodeizen/Jaap Goedemoed</p>
+                  <p className="text-text-muted mt-1">Screen print with acrylic and Arabic gum coloring</p>
+                  <p className="text-text-muted">40 x 56.5 cm</p>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="mt-12 text-center">

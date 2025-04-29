@@ -14,21 +14,16 @@ export default function ArtworksPage() {
   // Get remaining artworks for the gallery grid
   const remainingArtworks = artworks.filter(artwork => !artwork.featured);
   
-  // Group artworks by decade
-  const artworksByDecade: Record<string, typeof artworks> = {};
-  
-  artworks.forEach(artwork => {
-    const decade = `${Math.floor(artwork.year / 10) * 10}s`;
-    if (!artworksByDecade[decade]) {
-      artworksByDecade[decade] = [];
-    }
-    artworksByDecade[decade].push(artwork);
-  });
-  
-  // Sort decades in descending order
-  const sortedDecades = Object.keys(artworksByDecade).sort((a, b) => {
-    return parseInt(b) - parseInt(a);
-  });
+  // Categories of artworks using the category field we added
+  const categories = {
+    abstractArtworks: artworks.filter(artwork => artwork.category === 'abstract'),
+    oldStockPaperArtworks: artworks.filter(artwork => artwork.category === 'paper'),
+    jamesJoyceArtworks: artworks.filter(artwork => artwork.category === 'joyce'),
+    figurativeArtworks: artworks.filter(artwork => artwork.category === 'figurative'),
+    porcupineArtworks: artworks.filter(artwork => artwork.category === 'porcupine'),
+    youthArtworks: artworks.filter(artwork => artwork.category === 'youth'),
+    otherArtworks: artworks.filter(artwork => artwork.category === 'others')
+  };
 
   return (
     <div className="min-h-screen bg-[#0c0c0c]">
@@ -75,28 +70,127 @@ export default function ArtworksPage() {
         </div>
       </section>
       
-      {/* Timeline section */}
+      {/* Artwork Categories Section */}
       <section className="py-16 md:py-24 bg-[#0c0c0c]">
         <div className="container-wide">
-          <h2 className="font-serif text-2xl md:text-3xl text-white mb-2">Artworks by Period</h2>
-          <p className="text-white/60 mb-16">Chronological development of artistic practice from 1980s to present</p>
+          <h2 className="font-serif text-2xl md:text-3xl text-white mb-2">Artwork Categories</h2>
+          <p className="text-white/60 mb-16">Explore artworks by category from different periods and styles</p>
           
-          {sortedDecades.map((decade) => (
-            <div key={decade} className="mb-24 last:mb-0">
+          {/* Abstract Artworks 1990 - Present */}
+          <div className="mb-24">
+            <div className="flex items-center mb-8">
+              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Abstract Artworks 1990 - Present</h3>
+              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {categories.abstractArtworks
+                .sort((a, b) => b.year - a.year)
+                .map((artwork) => (
+                  <ArtworkCard key={artwork.id} artwork={artwork} />
+                ))}
+            </div>
+          </div>
+          
+          {/* Old stock paper Artworks 2005 - Present */}
+          <div className="mb-24">
+            <div className="flex items-center mb-8">
+              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Old Stock Paper Artworks 2005 - Present</h3>
+              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {categories.oldStockPaperArtworks
+                .sort((a, b) => b.year - a.year)
+                .map((artwork) => (
+                  <ArtworkCard key={artwork.id} artwork={artwork} />
+                ))}
+            </div>
+          </div>
+          
+          {/* James Joyce Artworks */}
+          {categories.jamesJoyceArtworks.length > 0 && (
+            <div className="mb-24">
               <div className="flex items-center mb-8">
-                <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">{decade}</h3>
+                <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">James Joyce Artworks</h3>
                 <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {artworksByDecade[decade]
+                {categories.jamesJoyceArtworks
                   .sort((a, b) => b.year - a.year)
                   .map((artwork) => (
                     <ArtworkCard key={artwork.id} artwork={artwork} />
                   ))}
               </div>
             </div>
-          ))}
+          )}
+          
+          {/* Figurative Artworks 1980-1989 */}
+          <div className="mb-24">
+            <div className="flex items-center mb-8">
+              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Figurative Artworks 1980-1989</h3>
+              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {categories.figurativeArtworks
+                .sort((a, b) => b.year - a.year)
+                .map((artwork) => (
+                  <ArtworkCard key={artwork.id} artwork={artwork} />
+                ))}
+            </div>
+          </div>
+          
+          {/* Porcupine Artworks */}
+          <div className="mb-24">
+            <div className="flex items-center mb-8">
+              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Porcupine Artworks</h3>
+              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {categories.porcupineArtworks
+                .sort((a, b) => b.year - a.year)
+                .map((artwork) => (
+                  <ArtworkCard key={artwork.id} artwork={artwork} />
+                ))}
+            </div>
+          </div>
+          
+          {/* Youth Artworks */}
+          {categories.youthArtworks.length > 0 && (
+            <div className="mb-24">
+              <div className="flex items-center mb-8">
+                <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Youth Artworks</h3>
+                <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {categories.youthArtworks
+                  .sort((a, b) => b.year - a.year)
+                  .map((artwork) => (
+                    <ArtworkCard key={artwork.id} artwork={artwork} />
+                  ))}
+              </div>
+            </div>
+          )}
+          
+          {/* Other Artworks */}
+          <div className="mb-24">
+            <div className="flex items-center mb-8">
+              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Other Artworks</h3>
+              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {categories.otherArtworks
+                .sort((a, b) => b.year - a.year)
+                .map((artwork) => (
+                  <ArtworkCard key={artwork.id} artwork={artwork} />
+                ))}
+            </div>
+          </div>
         </div>
       </section>
       
