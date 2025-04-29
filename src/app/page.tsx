@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { artworks } from "@/lib/placeholder-data";
@@ -50,28 +50,28 @@ export default function Home() {
   const [textColor, setTextColor] = useState('text-white');
   const [contrastMode, setContrastMode] = useState('light');
   
-  // Function to change the displayed artwork
-  const changeArtwork = (newIndex: number) => {
+  // Function to change the displayed artwork - memoized with useCallback
+  const changeArtwork = useCallback((newIndex: number) => {
     if (isTransitioning) return;
     
     setIsTransitioning(true);
     setCurrentArtworkIndex(newIndex);
     
-    // Reset transition state after animation completes
-    setTimeout(() => setIsTransitioning(false), 500);
-  };
+    // Reset transition state after animation completes (ultra-fast transition)
+    setTimeout(() => setIsTransitioning(false), 200);
+  }, [isTransitioning]);
   
-  // Go to next artwork
-  const nextArtwork = () => {
+  // Go to next artwork - useCallback to prevent recreation in useEffect
+  const nextArtwork = useCallback(() => {
     const newIndex = (currentArtworkIndex + 1) % featuredArtworks.length;
     changeArtwork(newIndex);
-  };
+  }, [currentArtworkIndex, featuredArtworks.length, changeArtwork]);
   
   // Go to previous artwork
-  const prevArtwork = () => {
+  const prevArtwork = useCallback(() => {
     const newIndex = (currentArtworkIndex - 1 + featuredArtworks.length) % featuredArtworks.length;
     changeArtwork(newIndex);
-  };
+  }, [currentArtworkIndex, featuredArtworks.length, changeArtwork]);
   
   // Determine text color based on current artwork
   useEffect(() => {
@@ -97,14 +97,28 @@ export default function Home() {
     }
   }, [currentArtworkIndex, featuredArtworks]);
   
-  // Auto-rotate artworks every 8 seconds
+  // Auto-rotate artworks every 2 seconds (without dependency on currentArtworkIndex to prevent stopping)
   useEffect(() => {
     const timer = setInterval(() => {
       nextArtwork();
-    }, 8000);
+    }, 2000);
     
     return () => clearInterval(timer);
-  }, [currentArtworkIndex]);
+  }, [nextArtwork]); // Only depend on the memoized nextArtwork function
+  
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        prevArtwork();
+      } else if (e.key === 'ArrowRight') {
+        nextArtwork();
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [prevArtwork, nextArtwork]); // Depend on the memoized functions instead of index
   
   // Current artwork to display
   const currentArtwork = featuredArtworks[currentArtworkIndex];
@@ -113,12 +127,14 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Full-screen Hero Section */}
       <section className="relative h-screen w-full flex items-center overflow-hidden">
-        {/* Background artwork image with transition */}
+        {/* Background artwork image with enhanced transition */}
         {featuredArtworks.map((artwork, index) => (
           <div 
             key={artwork.id}
-            className={`absolute inset-0 z-0 transition-opacity duration-500 ease-in-out ${
-              index === currentArtworkIndex ? 'opacity-100' : 'opacity-0'
+            className={`absolute inset-0 z-0 transition-all duration-200 ease-out ${
+              index === currentArtworkIndex 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-105'
             }`}
           >
             <Image
@@ -131,56 +147,92 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
             
-            {/* Artwork title and year overlay */}
-            <div className="absolute bottom-20 right-6 text-right z-10">
-              <p className="text-text-accent text-xl font-serif">{artwork.title}</p>
-              <p className="text-text-muted">{artwork.year}</p>
+            {/* Enhanced artwork title and year overlay */}
+            <div className={`absolute bottom-24 right-8 text-right z-10 transform transition-all duration-500 ${
+              index === currentArtworkIndex 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-4'
+            }`}>
+              <div className="relative bg-background/30 backdrop-blur-sm p-4 pr-6 border-l-2 border-accent overflow-hidden">
+                {/* Decorative corner accent */}
+                <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-accent"></div>
+                
+                <p className="text-text-accent text-2xl font-serif mb-1 relative">
+                  {artwork.title}
+                  <span className="absolute -bottom-1 right-0 w-1/2 h-px bg-accent/70"></span>
+                </p>
+                <p className="text-text-muted font-mono tracking-wider">{artwork.year}</p>
+              </div>
             </div>
           </div>
         ))}
         
-        {/* Navigation arrows */}
+        {/* Enhanced navigation arrows */}
         <button 
           onClick={prevArtwork}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 text-text-accent hover:text-accent transition-colors p-2 rounded-full bg-background/20 hover:bg-background/40"
+          className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 text-accent hover:text-white transition-all p-3 rounded-full bg-background/30 hover:bg-accent/80 shadow-lg backdrop-blur-sm"
           aria-label="Previous artwork"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            className="h-8 w-8" 
+            className="h-7 w-7" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         
         <button 
           onClick={nextArtwork}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 text-text-accent hover:text-accent transition-colors p-2 rounded-full bg-background/20 hover:bg-background/40"
+          className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 text-accent hover:text-white transition-all p-3 rounded-full bg-background/30 hover:bg-accent/80 shadow-lg backdrop-blur-sm"
           aria-label="Next artwork"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
-            className="h-8 w-8" 
+            className="h-7 w-7" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
           </svg>
         </button>
         
-        {/* Artistic flourish: abstract geometric pattern overlay */}
+        {/* Slide indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+          {featuredArtworks.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => changeArtwork(index)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                index === currentArtworkIndex 
+                  ? 'bg-accent w-8'
+                  : 'bg-white/50 hover:bg-white/70'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+        
+        {/* Enhanced artistic flourish: abstract geometric pattern overlay */}
         <div className="absolute inset-0 z-5 pointer-events-none opacity-10 mix-blend-screen">
           <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-accent/10 to-transparent"></div>
           <div className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-tl from-accent/20 to-transparent"></div>
           
-          {/* Animated geometric elements */}
+          {/* More dynamic animated geometric elements */}
           <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-accent rotate-45 animate-pulse"></div>
           <div className="absolute bottom-1/3 right-1/3 w-48 h-48 border border-accent rounded-full animate-ping opacity-20"></div>
           <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-accent/5 animate-pulse"></div>
+          
+          {/* New animated elements */}
+          <div className="absolute top-1/3 right-1/5 w-16 h-16 border-2 border-accent/30 animate-spin-slow"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-20 h-20 border border-accent/20 rounded-md rotate-12 animate-float"></div>
+          
+          {/* Dynamic line elements */}
+          <div className="absolute top-1/2 left-0 w-full h-px bg-accent/10 animate-pulse"></div>
+          <div className="absolute left-1/2 top-0 w-px h-full bg-accent/10 animate-pulse"></div>
         </div>
         
         {/* Content overlay with modern geometric typography */}

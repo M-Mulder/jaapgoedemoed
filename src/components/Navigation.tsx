@@ -58,83 +58,14 @@ const Navigation = () => {
     <nav className="bg-background border-b border-border py-4">
       <div className="container-wide relative">
         <div className="flex justify-between items-center">
-          {/* Logo using the actual image file with text overlay */}
+          {/* Text-based logo with aesthetic font */}
           <div className="flex items-center">
             <Link href="/" className="inline-block group">
-              <div className="relative h-16 w-64 overflow-hidden rounded-sm shadow-md border border-[#444] transition-all duration-500 ease-out 
-                group-hover:shadow-lg group-hover:shadow-accent/20 group-hover:scale-[1.02]">
-                {/* Actual artwork image with subtle zoom effect on hover */}
-                <div className="absolute inset-0 transition-transform duration-1000 ease-out group-hover:scale-105">
-                  <Image 
-                    src="/logo/ApplicationFrameHost_0x58qnirpO.png" 
-                    alt="Jaap Goedemoed - Artwork Pattern" 
-                    fill 
-                    style={{ objectFit: 'cover' }}
-                    className="rounded-sm"
-                  />
-                </div>
-                
-                {/* Decorative geometric accents inspired by the pattern */}
-                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-70"></div>
-                <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-70"></div>
-                <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-transparent via-accent to-transparent opacity-70"></div>
-                <div className="absolute inset-y-0 right-0 w-[2px] bg-gradient-to-b from-transparent via-accent to-transparent opacity-70"></div>
-                
-                {/* Dynamic corner decorations */}
-                <div className="absolute top-0 left-0 w-6 h-6 overflow-hidden">
-                  <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-accent rotate-0 opacity-70
-                    transition-all duration-500 group-hover:w-4 group-hover:h-4 group-hover:opacity-100"></div>
-                </div>
-                <div className="absolute top-0 right-0 w-6 h-6 overflow-hidden">
-                  <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-accent rotate-0 opacity-70
-                    transition-all duration-500 group-hover:w-4 group-hover:h-4 group-hover:opacity-100"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 w-6 h-6 overflow-hidden">
-                  <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-accent rotate-0 opacity-70
-                    transition-all duration-500 group-hover:w-4 group-hover:h-4 group-hover:opacity-100"></div>
-                </div>
-                <div className="absolute bottom-0 right-0 w-6 h-6 overflow-hidden">
-                  <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-accent rotate-0 opacity-70
-                    transition-all duration-500 group-hover:w-4 group-hover:h-4 group-hover:opacity-100"></div>
-                </div>
-                
-                {/* Modern, refined title treatment */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative px-3">
-                    {/* Text container with angled clip-path for geometric effect */}
-                    <div className="bg-black/15 backdrop-blur-[1px] p-2 rounded-sm backdrop-brightness-150"
-                         style={{ clipPath: 'polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%)' }}>
-                      <div className="bg-white/40 p-1.5">
-                        <h1 className="text-center">
-                          {/* First name with visual emphasis */}
-                          <span className="block relative font-mono uppercase text-lg tracking-[0.3em] font-bold text-black">
-                            <span className="relative inline-block">
-                              J<span className="absolute -top-0.5 -right-0.5 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            </span>
-                            <span className="relative inline-block">
-                              A<span className="absolute -top-0.5 -right-0.5 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity delay-100"></span>
-                            </span>
-                            <span className="relative inline-block">
-                              A<span className="absolute -top-0.5 -right-0.5 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity delay-150"></span>
-                            </span>
-                            <span className="relative inline-block">
-                              P<span className="absolute -top-0.5 -right-0.5 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity delay-200"></span>
-                            </span>
-                          </span>
-                          
-                          {/* Decorative separator that animates on hover */}
-                          <div className="flex items-center justify-center my-0.5 overflow-hidden h-[3px]">
-                            <div className="h-[2px] w-0 bg-accent group-hover:w-12 transition-all duration-700"></div>
-                          </div>
-                          
-                          {/* Last name with slightly more subdued styling */}
-                          <span className="block font-mono uppercase text-sm tracking-[0.2em] font-light text-black/80
-                            transition-all duration-700 group-hover:tracking-[0.25em]">GOEDEMOED</span>
-                        </h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="py-2">
+                <h1 className="font-serif text-3xl tracking-wide transition-all duration-300 ease-in-out">
+                  <span className="text-text font-light mr-1 hover:text-accent">Jaap</span>
+                  <span className="text-text-muted font-medium hover:text-accent">Goedemoed</span>
+                </h1>
               </div>
             </Link>
           </div>
