@@ -56,20 +56,6 @@ export default function ArtworksPage() {
         </div>
       </div>
       
-      {/* Featured works section */}
-      <section className="py-16 md:py-24 bg-black">
-        <div className="container-wide">
-          <h2 className="font-serif text-2xl md:text-3xl text-white mb-2">Featured Works</h2>
-          <p className="text-white/60 mb-12">Selected pieces representing key developments in the artist's practice</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {featuredArtworks.slice(0, 4).map((artwork) => (
-              <ArtworkCard key={artwork.id} artwork={artwork} featured={true} />
-            ))}
-          </div>
-        </div>
-      </section>
-      
       {/* Artwork Categories Section */}
       <section className="py-16 md:py-24 bg-[#0c0c0c]">
         <div className="container-wide">
