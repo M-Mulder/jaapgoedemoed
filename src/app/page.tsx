@@ -20,17 +20,6 @@ export default function Home() {
       featured: true
     },
     {
-      id: 'hero2',
-      title: 'Featured Work',
-      slug: 'hero-image-2',
-      year: 2024,
-      description: 'Special featured artwork',
-      medium: '',
-      dimensions: '',
-      imagePath: '/2024/hero_image_2.jpg',
-      featured: true
-    },
-    {
       id: 'hero3',
       title: 'Exhibition View',
       slug: 'exhibition-view',
@@ -40,11 +29,116 @@ export default function Home() {
       dimensions: '',
       imagePath: '/2019/03/ExhibitionJaapG1-1320x880.jpg',
       featured: true
+    },
+    {
+      id: 'tramways1',
+      title: 'Les Tramways d\'Iekaterinoslaw',
+      slug: 'tramways-iekaterinoslaw',
+      year: 2013,
+      description: 'Part of the tram series, this work documents and artistically interprets the historic tram systems of Eastern Europe',
+      medium: 'Mixed media on paper',
+      dimensions: '40 x 50 cm',
+      imagePath: '/2021/04/Les-Tramways-dIekaterinoslaw-2013-40-x-50-cm.jpg',
+      featured: true
+    },
+    // Add new high-quality images from Old stock paper Artworks
+    {
+      id: 'oldstock1',
+      title: 'Chemin de Fer Lung-Tsing-U-Haï',
+      slug: 'chemin-de-fer-lung-tsing',
+      year: 2005,
+      description: 'Mixed media composition integrating archival materials',
+      medium: 'Mixed media on paper',
+      dimensions: '40 x 50 cm',
+      imagePath: '/2021/04/Chemin-de-Fer-Lung-Tsing-U-Hai-2005-40-x-50-cm-1650x2048.jpg',
+      featured: true
+    },
+    {
+      id: 'oldstock2',
+      title: 'Les Tramways de Kiew',
+      slug: 'les-tramways-de-kiew-2013',
+      year: 2013,
+      description: 'Part of the urban transit documentation series',
+      medium: 'Mixed media on paper',
+      dimensions: '40 x 50 cm',
+      imagePath: '/2019/01/Les-Tramways-de-Kiew-2013-40-x-50-cm.jpg',
+      featured: true
+    },
+    {
+      id: 'oldstock3',
+      title: 'Société d\'Électricité d\'Odessa',
+      slug: 'societe-electricite-odessa',
+      year: 2006,
+      description: 'Mixed media artwork based on historical documents',
+      medium: 'Mixed media on paper',
+      dimensions: '40 x 50 cm',
+      imagePath: '/2019/01/Societe-dElectricite-dOdessa-2006.jpg',
+      featured: true
+    },
+    // Add new high-quality images from Large abstract Artworks
+    {
+      id: 'abstract1',
+      title: 'Composition 2014',
+      slug: 'composition-2014-large',
+      year: 2014,
+      description: 'A sophisticated geometric composition exploring spatial relationships',
+      medium: 'Acrylic on canvas',
+      dimensions: '100 x 100 cm',
+      imagePath: '/2019/01/Composition-2014-100-x-100-cm-2.jpg',
+      featured: true
+    },
+    {
+      id: 'abstract2',
+      title: 'Disconnected Coptic tiling',
+      slug: 'disconnected-coptic-tiling-large',
+      year: 1996,
+      description: 'A composition inspired by Coptic visual traditions',
+      medium: 'Mixed media on canvas',
+      dimensions: '150 x 150 cm',
+      imagePath: '/2018/12/Disconnected-Coptic-tiling-1996-150-x-150-cm-slider.jpg',
+      featured: true
+    },
+    {
+      id: 'abstract3',
+      title: 'Composition with open structure',
+      slug: 'composition-with-open-structure-large',
+      year: 1999,
+      description: 'A geometric abstraction featuring an open structure',
+      medium: 'Mixed media on canvas',
+      dimensions: '150 x 150 cm',
+      imagePath: '/2018/12/Composition-with-open-structure-1999-150-x-150-cm-slider.jpg',
+      featured: true
+    },
+    // Add porcupine artworks to the slider
+    {
+      id: 'porcupine1',
+      title: 'Porcupine I',
+      slug: 'porcupine-i-slider',
+      year: 2021,
+      description: 'An innovative work incorporating porcupine quills as a primary medium',
+      medium: 'Porcupine quills on panel',
+      dimensions: '100 x 100 cm',
+      imagePath: '/2022/03/Porcupine-I-5-March-2021-finale-werk-2048x2039.jpg',
+      featured: true
+    },
+    {
+      id: 'porcupine2',
+      title: 'Porcupine Boogie Woogie II',
+      slug: 'porcupine-boogie-woogie-ii-slider',
+      year: 2022,
+      description: 'A work inspired by the geometric abstraction of Mondrian\'s Boogie Woogie series',
+      medium: 'Porcupine quills on panel',
+      dimensions: '100 x 100 cm',
+      imagePath: '/2022/03/Composition-2022-Procupine-Boogie-Woogie-II-scaled.jpg',
+      featured: true
     }
   ];
   
-  // Combine hero images with other featured artworks
-  const featuredArtworks = [...heroImages, ...artworks.filter(artwork => artwork.featured)];
+  // Combine hero images with other featured artworks (excluding sea balls)
+  const featuredArtworks = [
+    ...heroImages, 
+    ...artworks.filter(artwork => artwork.featured && artwork.slug !== 'sea-balls-composition')
+  ];
   const [currentArtworkIndex, setCurrentArtworkIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [textColor, setTextColor] = useState('text-white');
@@ -145,7 +239,11 @@ export default function Home() {
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
+            {/* Bottom shadow overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" style={{ height: '40%', bottom: 0, top: 'auto' }}></div>
+            
+            {/* Top shadow overlay for navbar transition */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-transparent" style={{ height: '15%', top: 0, bottom: 'auto' }}></div>
             
             {/* Enhanced artwork title and year overlay */}
             <div className={`absolute bottom-24 right-8 text-right z-10 transform transition-all duration-500 ${
@@ -153,15 +251,15 @@ export default function Home() {
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-4'
             }`}>
-              <div className="relative bg-background/30 backdrop-blur-sm p-4 pr-6 border-l-2 border-accent overflow-hidden">
+              <div className="relative bg-background/60 backdrop-blur-sm p-4 pr-6 border-l-2 border-accent overflow-hidden">
                 {/* Decorative corner accent */}
                 <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-accent"></div>
                 
-                <p className="text-text-accent text-2xl font-serif mb-1 relative">
+                <p className="text-text-accent text-2xl font-serif mb-1 relative font-bold">
                   {artwork.title}
-                  <span className="absolute -bottom-1 right-0 w-1/2 h-px bg-accent/70"></span>
+                  <span className="absolute -bottom-1 right-0 w-1/2 h-px bg-accent/90"></span>
                 </p>
-                <p className="text-text-muted font-mono tracking-wider">{artwork.year}</p>
+                <p className="text-white font-mono tracking-wider font-semibold">{artwork.year}</p>
               </div>
             </div>
           </div>
@@ -200,6 +298,22 @@ export default function Home() {
           </svg>
         </button>
         
+        {/* Action buttons - redesigned with more elegant styling */}
+        <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 flex space-x-8">
+          <Link 
+            href="/artworks" 
+            className="px-8 py-2 text-white hover:text-accent transition-all duration-300 uppercase tracking-widest text-sm font-light border-b border-accent/40 hover:border-accent"
+          >
+            Explore Works
+          </Link>
+          <Link 
+            href="/welcome" 
+            className="px-8 py-2 text-white hover:text-accent transition-all duration-300 uppercase tracking-widest text-sm font-light border-b border-accent/40 hover:border-accent"
+          >
+            Artist Introduction
+          </Link>
+        </div>
+        
         {/* Slide indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
           {featuredArtworks.map((_, index) => (
@@ -235,55 +349,7 @@ export default function Home() {
           <div className="absolute left-1/2 top-0 w-px h-full bg-accent/10 animate-pulse"></div>
         </div>
         
-        {/* Content overlay with modern geometric typography */}
-        <div className="container-wide relative z-10 text-center mt-16">
-          {/* Geometric artist name display */}
-          <div className="relative mb-12 py-8 inline-block">
-            <div className="flex flex-col items-center">
-              {/* Creating a geometric frame with clean lines */}
-              <div className="relative">
-                {/* Horizontal lines */}
-                <div className="absolute -top-6 left-0 w-full h-[2px] bg-accent opacity-80"></div>
-                <div className="absolute -bottom-6 left-0 w-full h-[2px] bg-accent opacity-80"></div>
-                
-                {/* Corner accents */}
-                <div className="absolute -top-6 -left-6 w-12 h-12 border-l-2 border-t-2 border-accent opacity-80"></div>
-                <div className="absolute -top-6 -right-6 w-12 h-12 border-r-2 border-t-2 border-accent opacity-80"></div>
-                <div className="absolute -bottom-6 -left-6 w-12 h-12 border-l-2 border-b-2 border-accent opacity-80"></div>
-                <div className="absolute -bottom-6 -right-6 w-12 h-12 border-r-2 border-b-2 border-accent opacity-80"></div>
-                
-                {/* Main title with clean typography */}
-                <h1 className="font-mono font-bold tracking-wide text-4xl md:text-6xl lg:text-7xl"
-                   style={{ color: contrastMode === 'dark' ? '#0f0f0f' : '#ffffff' }}>
-                  <span className="block">JAAP</span>
-                  <span className="block font-normal tracking-[0.25em] text-3xl md:text-5xl lg:text-6xl text-accent opacity-90 mt-2">GOEDEMOED</span>
-                </h1>
-              </div>
-            </div>
-          </div>
-          
-          {/* Clean, geometric subtitle with no shadow effects */}
-          <div className="relative max-w-2xl mx-auto">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-8 md:w-16 h-[1px] bg-accent opacity-70"></div>
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 md:w-16 h-[1px] bg-accent opacity-70"></div>
-            
-            <p className="text-lg md:text-xl px-12 font-mono uppercase tracking-wider"
-               style={{ color: contrastMode === 'dark' ? '#0f0f0f' : '#e6e6e6' }}>
-              Dutch artist creating geometric abstractions through pentagonal patterns and dimensional constructions
-            </p>
-          </div>
-          
-          <div className="mt-10 space-x-6 relative">
-            <Link href="/artworks" className="btn group relative overflow-hidden">
-              <span className="relative z-10">Explore Works</span>
-              <span className="absolute inset-0 bg-accent-hover transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-            </Link>
-            
-            <Link href="/biography" className="relative text-text hover:text-accent transition-colors border-b border-transparent hover:border-accent pb-1">
-              About the Artist
-            </Link>
-          </div>
-        </div>
+        {/* Navigation buttons are kept, but artist name and subtitle are removed */}
       </section>
 
       {/* Featured Artworks - with artistic layout */}

@@ -16,12 +16,14 @@ const Navigation = () => {
   // Main navigation links
   const navLinks = [
     { title: "Home", href: "/" },
+    { title: "Welcome", href: "/welcome" }, // Added Welcome page link
     { title: "Artworks", href: "/artworks" },
     { title: "Biography", href: "/biography" },
     { title: "Information", href: "/info" },
     { title: "Exhibitions", href: "/exhibitions" },
     { title: "Photographs", href: "/photographs" },
     { title: "Contact", href: "/contact" },
+    { title: "Guestbook", href: "/guestbook" },
   ];
 
   // Submenu items for artworks dropdown - only showing pages that exist
@@ -41,6 +43,8 @@ const Navigation = () => {
   const additionalInfo = [
     { title: "Interview with JG 2015", href: "/info/interview-2015" },
     { title: "Gypsies in Amsterdam", href: "/info/gypsies-amsterdam" },
+    { title: "Taxation by J.P. Glerum 1991", href: "/info/taxation-glerum-1991" }, // Added new page
+    { title: "A Serious Piece of Art", href: "/info/serious-art-piece" }, // Added new page
   ];
 
   // State for managing dropdown menus
@@ -58,13 +62,18 @@ const Navigation = () => {
     <nav className="bg-background border-b border-border py-4">
       <div className="container-wide relative">
         <div className="flex justify-between items-center">
-          {/* Text-based logo with aesthetic font */}
+          {/* Text-based logo with artistic gradient */}
           <div className="flex items-center">
             <Link href="/" className="inline-block group">
               <div className="py-2">
-                <h1 className="font-serif text-3xl tracking-wide transition-all duration-300 ease-in-out">
-                  <span className="text-text font-light mr-1 hover:text-accent">Jaap</span>
-                  <span className="text-text-muted font-medium hover:text-accent">Goedemoed</span>
+                <h1 className="font-serif text-3xl tracking-wide">
+                  {/* Apply accent color to match slider text */}
+                  <span className="text-accent font-semibold mr-1 transition-all duration-300 ease-in-out group-hover:opacity-90">
+                    Jaap
+                  </span>
+                  <span className="text-accent font-medium transition-all duration-300 ease-in-out group-hover:opacity-90">
+                    Goedemoed
+                  </span>
                 </h1>
               </div>
             </Link>

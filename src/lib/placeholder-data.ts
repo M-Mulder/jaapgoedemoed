@@ -339,56 +339,6 @@ export const artworks: Artwork[] = [
     category: 'paper'
   },
 
-  // Lucebert-inspired Artworks (James Joyce category)
-  {
-    id: '27',
-    title: 'Portrait of Lucebert',
-    slug: 'portrait-of-lucebert-1957',
-    year: 1957,
-    description: 'An early woodcut portrait of the renowned Dutch artist and poet Lucebert, capturing his distinctive features through the bold lines of the woodcut medium.',
-    medium: 'Woodcut',
-    dimensions: '30 x 40 cm',
-    imagePath: '/2021/03/1957-Portrait-of-Lucebert-Woodcut.jpg',
-    featured: false,
-    category: 'joyce'
-  },
-  {
-    id: '28',
-    title: 'Portrait of Lucebert on Paper',
-    slug: 'portrait-of-lucebert-on-paper',
-    year: 1992,
-    description: 'A portrait study of Lucebert rendered on paper, reflecting the artist\'s ongoing interest in the Dutch poet-painter\'s visual and literary legacy.',
-    medium: 'Mixed media on paper',
-    dimensions: '27 x 35 cm',
-    imagePath: '/2021/03/1992-Portrait-of-Lucebert-on-paper-27x35cm-.jpg',
-    featured: false,
-    category: 'joyce'
-  },
-  {
-    id: '29',
-    title: 'Lucebert\'s Funeral',
-    slug: 'luceberts-funeral',
-    year: 1994,
-    description: 'A commemorative work created in response to Lucebert\'s passing, combining figurative and abstract elements to honor the artist\'s life and work.',
-    medium: 'Mixed media on paper',
-    dimensions: '100 x 70 cm',
-    imagePath: '/2021/03/1994-Luceberts-funeral-mixed-media-on-paper-100x70cm.jpg',
-    featured: false,
-    category: 'joyce'
-  },
-  {
-    id: '31',
-    title: 'Lucebert - Mother Wins',
-    slug: 'lucebert-mother-wins',
-    year: 1984,
-    description: 'An oil painting inspired by Lucebert\'s poetic themes, exploring maternal imagery through a contemporary artistic lens.',
-    medium: 'Oil on canvas',
-    dimensions: '72 x 82 cm',
-    imagePath: '/2021/04/Lucebert-1984-ΓÇô-Mother-wins-oil-painting-on-canvas-72x82cm.jpg',
-    featured: false,
-    category: 'joyce'
-  },
-
   // Figurative Artworks 1980-1989
   {
     id: '8',
