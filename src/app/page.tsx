@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { artworks } from "@/lib/placeholder-data";
+import { artworks } from "@/lib/simplified-artwork-data";
 
 export default function Home() {
   // Add the hero images to the featured images rotation

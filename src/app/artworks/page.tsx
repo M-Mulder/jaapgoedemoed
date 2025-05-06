@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { artworks } from "@/lib/placeholder-data";
+import { artworks } from "@/lib/simplified-artwork-data";
 import ArtworkCard from "@/components/ArtworkCard";
 
 export const metadata = {
@@ -22,7 +22,7 @@ export default function ArtworksPage() {
     figurativeArtworks: artworks.filter(artwork => artwork.category === 'figurative'),
     porcupineArtworks: artworks.filter(artwork => artwork.category === 'porcupine'),
     youthArtworks: artworks.filter(artwork => artwork.category === 'youth'),
-    otherArtworks: artworks.filter(artwork => artwork.category === 'others')
+    otherArtworks: artworks.filter(artwork => artwork.category === 'other')
   };
 
   return (

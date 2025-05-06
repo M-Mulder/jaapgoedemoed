@@ -205,3 +205,4 @@ const SeriousArtPiecePage = () => {
 };
 
 export default SeriousArtPiecePage;
+

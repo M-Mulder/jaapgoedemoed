@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { artworks } from '@/lib/placeholder-data';
+import { artworks } from '@/lib/simplified-artwork-data';
 
 export async function generateMetadata(props: any) {
   const { params } = props;
