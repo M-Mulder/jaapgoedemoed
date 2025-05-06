@@ -1,11 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import { artworks } from "@/lib/simplified-artwork-data";
 import ArtworkCard from "@/components/ArtworkCard";
+import AccordionCategory from "@/components/AccordionCategory";
 
-export const metadata = {
-  title: 'Artworks | Jaap Goedemoed',
-  description: 'Browse the collection of artworks by contemporary artist Jaap Goedemoed, including geometric compositions, mixed media pieces, and conceptual works.',
-};
+// Metadata needs to be handled differently in client components
+// This would typically be in a separate layout.tsx file for this route
 
 export default function ArtworksPage() {
   // Get featured artworks for the hero section
@@ -60,122 +61,127 @@ export default function ArtworksPage() {
       <section className="py-16 md:py-24 bg-[#0c0c0c]">
         <div className="container-wide">
           <h2 className="font-serif text-2xl md:text-3xl text-white mb-2">Artwork Categories</h2>
-          <p className="text-white/60 mb-16">Explore artworks by category from different periods and styles</p>
+          <p className="text-white/60 mb-8">Explore artworks by category from different periods and styles</p>
           
-          {/* Abstract Artworks 1990 - Present */}
-          <div className="mb-24">
-            <div className="flex items-center mb-8">
-              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Abstract Artworks 1990 - Present</h3>
-              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {categories.abstractArtworks
-                .sort((a, b) => b.year - a.year)
-                .map((artwork) => (
-                  <ArtworkCard key={artwork.id} artwork={artwork} />
-                ))}
+          {/* Category filter options */}
+          <div className="mb-12">
+            <div className="flex flex-wrap gap-4 justify-center">
+              <button className="px-4 py-2 rounded-full bg-[#1a1a1a] text-white hover:bg-[#d4af37] hover:text-black transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#d4af37]">
+                All Categories
+              </button>
+              <button className="px-4 py-2 rounded-full bg-[#1a1a1a] text-white hover:bg-[#d4af37] hover:text-black transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#d4af37]">
+                Featured Works
+              </button>
+              <button className="px-4 py-2 rounded-full bg-[#1a1a1a] text-white hover:bg-[#d4af37] hover:text-black transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#d4af37]">
+                Latest Additions
+              </button>
             </div>
           </div>
           
-          {/* Old stock paper Artworks 2005 - Present */}
-          <div className="mb-24">
-            <div className="flex items-center mb-8">
-              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Old Stock Paper Artworks 2005 - Present</h3>
-              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {categories.oldStockPaperArtworks
-                .sort((a, b) => b.year - a.year)
-                .map((artwork) => (
-                  <ArtworkCard key={artwork.id} artwork={artwork} />
-                ))}
-            </div>
-          </div>
-          
-          {/* James Joyce Artworks */}
-          {categories.jamesJoyceArtworks.length > 0 && (
-            <div className="mb-24">
-              <div className="flex items-center mb-8">
-                <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">James Joyce Artworks</h3>
-                <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
-              </div>
-              
+          {/* Accordion Categories */}
+          <div className="space-y-6">
+            {/* Abstract Artworks */}
+            <AccordionCategory 
+              title="Abstract Artworks 1990 - Present" 
+              count={categories.abstractArtworks.length}
+              defaultOpen={true}
+            >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {categories.jamesJoyceArtworks
+                {categories.abstractArtworks
                   .sort((a, b) => b.year - a.year)
                   .map((artwork) => (
                     <ArtworkCard key={artwork.id} artwork={artwork} />
                   ))}
               </div>
-            </div>
-          )}
-          
-          {/* Figurative Artworks 1980-1989 */}
-          <div className="mb-24">
-            <div className="flex items-center mb-8">
-              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Figurative Artworks 1980-1989</h3>
-              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
-            </div>
+            </AccordionCategory>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {categories.figurativeArtworks
-                .sort((a, b) => b.year - a.year)
-                .map((artwork) => (
-                  <ArtworkCard key={artwork.id} artwork={artwork} />
-                ))}
-            </div>
-          </div>
-          
-          {/* Porcupine Artworks */}
-          <div className="mb-24">
-            <div className="flex items-center mb-8">
-              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Porcupine Artworks</h3>
-              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {categories.porcupineArtworks
-                .sort((a, b) => b.year - a.year)
-                .map((artwork) => (
-                  <ArtworkCard key={artwork.id} artwork={artwork} />
-                ))}
-            </div>
-          </div>
-          
-          {/* Youth Artworks */}
-          {categories.youthArtworks.length > 0 && (
-            <div className="mb-24">
-              <div className="flex items-center mb-8">
-                <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Youth Artworks</h3>
-                <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
-              </div>
-              
+            {/* Old Stock Paper Artworks */}
+            <AccordionCategory 
+              title="Old Stock Paper Artworks 2005 - Present" 
+              count={categories.oldStockPaperArtworks.length}
+            >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {categories.youthArtworks
+                {categories.oldStockPaperArtworks
                   .sort((a, b) => b.year - a.year)
                   .map((artwork) => (
                     <ArtworkCard key={artwork.id} artwork={artwork} />
                   ))}
               </div>
-            </div>
-          )}
-          
-          {/* Other Artworks */}
-          <div className="mb-24">
-            <div className="flex items-center mb-8">
-              <h3 className="font-serif text-xl md:text-2xl text-[#d4af37]">Other Artworks</h3>
-              <div className="ml-6 h-[1px] flex-grow bg-gradient-to-r from-[#d4af37]/50 to-transparent"></div>
-            </div>
+            </AccordionCategory>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {categories.otherArtworks
-                .sort((a, b) => b.year - a.year)
-                .map((artwork) => (
-                  <ArtworkCard key={artwork.id} artwork={artwork} />
-                ))}
-            </div>
+            {/* James Joyce Artworks */}
+            {categories.jamesJoyceArtworks.length > 0 && (
+              <AccordionCategory 
+                title="James Joyce Artworks" 
+                count={categories.jamesJoyceArtworks.length}
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {categories.jamesJoyceArtworks
+                    .sort((a, b) => b.year - a.year)
+                    .map((artwork) => (
+                      <ArtworkCard key={artwork.id} artwork={artwork} />
+                    ))}
+                </div>
+              </AccordionCategory>
+            )}
+            
+            {/* Figurative Artworks */}
+            <AccordionCategory 
+              title="Figurative Artworks 1980-1989" 
+              count={categories.figurativeArtworks.length}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {categories.figurativeArtworks
+                  .sort((a, b) => b.year - a.year)
+                  .map((artwork) => (
+                    <ArtworkCard key={artwork.id} artwork={artwork} />
+                  ))}
+              </div>
+            </AccordionCategory>
+            
+            {/* Porcupine Artworks */}
+            <AccordionCategory 
+              title="Porcupine Artworks" 
+              count={categories.porcupineArtworks.length}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {categories.porcupineArtworks
+                  .sort((a, b) => b.year - a.year)
+                  .map((artwork) => (
+                    <ArtworkCard key={artwork.id} artwork={artwork} />
+                  ))}
+              </div>
+            </AccordionCategory>
+            
+            {/* Youth Artworks */}
+            {categories.youthArtworks.length > 0 && (
+              <AccordionCategory 
+                title="Youth Artworks" 
+                count={categories.youthArtworks.length}
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {categories.youthArtworks
+                    .sort((a, b) => b.year - a.year)
+                    .map((artwork) => (
+                      <ArtworkCard key={artwork.id} artwork={artwork} />
+                    ))}
+                </div>
+              </AccordionCategory>
+            )}
+            
+            {/* Other Artworks */}
+            <AccordionCategory 
+              title="Other Artworks" 
+              count={categories.otherArtworks.length}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {categories.otherArtworks
+                  .sort((a, b) => b.year - a.year)
+                  .map((artwork) => (
+                    <ArtworkCard key={artwork.id} artwork={artwork} />
+                  ))}
+              </div>
+            </AccordionCategory>
           </div>
         </div>
       </section>

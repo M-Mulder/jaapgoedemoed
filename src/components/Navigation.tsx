@@ -42,6 +42,7 @@ const Navigation = () => {
   // Only showing information pages that exist
   const additionalInfo = [
     { title: "Interview with JG 2015", href: "/info/interview-2015" },
+    { title: "JG Interview in Russian", href: "/info/russian-interview" }, // Added Russian interview page
     { title: "Gypsies in Amsterdam", href: "/info/gypsies-amsterdam" },
     { title: "Taxation by J.P. Glerum 1991", href: "/info/taxation-glerum-1991" }, // Added new page
     { title: "A Serious Piece of Art", href: "/info/serious-art-piece" }, // Added new page
