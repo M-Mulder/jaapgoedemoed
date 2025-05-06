@@ -29,6 +29,18 @@ export const metadata: Metadata = {
   title: "Jaap Goedemoed | Artist",
   description: "Portfolio website for artist Jaap Goedemoed, showcasing artworks, exhibitions, and more.",
   keywords: ["artist", "art", "portfolio", "Jaap Goedemoed", "paintings", "exhibitions"],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: { url: '/favicon-large.svg', type: 'image/svg+xml' },
+    other: {
+      rel: 'mask-icon',
+      url: '/favicon.svg',
+      color: '#D4AF37',
+    },
+  },
 };
 
 export default function RootLayout({

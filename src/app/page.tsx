@@ -82,12 +82,22 @@ export default function Home() {
       year: 1997,
       imagePath: '/Large abstract Artworks 1990 - 20/Division of the plane with stamps 1997, 65 x 65 cm.jpg',
     },
+    // Removed Metropolis (low-resolution)
+    
+    // Two more works from Large abstract Artworks
     {
-      id: 'metropolis',
-      title: 'Metropolis',
-      slug: 'metropolis',
-      year: 1997,
-      imagePath: '/Large abstract Artworks 1990 - 20/Metropolis 1997, 120 x 80 cm.jpg',
+      id: 'disconnected-coptic',
+      title: 'Disconnected Coptic tiling',
+      slug: 'disconnected-coptic-tiling',
+      year: 1996,
+      imagePath: '/Large abstract Artworks 1990 - 20/Disconnected Coptic tiling 1996, 150 x 150 cm.jpg',
+    },
+    {
+      id: 'tuscan-tiling',
+      title: 'Tuscan tiling I',
+      slug: 'tuscan-tiling-i',
+      year: 1994,
+      imagePath: '/Large abstract Artworks 1990 - 20/Tuscan tiling I 1994, 165 x 165 cm.jpg',
     },
     {
       id: 'two-worlds',
