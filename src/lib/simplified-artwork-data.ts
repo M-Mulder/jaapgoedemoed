@@ -116,7 +116,7 @@ export const artworks: Artwork[] = [
     description: 'A sophisticated geometric composition exploring spatial relationships and color harmony, with carefully balanced elements creating a meditative visual experience.',
     medium: 'Acrylic on canvas',
     dimensions: '100 x 100 cm',
-    imagePath: '/Large abstract Artworks 1990 - 20/Composition 2014, 100 x 100 cm.jpg',
+    imagePath: '/Large abstract Artworks 1990 - 20/Composition 2014, 100 x 100 cm (2).jpg',
     featured: true,
     category: 'abstract'
   },

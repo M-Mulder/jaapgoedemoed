@@ -350,7 +350,7 @@ export default function InterviewPage() {
           <div className="mb-12">
             <div className="relative aspect-[4/3] shadow-xl mb-4">
               <Image 
-                src="/Interviuw/de-etnografische-invloed-kwam-via-paul-klee-max-ernst-interview-met-jaap-goedemoed-9-638.jpg"
+                src="/images/taxation-glerum-1991/1989_Nov_Chiapas_Yaxchilan_07b.jpg"
                 alt="Maya ruins and at the foreground stele in Yatchilan, Mexico, december 1989"
                 fill
                 className="object-contain"
@@ -375,7 +375,7 @@ export default function InterviewPage() {
           <div className="mb-12">
             <div className="relative aspect-[1/1] shadow-xl mb-4">
               <Image 
-                src="/Large abstract Artworks 1990 - 20/Composition 2014, 100 x 100 cm.jpg"
+                src="/Large abstract Artworks 1990 - 20/Composition 2014, 100 x 100 cm (2).jpg"
                 alt="Composition 2014, 100 x 100 cm"
                 fill
                 className="object-contain"
