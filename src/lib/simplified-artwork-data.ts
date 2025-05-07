@@ -35,7 +35,31 @@ export interface Photograph {
 
 // Comprehensive Artworks Collection - Using actual file paths from public directory
 export const artworks: Artwork[] = [
-  // Abstract Artworks 1990 - Present
+// Abstract Artworks 1990 - Present
+  {
+    id: '106',
+    title: 'Composition 2025',
+    slug: 'composition-2025',
+    year: 2025,
+    description: 'A contemporary geometric composition exploring spatial relationships with harmonious balance. This work represents the artist\'s latest evolution in abstract expression.',
+    medium: 'Mixed media on canvas',
+    dimensions: '140 x 145 cm',
+    imagePath: '/2025/composition_2025_140x145cm.png',
+    featured: false,
+    category: 'abstract'
+  },
+  {
+    id: '107',
+    title: 'Composition 2024',
+    slug: 'composition-2024',
+    year: 2024,
+    description: 'A balanced geometric abstraction featuring subtle color harmonies and precise spatial organization, demonstrating the artist\'s mature style.',
+    medium: 'Mixed media on canvas',
+    dimensions: '150 x 150 cm',
+    imagePath: '/2024/Composition 2024 150x150cm.jpg',
+    featured: false,
+    category: 'abstract'
+  },
   {
     id: '1',
     title: 'Composition No. 2 2022',
@@ -541,6 +565,30 @@ export const artworks: Artwork[] = [
     category: 'abstract'
   },
   // Paper artworks
+  {
+    id: '108',
+    title: 'Banque Bulgare De Commerce 1895 Roustchouk (Other Version)',
+    slug: 'banque-bulgare-de-commerce-1895-roustchouk-other-version',
+    year: 2024,
+    description: 'A detailed exploration of Bulgarian commercial history through the recontextualization of historical bank documents from Roustchouk, now Ruse, showcasing Bulgaria\'s economic development.',
+    medium: 'Mixed media with stock certificates',
+    dimensions: '50 x 70 cm',
+    imagePath: '/2024/banque_Bulgare_De_Commerce_1895_Roustchouk 2024 50x70cm other_version.png',
+    featured: false,
+    category: 'paper'
+  },
+  {
+    id: '109',
+    title: 'Banque Bulgare De Commerce a Roustchouk',
+    slug: 'banque-bulgare-de-commerce-a-roustchouk',
+    year: 2024,
+    description: 'An alternative interpretation of Bulgarian banking history, presenting a different visual arrangement of historic financial documents from the Bulgarian Commercial Bank in Roustchouk.',
+    medium: 'Mixed media with stock certificates',
+    dimensions: '50 x 70 cm',
+    imagePath: '/2024/Banque_Bulgare_De_Commerce_a_Roustchouk 50x70cm_2024.png',
+    featured: false,
+    category: 'paper'
+  },
   {
     id: '43',
     title: 'Aandeelkunstwerk Donetz',

@@ -102,7 +102,7 @@ export default function BiographyPage() {
               <div className="flex-grow text-[#a3a3a3]">Solo exhibition at Galerie Ruimte, Amsterdam: Tramways d'Odessa</div>
             </div>
             <div className="flex">
-              <div className="w-24 flex-shrink-0 text-[#d4af37] font-medium">2012-now</div>
+              <div className="w-24 flex-shrink-0 text-[#d4af37] font-medium">2012-2022</div>
               <div className="flex-grow text-[#a3a3a3]">Pharmaceutical assessor at Medicines Evaluation Board of The Netherlands</div>
             </div>
             <div className="flex">

@@ -7,6 +7,35 @@ import Image from "next/image";
 export default function Home() {
   // Slider images based on user's specifications
   const sliderImages = [
+    // New artworks added to the front (2024-2025)
+    {
+      id: 'banque-bulgare-de-commerce-1895-other',
+      title: 'Banque Bulgare De Commerce 1895 Roustchouk (Other Version)',
+      slug: 'banque-bulgare-de-commerce-1895-roustchouk-other-version',
+      year: 2024,
+      imagePath: '/2024/banque_Bulgare_De_Commerce_1895_Roustchouk 2024 50x70cm other_version.png',
+    },
+    {
+      id: 'banque-bulgare-de-commerce-a-roustchouk',
+      title: 'Banque Bulgare De Commerce a Roustchouk',
+      slug: 'banque-bulgare-de-commerce-a-roustchouk',
+      year: 2024,
+      imagePath: '/2024/Banque_Bulgare_De_Commerce_a_Roustchouk 50x70cm_2024.png',
+    },
+    {
+      id: 'composition-2024',
+      title: 'Composition 2024',
+      slug: 'composition-2024',
+      year: 2024,
+      imagePath: '/2024/Composition 2024 150x150cm.jpg',
+    },
+    {
+      id: 'composition-2025',
+      title: 'Composition 2025',
+      slug: 'composition-2025',
+      year: 2025,
+      imagePath: '/2025/composition_2025_140x145cm.png',
+    },
     {
       id: 'porcupine1',
       title: 'Porcupine I',
