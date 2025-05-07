@@ -41,11 +41,11 @@ export const artworks: Artwork[] = [
     title: 'Composition 2025',
     slug: 'composition-2025',
     year: 2025,
-    description: 'A contemporary geometric composition exploring spatial relationships with harmonious balance. This work represents the artist\'s latest evolution in abstract expression.',
-    medium: 'Mixed media on canvas',
-    dimensions: '140 x 145 cm',
+    description: 'Three-dimensional work with balsa wooded slats on canvas. The main layout is determined by irregular porcupine quills elongated with straw reeds to obtain rectangular shapes. Includes 3 Persian miniatures (19th century), 3 carved wooden panels from Dutch standing watches, 9 original \'Cobra-like\' artworks from Björn T. Hansen (Danish, 1942-2007) and 9 Saul Steinberg landscapes (lithographs, Derriere le Miroir, Maeght Edition 1971). Also features tributes to Kurt Schwitters, Edgar P. Jacobs, Stéphane Heuet, and George Braque, along with Japanese prints, Coptic and Islamic handwritings, Soviet banknotes, a Venetian carnival mask, ethnographic items, fossils, and the artist\'s photographs from various locations.',
+    medium: 'Mixed media with balsa wood slats on canvas',
+    dimensions: '145 x 145 cm',
     imagePath: '/2025/composition_2025_140x145cm.png',
-    featured: false,
+    featured: true,
     category: 'abstract'
   },
   {
@@ -53,11 +53,11 @@ export const artworks: Artwork[] = [
     title: 'Composition 2024',
     slug: 'composition-2024',
     year: 2024,
-    description: 'A balanced geometric abstraction featuring subtle color harmonies and precise spatial organization, demonstrating the artist\'s mature style.',
-    medium: 'Mixed media on canvas',
+    description: 'Three-dimensional artwork with pentagonal boxes made from balsa wood on canvas. This work is a further exploration of Composition no.2 – 2022 113x113 cm artwork. In the center, the height above the canvas surface is 10 cm. The boxes are created with open windows, causing specific shadowing dependent on the daylight situation. Inside the boxes, balsa wood slats are positioned in a specific \'rotating\' way. On top of the walls, tiny colored slats and arrows are placed. The slats inside the boxes are very slightly colored to allow the play of shadowing in this open structure.',
+    medium: 'Balsa wood on canvas, three-dimensional',
     dimensions: '150 x 150 cm',
     imagePath: '/2024/Composition 2024 150x150cm.jpg',
-    featured: false,
+    featured: true,
     category: 'abstract'
   },
   {
@@ -567,26 +567,26 @@ export const artworks: Artwork[] = [
   // Paper artworks
   {
     id: '108',
-    title: 'Banque Bulgare De Commerce 1895 Roustchouk (Other Version)',
-    slug: 'banque-bulgare-de-commerce-1895-roustchouk-other-version',
+    title: 'Souvenir pentagonale de Roustchouk',
+    slug: 'souvenir-pentagonale-de-roustchouk',
     year: 2024,
-    description: 'A detailed exploration of Bulgarian commercial history through the recontextualization of historical bank documents from Roustchouk, now Ruse, showcasing Bulgaria\'s economic development.',
-    medium: 'Mixed media with stock certificates',
+    description: 'Old stock paper from 1895 on canvas, acrylic paint with Arabic gum. Both inside the stock paper as well as outside the paper, an interesting pentagonal rotating pattern can be observed.',
+    medium: 'Old stock paper on canvas, acrylic with Arabic gum',
     dimensions: '50 x 70 cm',
     imagePath: '/2024/banque_Bulgare_De_Commerce_1895_Roustchouk 2024 50x70cm other_version.png',
-    featured: false,
+    featured: true,
     category: 'paper'
   },
   {
     id: '109',
-    title: 'Banque Bulgare De Commerce a Roustchouk',
-    slug: 'banque-bulgare-de-commerce-a-roustchouk',
+    title: 'Souvenir de Roustchouk à la Asmat',
+    slug: 'souvenir-de-roustchouk-a-la-asmat',
     year: 2024,
-    description: 'An alternative interpretation of Bulgarian banking history, presenting a different visual arrangement of historic financial documents from the Bulgarian Commercial Bank in Roustchouk.',
-    medium: 'Mixed media with stock certificates',
+    description: 'Old stock paper from 1895 on canvas, acrylic paint with Arabic gum. On the inside an intriguing pattern is present derived from an Asmat shield. Outside the paper other Asmat patterns are visible, derived from a shield and a canoe model, with additional colored dots.',
+    medium: 'Old stock paper on canvas, acrylic with Arabic gum',
     dimensions: '50 x 70 cm',
     imagePath: '/2024/Banque_Bulgare_De_Commerce_a_Roustchouk 50x70cm_2024.png',
-    featured: false,
+    featured: true,
     category: 'paper'
   },
   {

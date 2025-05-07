@@ -34,12 +34,17 @@ export default function PhotographsPage() {
           </div>
           
           <p className="text-lg mb-4 text-center">
-            This section of the website is currently under development.
+            The photographs section is currently a work in progress.
+          </p>
+          
+          <p className="text-center mb-4">
+            We are in the process of curating and organizing Jaap Goedemoed's extensive photography collection. 
+            This includes documentary photographs from various locations and periods, as well as artistic photographic works.
           </p>
           
           <p className="text-center">
-            We're working on organizing and presenting Jaap Goedemoed's photography collection. 
-            Please check back soon to explore this upcoming section.
+            Please check back soon as we continue to develop this section of the website. 
+            In the meantime, you can explore the artist's other works in the Artworks section.
           </p>
         </div>
       </div>

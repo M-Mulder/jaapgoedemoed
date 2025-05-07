@@ -10,15 +10,15 @@ export default function Home() {
     // New artworks added to the front (2024-2025)
     {
       id: 'banque-bulgare-de-commerce-1895-other',
-      title: 'Banque Bulgare 1895 Roustchouk',
-      slug: 'banque-bulgare-de-commerce-1895-roustchouk-other-version',
+      title: 'Souvenir pentagonale de Roustchouk',
+      slug: 'souvenir-pentagonale-de-roustchouk',
       year: 2024,
       imagePath: '/2024/banque_Bulgare_De_Commerce_1895_Roustchouk 2024 50x70cm other_version.png',
     },
     {
       id: 'banque-bulgare-de-commerce-a-roustchouk',
-      title: 'Banque Bulgare De Commerce a Roustchouk',
-      slug: 'banque-bulgare-de-commerce-a-roustchouk',
+      title: 'Souvenir de Roustchouk à la Asmat',
+      slug: 'souvenir-de-roustchouk-a-la-asmat',
       year: 2024,
       imagePath: '/2024/Banque_Bulgare_De_Commerce_a_Roustchouk 50x70cm_2024.png',
     },
