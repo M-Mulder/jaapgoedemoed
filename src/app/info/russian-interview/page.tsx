@@ -27,15 +27,15 @@ export default function RussianInterviewPage() {
       {/* Introduction Section */}
       <div className="bg-background-light py-16">
         <div className="container-narrow">
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
-            <div className="lg:w-1/2">
-              <div className="relative aspect-[3/4] shadow-xl">
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="lg:w-2/5">
+              <div className="relative shadow-md border border-border rounded overflow-hidden">
                 <Image 
                   src="/2019/01/Jaap-and-Alexander-27-June-2015-copy-693x1024.jpg"
                   alt="Jaap Goedemoed and Alexander Kamyshin in Amsterdam, June 2015"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={300}
+                  height={400}
+                  className="object-cover mx-auto"
                 />
               </div>
               <p className="text-sm text-text-muted mt-2 text-center">
@@ -43,7 +43,7 @@ export default function RussianInterviewPage() {
               </p>
             </div>
             
-            <div className="lg:w-1/2">
+            <div className="lg:w-3/5">
               <h2 className="text-2xl font-serif mb-4 text-text-accent">The Story Behind the Interview</h2>
               
               <div className="space-y-4 text-text">
@@ -77,14 +77,14 @@ export default function RussianInterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[4/3] shadow-xl mb-4">
+          <div className="mb-10 max-w-lg mx-auto">
+            <div className="mb-2">
               <Image 
                 src="/2019/01/Rusiesch-txtno1.jpg"
                 alt="Russian interview text"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
+                width={400}
+                height={300}
+                className="object-contain mx-auto"
               />
             </div>
           </div>
@@ -113,14 +113,14 @@ export default function RussianInterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[3/4] shadow-xl mb-4">
+          <div className="float-right ml-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/2021/04/Chemin-de-Fer-Lung-Tsing-U-Hai-2005-40-x-50-cm-768x953.jpg"
                 alt="Chemin de Fer Lung-Tsing-U-Hai 2005, 40 x 50 cm"
-                fill
+                width={240}
+                height={320}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-muted text-center">
@@ -140,14 +140,14 @@ export default function RussianInterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[3/4] shadow-xl mb-4">
+          <div className="float-left mr-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/2019/01/Tramways-dOdessa-posterA4-722x1024.jpg"
                 alt="Tramways d'Odessa exhibition poster"
-                fill
+                width={240}
+                height={320}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-muted text-center">
@@ -180,14 +180,14 @@ export default function RussianInterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[4/3] shadow-xl mb-4">
+          <div className="mb-10 max-w-lg mx-auto">
+            <div className="mb-2">
               <Image 
                 src="/2019/01/Rusiesch-txt1-1.jpg"
                 alt="Russian interview text"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
+                width={400}
+                height={300}
+                className="object-contain mx-auto"
               />
             </div>
           </div>
@@ -215,14 +215,14 @@ export default function RussianInterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[3/4] shadow-xl mb-4">
+          <div className="float-right ml-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/2021/04/Fabrication-des-Bouteilles-a-Odessa-I-2005-40-x-50-cm-768x959.jpg"
                 alt="Fabrication des Bouteilles à Odessa I 2005, 40 x 50 cm"
-                fill
+                width={240}
+                height={320}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-muted text-center">

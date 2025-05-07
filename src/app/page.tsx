@@ -10,7 +10,7 @@ export default function Home() {
     // New artworks added to the front (2024-2025)
     {
       id: 'banque-bulgare-de-commerce-1895-other',
-      title: 'Banque Bulgare De Commerce 1895 Roustchouk (Other Version)',
+      title: 'Banque Bulgare 1895 Roustchouk',
       slug: 'banque-bulgare-de-commerce-1895-roustchouk-other-version',
       year: 2024,
       imagePath: '/2024/banque_Bulgare_De_Commerce_1895_Roustchouk 2024 50x70cm other_version.png',

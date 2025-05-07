@@ -27,15 +27,15 @@ export default function InterviewPage() {
       {/* Interview Introduction Section */}
       <div className="bg-background-light py-16">
         <div className="container-narrow">
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
-            <div className="lg:w-1/2">
-              <div className="relative aspect-[3/4] shadow-xl">
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="lg:w-2/5">
+              <div className="relative shadow-md border border-border rounded overflow-hidden">
                 <Image 
                   src="/2018/12/The-artist-in-front-of-some-of-his-artworks-and-ethnographic-items-from-New-Guinea-in-his-home-in-Amsterdam-2015-697x1024.jpg"
                   alt="The artist in front of some of his artworks and ethnographic items from New Guinea in his home in Amsterdam"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={350}
+                  height={500}
+                  className="object-cover mx-auto"
                 />
               </div>
               <p className="text-sm text-text-muted mt-2 text-center">
@@ -43,7 +43,7 @@ export default function InterviewPage() {
               </p>
             </div>
             
-            <div className="lg:w-1/2">
+            <div className="lg:w-3/5">
               <h2 className="text-2xl font-serif mb-4 text-text-accent">Introduction</h2>
               
               <div className="space-y-4 text-text">
@@ -73,14 +73,14 @@ export default function InterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[3/1] shadow-xl mb-4">
+          <div className="float-right ml-6 mb-8 mt-2 max-w-md">
+            <div className="mb-2">
               <Image 
                 src="/2018/12/Changing-tiling-on-a-wooden-plank-1990-60-x-200-cm-768x960.png"
                 alt="Changing tiling on a wooden plank 1990, 60 x 200 cm"
-                fill
+                width={400}
+                height={130}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-muted text-center">
@@ -116,14 +116,14 @@ export default function InterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[1/1] shadow-xl mb-4">
+          <div className="float-right ml-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/2018/12/Changing-pattern-with-opening-I-1990-90-x-95-cm-768x729.jpg"
                 alt="Changing pattern with opening I 1990, 90 x 95 cm"
-                fill
+                width={280}
+                height={266}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-muted text-center">
@@ -135,14 +135,14 @@ export default function InterviewPage() {
             Changing tiling on a wooden plank 60x200cm (Fig. 1) may have an Escher-like motif (metamorphosis), but its execution has brought out ethnographic influences, such as the accentuated wood texture. Changing pattern with opening I 1990, 90x95cm (Fig. 2) is another artwork from 1990 and was used on the cover of my thesis. This work is undeniably ethnographic, inspired by motifs on a Ngeende dance skirt from the Kuba region. It has a distinct composition of a few lines with subtle color transitions between them. The design on a shoowa was increasingly distorted in a work from 1990: Changing pattern with relief I 1990, 100x100cm (Fig.3). After this, the influence of ethnographic art as a source of inspiration for shapes and patterns was less direct. However, several basic ethnographic influences remained: the use of various characters (letters) in all kinds of shapes, the use of repetitions, and the color scheme of mostly soft earthy colors. After 1994, I also used the so-called acrylic/gum arabic rinsing technique which means that acrylic color surfaces do not look new or homogeneous, but rather "worn" or "marked", suggesting that they have aged, like color surfaces in ethnographic objects.
           </p>
           
-          <div className="mb-12">
-            <div className="relative aspect-[1/1] shadow-xl mb-4">
+          <div className="float-left mr-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/Large abstract Artworks 1990 - 20/Changing pattern with relief I 1990, 100 x 100 cm.jpg"
                 alt="Changing pattern with relief I 1990, 100 x 100 cm"
-                fill
+                width={280}
+                height={280}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-muted text-center">
@@ -164,24 +164,32 @@ export default function InterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[1/1] shadow-xl mb-4">
-              <Image 
-                src="/Old stock paper Artworks 2005 - 20/Les Tramways katerino 2013, 40 x 50 cm.jpg"
-                alt="Les Tramways d'Iékaterinoslaw 2013, 40 x 50 cm"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
-              />
+<div className="flex flex-col md:flex-row gap-8 mb-10">
+            <div className="max-w-xl mx-auto">
+              <div className="mb-2">
+                <Image 
+                  src="/Old stock paper Artworks 2005 - 20/Les Tramways katerino 2013, 40 x 50 cm.jpg"
+                  alt="Les Tramways d'Iékaterinoslaw 2013, 40 x 50 cm"
+                  width={550}
+                  height={688}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <p className="text-sm text-text-muted text-center">
+                Les Tramways d'Iékaterinoslaw 2013, 40 x 50 cm
+              </p>
             </div>
-            <p className="text-sm text-text-muted text-center">
-              Les Tramways d'Iékaterinoslaw 2013, 40 x 50 cm<br/>
-              Old stock paper certificates from 1897 on canvas, acrylic with gum Arabic, bark pieces off an Italian pine tree, collected in Montescudaio, Tuscany.
-            </p>
-            <p className="text-sm mt-4">
-              The red plane division in the center is based on the chips of Pinus bark I found. Other shapes of bark were used around the center pane. The red plane division looks rather 'ethnographic', although it was not a conscious attempt. The bark pieces in the outer part seem to lead a life of their own, as if they are circling round the inner part. In the series of artworks consisting of old stock share certificates, the outer part was usually intended as the decorative finish to the artwork, but in both this work and the work above, the outer parts seem to be competing with the inner parts. There aren't any real connections with ethnographic art, and yet this work has an ethnographic aura due to the color scheme, the wooden bark pieces and the shapes.
-              This work shows how new shapes emerge in addition to the original shapes if you focus on the interspaces. Consciously or subconsciously, these 'residual shapes' contribute to our appreciation of the work. We see the same in many Oceanian shields.
-            </p>
+            
+            <div>
+              <p className="text-sm mb-4">
+                Old stock paper certificates from 1897 on canvas, acrylic with gum Arabic, bark pieces off an Italian pine tree, collected in Montescudaio, Tuscany.
+              </p>
+              <p className="text-sm">
+                The red plane division in the center is based on the chips of Pinus bark I found. Other shapes of bark were used around the center pane. The red plane division looks rather 'ethnographic', although it was not a conscious attempt. The bark pieces in the outer part seem to lead a life of their own, as if they are circling round the inner part. In the series of artworks consisting of old stock share certificates, the outer part was usually intended as the decorative finish to the artwork, but in both this work and the work above, the outer parts seem to be competing with the inner parts. There aren't any real connections with ethnographic art, and yet this work has an ethnographic aura due to the color scheme, the wooden bark pieces and the shapes.
+                This work shows how new shapes emerge in addition to the original shapes if you focus on the interspaces. Consciously or subconsciously, these 'residual shapes' contribute to our appreciation of the work. We see the same in many Oceanian shields.
+              </p>
+            </div>
           </div>
           
           <div className="mb-8">
@@ -190,19 +198,19 @@ export default function InterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[3/4] shadow-xl mb-4">
+          <div className="float-right ml-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/Large abstract Artworks 1990 - 20/Ancient hand writing 1997, 42 x 30 cm.png"
                 alt="Ancient hand writing 1997, 42 x 30 cm"
-                fill
+                width={240}
+                height={320}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
-            <p className="text-sm text-text-muted text-center">
+            <p className="text-sm text-text-muted">
               Fig. 4 – Ancient hand-writing 1997, 42 x 30 cm. Acryl/Arabic gum / modeling paste on carton.<br/>
-              The irregularity of subtracting the acryl perfectly fits to this ancient handwriting. After some research performed after 17 years of making this artwork, it appears that that this word text is part of an old Samaritan handwriting from the 13th century BC. The text part refers to Genesis 21:4-14. The manuscript is kept in the Chester Beaty Library in Dublin.
+              The irregularity of subtracting the acryl perfectly fits to this ancient handwriting. After some research performed after 17 years of making this artwork, it appears that that this word text is part of an old Samaritan handwriting from the 13th century BC.
             </p>
           </div>
           
@@ -214,19 +222,19 @@ export default function InterviewPage() {
             Other influences are the beautiful patterns in nature, such as the wonderful pigmentation patterns of tropical seashells, for example Oliva porphyria L. These patterns are described by the researcher Hans Meinhardt [Lit.3]. It is interesting that patterns such as those of tropical seashells are not part of the ethnographic cultural expressions of indigenous Oceanic peoples. Apparently, Westerners (see Fig. 5) see them differently than indigenous people, and Oceanic inhabitants are less inclined to be inspired by beautiful natural designs, although we might have expected otherwise. The wealth of well-known and unknown manuscripts from ancient cultures have been an additional source of inspiration, and of course other artists' works can also be influential, at least if they also have an 'ethnographic feel'.
           </p>
           
-          <div className="mb-12">
-            <div className="relative aspect-[3/4] shadow-xl mb-4">
+          <div className="float-left mr-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/Large abstract Artworks 1990 - 20/Division of the plane no. II 1997, 58 x 42 cm.png"
                 alt="Division of the plane no. II 1997, 58 x 42 cm"
-                fill
+                width={240}
+                height={320}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
-            <p className="text-sm text-text-muted text-center">
+            <p className="text-sm text-text-muted">
               Fig. 5 – Division of the plane no. II 1997, 58 x 42 cm. Acryl/Arabic gum on paper.<br/>
-              The subtraction treatment with wet textiles adds an additional value to the surprising patterns of the black lines and smaller red patterns.
+              The subtraction treatment with wet textiles adds value to the surprising patterns of the black lines and smaller red patterns.
             </p>
           </div>
           
@@ -242,23 +250,31 @@ export default function InterviewPage() {
             Furthermore, my most recent work (shown in the opening photo with the artist), 100x100cm was created between September and December 2014. Once again it is closely related to Asmat shields: I used natural material (bark pieces that had fallen off Pinus Pinacea trees in Tuscany), an almost identical simple color scheme (white-black-brown to ocher, with an additional orange red hue in my work), and with a strong relief. Of course, my work is completely abstract, whereas Asmat shields are about stylized symbolic representations. I think the beautiful Mimika shield next to it should however be considered as an entirely abstract art. Coincidence arising from the irregular shapes of bark pieces is important in my work. In Asmat patterns coincidence hardly exists: their patterns are passed on from generation to generation. It would be interesting to see how Asmat and Mimika woodcutters would respond to my work.
           </p>
           
-          <div className="mb-12">
-            <div className="relative aspect-[1/1] shadow-xl mb-4">
-              <Image 
-                src="/Old stock paper Artworks 2005 - 20/Les Tramways de Kiew 2013, 40 x 50 cm.jpg"
-                alt="Les Tramways de Kiew 2013, 40 x 50 cm"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
-              />
+<div className="flex flex-col md:flex-row gap-8 mb-12">
+            <div className="max-w-xl mx-auto">
+              <div className="mb-2">
+                <Image 
+                  src="/Old stock paper Artworks 2005 - 20/Les Tramways de Kiew 2013, 40 x 50 cm.jpg"
+                  alt="Les Tramways de Kiew 2013, 40 x 50 cm"
+                  width={550}
+                  height={688}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <p className="text-sm text-text-muted text-center">
+                Les Tramways de Kiew 2013, 40 x 50 cm
+              </p>
             </div>
-            <p className="text-sm text-text-muted text-center">
-              Les Tramways de Kiew 2013, 40 x 50 cm<br/>
-              Old stock paper certificates from 1905 on canvas, acrylic with gum arabic.
-            </p>
-            <p className="text-sm mt-4">
-              This is an example of recent work with many symbols and signs, and much repetition. In Africa and Oceania repetition is standard in any form of art, such as music, stories, visual arts, dance (with masks). The ordering of the symbols and signs shows an irregular regularity. Symmetrical, but not quite: it is a little trick applied by many indigenous artists in Oceania and Africa. They know that too much regularity is predictable and therefore boring.
-            </p>
+            
+            <div>
+              <p className="text-sm mb-4">
+                Old stock paper certificates from 1905 on canvas, acrylic with gum arabic.
+              </p>
+              <p className="text-sm">
+                This is an example of recent work with many symbols and signs, and much repetition. In Africa and Oceania repetition is standard in any form of art, such as music, stories, visual arts, dance (with masks). The ordering of the symbols and signs shows an irregular regularity. Symmetrical, but not quite: it is a little trick applied by many indigenous artists in Oceania and Africa. They know that too much regularity is predictable and therefore boring.
+              </p>
+            </div>
           </div>
           
           <p>
@@ -283,14 +299,14 @@ export default function InterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[3/4] shadow-xl mb-4">
+          <div className="float-right ml-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/Interviuw/ZEB_0079.jpg"
                 alt="Polychroome mask from the Ituri wood"
-                fill
+                width={240}
+                height={320}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-muted text-center">
@@ -312,14 +328,14 @@ export default function InterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[3/4] shadow-xl mb-4">
+          <div className="float-left mr-6 mb-6 max-w-xs">
+            <div className="mb-2">
               <Image 
                 src="/Interviuw/de-etnografische-invloed-kwam-via-paul-klee-max-ernst-interview-met-jaap-goedemoed-8-638.png"
                 alt="Mbuti tapas from the Ituri wood in Eastern Congo"
-                fill
+                width={240}
+                height={320}
                 className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
               />
             </div>
             <p className="text-sm text-text-muted text-center">
@@ -347,14 +363,14 @@ export default function InterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[4/3] shadow-xl mb-4">
+          <div className="mb-10 max-w-md mx-auto">
+            <div className="mb-2">
               <Image 
                 src="/images/taxation-glerum-1991/1989_Nov_Chiapas_Yaxchilan_07b.jpg"
                 alt="Maya ruins and at the foreground stele in Yatchilan, Mexico, december 1989"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
+                width={400}
+                height={300}
+                className="object-contain mx-auto"
               />
             </div>
             <p className="text-sm text-text-muted text-center">
@@ -372,23 +388,30 @@ export default function InterviewPage() {
             </p>
           </div>
           
-          <div className="mb-12">
-            <div className="relative aspect-[1/1] shadow-xl mb-4">
-              <Image 
-                src="/Large abstract Artworks 1990 - 20/Composition 2014, 100 x 100 cm (2).jpg"
-                alt="Composition 2014, 100 x 100 cm"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 75vw"
-              />
+          <div className="flex flex-row gap-8 mb-10">
+            <div className="max-w-sm">
+              <div className="mb-2">
+                <Image 
+                  src="/Large abstract Artworks 1990 - 20/Composition 2014, 100 x 100 cm (2).jpg"
+                  alt="Composition 2014, 100 x 100 cm"
+                  width={350}
+                  height={350}
+                  className="object-contain mx-auto"
+                />
+              </div>
+              <p className="text-sm text-text-muted text-center">
+                Composition 2014, 100 x 100 cm
+              </p>
             </div>
-            <p className="text-sm text-text-muted text-center">
-              Composition 2014, 100 x 100 cm<br/>
-              3D artwork with pieces of Pinus Pinacea bark ('umbrella pine') from Tuscany.
-            </p>
-            <p className="text-sm mt-4">
-              This time the bark pieces have a light orange brown color. One of the bright orange shapes was an original chip of bark off the Pinus tree with this kind of 'eye'. It is still possible to identify this piece by its grain structure. All the other bright orange pieces were copied and cut out of cardboard. It has created a strong sense of rhythm between the tree bark structures and the smaller shapes in bright orange. When taking photos after 11 am as sunlight falls diagonally and partly across the artwork, the artefact comes to life. The bark pieces in the sunlit part have much more depth and seem to be jumping off the flat surface, and the white background (titanium acrylic paint mixed with sand) emanates a brilliant white.
-            </p>
+            
+            <div>
+              <p className="text-sm mb-4">
+                3D artwork with pieces of Pinus Pinacea bark ('umbrella pine') from Tuscany.
+              </p>
+              <p className="text-sm">
+                This time the bark pieces have a light orange brown color. One of the bright orange shapes was an original chip of bark off the Pinus tree with this kind of 'eye'. It is still possible to identify this piece by its grain structure. All the other bright orange pieces were copied and cut out of cardboard. It has created a strong sense of rhythm between the tree bark structures and the smaller shapes in bright orange. When taking photos after 11 am as sunlight falls diagonally and partly across the artwork, the artefact comes to life. The bark pieces in the sunlit part have much more depth and seem to be jumping off the flat surface, and the white background (titanium acrylic paint mixed with sand) emanates a brilliant white.
+              </p>
+            </div>
           </div>
           
           <h3 className="mt-16 mb-4">Postscript</h3>
@@ -396,33 +419,33 @@ export default function InterviewPage() {
             At the time of the interview in 2015, there was much discussion about ethnographic influences that might have shaped certain artworks, including the work Changing pattern with opening I 1990, 90x95cm (Fig.2) from 1990. At the time, I was unable to illustrate this influence with an attractive sample of woven raffia from the Kuba region, and the influence was dispelled in a few words. However, 28 years after creating the artwork, I was surfing on the web and noticed this attractive sample on the site of an ethnographic art dealer in San Francisco! The connection and source of inspiration are obvious; I knew I had seen these specific shapes before.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
-            <div>
-              <div className="relative aspect-square shadow-xl mb-4">
+          <div className="flex flex-wrap justify-center gap-6 my-8">
+            <div className="w-64">
+              <div className="mb-2">
                 <Image 
-                  src="/2021/04/Detail-of-Kuba-Noblewomans-Skirt-Bushoong-Group-DR-Congo-Early-20th-century-Raffia-palm-fiber-applique-and-embroidery-89×482-cm-300x300-1.jpg"
+                  src="/2021/04/KubaNoblewoman.jpg"
                   alt="Detail of Kuba Noblewoman's Skirt, Bushoong Group, DR Congo, Early 20th century"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={250}
+                  height={250}
+                  className="object-contain mx-auto"
                 />
               </div>
-              <p className="text-sm text-text-muted text-center">
-                Detail of Kuba Noblewoman's Skirt, Bushoong Group, DR Congo, Early 20th century, Raffia palm fiber, appliqué and embroidery, 89×482 cm
+              <p className="text-xs text-text-muted text-center">
+                Detail of Kuba Noblewoman's Skirt, Bushoong Group, DR Congo, Early 20th century
               </p>
             </div>
             
-            <div>
-              <div className="relative aspect-square shadow-xl mb-4">
+            <div className="w-64">
+              <div className="mb-2">
                 <Image 
                   src="/2018/12/Changing-pattern-with-opening-I-1990-90-x-95-cm-768x729.jpg"
                   alt="Changing pattern with opening I 1990, 90 x 95 cm"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={250}
+                  height={250}
+                  className="object-contain mx-auto"
                 />
               </div>
-              <p className="text-sm text-text-muted text-center">
+              <p className="text-xs text-text-muted text-center">
                 Changing pattern with opening I 1990, 90 x 95 cm
               </p>
             </div>

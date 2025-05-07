@@ -78,28 +78,34 @@ export default function WelcomePage() {
             He was a keen and valued student during drawing lessons but only began painting on canvas seriously after finishing his studies. These were figurative paintings, first in oils and then in acrylics. Characteristic of these first steps are canvases with a flat scenery, painted in 1984 (1), and with a deep perspective, painted in 1985 (2).
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
-            <div className="flex flex-col items-center">
-              <div className="relative aspect-square w-full mb-4">
-                <Image 
-                  src="/Figurative Artworks 1980 -1989/Egyptian scene, flat 1984, 120 x 85 cm.jpg" 
-                  alt="1984 - Flat scenery" 
-                  fill
-                  className="object-cover"
-                />
+          <div className="flex flex-wrap my-8 gap-6 justify-center">
+            <div className="float-left mr-6 mb-4 w-48 md:w-64">
+              <div className="flex flex-col">
+                <div className="relative mb-2">
+                  <Image 
+                    src="/Figurative Artworks 1980 -1989/Egyptian scene, flat 1984, 120 x 85 cm.jpg" 
+                    alt="1984 - Flat scenery" 
+                    width={250}
+                    height={176}
+                    className="object-cover border border-border rounded"
+                  />
+                </div>
+                <p className="text-sm text-center text-text-muted">1</p>
               </div>
-              <p className="text-sm text-center text-text-muted">1</p>
             </div>
-            <div className="flex flex-col items-center">
-              <div className="relative aspect-square w-full mb-4">
-                <Image 
-                  src="/Figurative Artworks 1980 -1989/Egyptian scene, with depth 1985, 125 x 90 cm.jpg" 
-                  alt="1985 - Deep perspective" 
-                  fill
-                  className="object-cover"
-                />
+            <div className="float-right ml-6 mb-4 w-48 md:w-64">
+              <div className="flex flex-col">
+                <div className="relative mb-2">
+                  <Image 
+                    src="/Figurative Artworks 1980 -1989/Egyptian scene, with depth 1985, 125 x 90 cm.jpg" 
+                    alt="1985 - Deep perspective" 
+                    width={250}
+                    height={180}
+                    className="object-cover border border-border rounded"
+                  />
+                </div>
+                <p className="text-sm text-center text-text-muted">2</p>
               </div>
-              <p className="text-sm text-center text-text-muted">2</p>
             </div>
           </div>
           
@@ -109,20 +115,15 @@ export default function WelcomePage() {
           
           <h3 className="text-xl md:text-2xl font-serif mb-4 mt-8">Turning point</h3>
           
-          <p>
-            As a result of a process that started in earlier years, 1990 was perhaps a turning point in Jaap's artistic development. His work demonstrates less symbolism and the figurative themes are replaced by abstract images and strong attention to detail. These elements still define and characterize "a typical Goedemoed".
-            Regarding the wooden plank (60x200cm)(3) from 1990, partially covered with linen tape, once again the influence of Escher appears: lower and upper side reveal identical structures, a development of changing patterns which return to their original shape, forming a metamorphosis. In this work ethnographic influences can be observed for the first time, e.g. emphasizing of the patina of the wood. Jaap finds much inspiration in ethnic art, which he has collected fervently since settling in Amsterdam.
-          </p>
-          
-          <div className="my-8 flex justify-center">
-            <div className="flex flex-col items-center max-w-2xl">
-              <div className="relative w-full h-[400px] mb-4">
+          <div className="float-left mr-6 mb-6 w-full md:w-80 lg:w-96">
+            <div className="flex flex-col">
+              <div className="relative mb-2">
                 <Image 
                   src="/Large abstract Artworks 1990 - 20/Changing tiling on a wooden plank 1990, 60 x 200 cm.png" 
                   alt="Wooden plank (60x200cm) from 1990" 
-                  width={600}
-                  height={200}
-                  className="mx-auto h-full w-auto"
+                  width={380}
+                  height={126}
+                  className="border border-border rounded"
                 />
               </div>
               <p className="text-sm text-center text-text-muted">3</p>
@@ -130,20 +131,25 @@ export default function WelcomePage() {
           </div>
           
           <p>
+            As a result of a process that started in earlier years, 1990 was perhaps a turning point in Jaap's artistic development. His work demonstrates less symbolism and the figurative themes are replaced by abstract images and strong attention to detail. These elements still define and characterize "a typical Goedemoed".
+            Regarding the wooden plank (60x200cm)(3) from 1990, partially covered with linen tape, once again the influence of Escher appears: lower and upper side reveal identical structures, a development of changing patterns which return to their original shape, forming a metamorphosis. In this work ethnographic influences can be observed for the first time, e.g. emphasizing of the patina of the wood. Jaap finds much inspiration in ethnic art, which he has collected fervently since settling in Amsterdam.
+          </p>
+          
+          <p>
             The colors and geometric patterns of the dance shawls and garments of the central Kuba Kingdom in Africa are an important source of inspiration as in Changing pattern with opening I (1990) (4), which is based on a fragment of a Ngongo woman's dance shawl.
             That year, the artist used this image for the cover of his thesis. In these and later paintings, Goedemoed has been guided by shapes inspired by the human spirit, like the African patterns, and those generated by computer. For this theme, Jaap is indebted to Douglas R. Hofstadter, author of Gödel, Escher, Bach. Having a precise mind, Goedemoed is fascinated by this book and Metamagical Themas by the same author.
             This brought him to computer-generated patterns and subtle deformations and transformations. The mathematical orders and theirvariations are features of his later works.
           </p>
           
-          <div className="my-8 flex justify-center">
-            <div className="flex flex-col items-center max-w-2xl">
-              <div className="relative w-full h-[400px] mb-4">
+          <div className="float-right ml-6 mb-6 w-48 md:w-56">
+            <div className="flex flex-col">
+              <div className="relative mb-2">
                 <Image 
                   src="/Large abstract Artworks 1990 - 20/Changing pattern with opening I 1990, 90 x 95 cm.jpg" 
                   alt="Changing pattern with opening I (1990)" 
-                  width={400}
-                  height={400}
-                  className="mx-auto h-full w-auto"
+                  width={220}
+                  height={232}
+                  className="border border-border rounded"
                 />
               </div>
               <p className="text-sm text-center text-text-muted">4</p>

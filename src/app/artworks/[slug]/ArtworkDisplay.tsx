@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -31,10 +31,11 @@ const ArtworkDisplay = ({
   currentIndex, 
   totalCount 
 }: ArtworkDisplayProps) => {
+  const [showDescription, setShowDescription] = useState(false);
   return (
     <main className="bg-black">
       {/* Artwork Viewer */}
-      <div className="h-screen w-full relative flex items-center justify-center">
+      <div className="min-h-screen w-full relative">
         {/* Back button with subtle background */}
         <div className="absolute top-6 left-6 z-20 bg-black/30 backdrop-blur-sm rounded-full">
           <Link 
@@ -94,8 +95,8 @@ const ArtworkDisplay = ({
         </div>
         
         {/* Main artwork image with fullscreen capability */}
-        <div className="w-full h-full flex items-center justify-center p-4 md:p-12">
-          <div className="relative w-full h-full max-w-5xl mx-auto">
+        <div className="w-full pt-16 flex items-center justify-center p-4 md:p-12">
+          <div className="relative w-full aspect-square md:aspect-auto md:h-[70vh] max-w-5xl mx-auto">
             <FullscreenImageViewer 
               src={artwork.imagePath} 
               alt={artwork.title} 
@@ -103,22 +104,36 @@ const ArtworkDisplay = ({
           </div>
         </div>
         
-        {/* Bottom information panel with gradient background */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/80 to-transparent pt-20 pb-6 px-6">
-          <div className="container-wide">
-            <div className="md:flex md:items-end md:justify-between">
+        {/* Artwork information placed below the image */}
+        <div className="container-wide pt-6 pb-8 px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between">
               <div className="md:max-w-2xl">
                 <div className="mb-1 text-sm text-[#d4af37]">{artwork.year}</div>
                 <h1 className="text-2xl md:text-4xl font-serif text-white mb-2">{artwork.title}</h1>
                 <div className="text-white/70 mb-4">
                   {artwork.medium} • {artwork.dimensions}
                 </div>
-                <p className="text-white/80 md:text-lg">{artwork.description}</p>
+                
+                <button 
+                  onClick={() => setShowDescription(!showDescription)}
+                  className="px-4 py-2 bg-[#1a1a1a] border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-colors rounded-md mb-4"
+                >
+                  {showDescription ? 'Hide Description' : 'Show Description'}
+                </button>
+                
+                {showDescription && (
+                  <div className="mt-6 animate-fade-in">
+                    <p className="text-white/90 text-base md:text-lg max-w-3xl leading-relaxed py-6 border-t border-b border-white/10">
+                      {artwork.description}
+                    </p>
+                  </div>
+                )}
               </div>
               
-              <div className="hidden md:block">
+              <div className="mt-4 md:mt-0">
                 {prevArtwork && nextArtwork && (
-                  <div className="text-white/60 text-sm mt-4">
+                  <div className="text-white/60 text-sm">
                     <span>{currentIndex + 1}</span>
                     <span className="mx-2">/</span>
                     <span>{totalCount}</span>

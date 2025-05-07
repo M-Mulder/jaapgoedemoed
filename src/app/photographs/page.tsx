@@ -1,5 +1,4 @@
-import { photographs } from "@/lib/placeholder-data";
-import PhotographCard from "@/components/PhotographCard";
+import React from "react";
 
 export const metadata = {
   title: 'Photographs | Jaap Goedemoed',
@@ -24,17 +23,24 @@ export default function PhotographsPage() {
         </div>
       </div>
       
-      {/* Photographs Gallery Grid - slightly wider than standard container */}
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {photographs.map((photograph) => (
-            <PhotographCard key={photograph.id} photograph={photograph} />
-          ))}
-        </div>
-        
-        {/* Note: In a real implementation, pagination would be added here */}
-        <div className="mt-16 text-center text-text-muted">
-          <p>Showing {photographs.length} photographs</p>
+      {/* Work in Progress Content */}
+      <div className="container-narrow py-24 flex flex-col items-center justify-center">
+        <div className="bg-yellow-600 text-white p-8 rounded-lg max-w-2xl mx-auto shadow-lg">
+          <div className="flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <h2 className="text-2xl font-bold">Work in Progress</h2>
+          </div>
+          
+          <p className="text-lg mb-4 text-center">
+            This section of the website is currently under development.
+          </p>
+          
+          <p className="text-center">
+            We're working on organizing and presenting Jaap Goedemoed's photography collection. 
+            Please check back soon to explore this upcoming section.
+          </p>
         </div>
       </div>
     </div>

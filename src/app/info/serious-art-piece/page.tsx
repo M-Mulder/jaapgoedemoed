@@ -82,19 +82,25 @@ const SeriousArtPiecePage = () => {
 
       <p>I had only recently taken up painting again and I was still quite a novice. I did not yet have my own style and was not quite sure of the purpose of my painting. I was rather guileless and believed that my paintings should exude a ‘strong message’: ‘we had had enough of all that woolly art!’ I hung several paintings with strong messages, or should we say ‘shocking messages,’ from the 1980s on the walls of my beautiful studio. At the time I did not realize that a brazen message that sticks out a mile does not necessarily support the artwork.</p>
 
-      {artworkReachingLord && (
-        <figure className="my-6">
-          <Image src={artworkReachingLord.imagePath} alt={artworkReachingLord.alt} width={600} height={600} className="mx-auto" />
-          <figcaption className="text-center text-sm mt-2">{artworkReachingLord.year} {artworkReachingLord.title} – {artworkReachingLord.medium}, {artworkReachingLord.dimensions}</figcaption>
-        </figure>
-      )}
+      <div className="flex flex-wrap justify-center gap-6 my-8">
+        {artworkReachingLord && (
+          <figure className="w-64 md:w-72 mb-4">
+            <div className="border border-gray-300 rounded shadow-sm overflow-hidden mb-2">
+              <Image src={artworkReachingLord.imagePath} alt={artworkReachingLord.alt} width={300} height={300} className="mx-auto" />
+            </div>
+            <figcaption className="text-center text-sm">{artworkReachingLord.year} {artworkReachingLord.title} – {artworkReachingLord.medium}, {artworkReachingLord.dimensions}</figcaption>
+          </figure>
+        )}
 
-      {artworkHungryBridegroom && (
-        <figure className="my-6">
-          <Image src={artworkHungryBridegroom.imagePath} alt={artworkHungryBridegroom.alt} width={600} height={600} className="mx-auto" />
-          <figcaption className="text-center text-sm mt-2">{artworkHungryBridegroom.year} {artworkHungryBridegroom.title} – {artworkHungryBridegroom.medium} {artworkHungryBridegroom.dimensions}</figcaption>
-        </figure>
-      )}
+        {artworkHungryBridegroom && (
+          <figure className="w-64 md:w-72 mb-4">
+            <div className="border border-gray-300 rounded shadow-sm overflow-hidden mb-2">
+              <Image src={artworkHungryBridegroom.imagePath} alt={artworkHungryBridegroom.alt} width={300} height={300} className="mx-auto" />
+            </div>
+            <figcaption className="text-center text-sm">{artworkHungryBridegroom.year} {artworkHungryBridegroom.title} – {artworkHungryBridegroom.medium} {artworkHungryBridegroom.dimensions}</figcaption>
+          </figure>
+        )}
+      </div>
 
       <p>Looking back, I realize that the twenty-four year old Jaap was out to shock the socks off his audience. The painting on the left shows Ernie (in the children’s programme Sesame Street) who suits the action to the word in the biblical text: “But Jesus called the children to Him and said, let the little children come to me, and do not hinder them, for the kingdom of God belongs to such as these (Luke 18:16). Ernie depicts the artist’s rather cynical religious experience. The scene in the background was taken from ten-year old Jaap’s Sunday school booklet; I was sent to Sunday school every week to learn about the Bible. Of course, this was great for my parents, because it took me off their hands for a couple of hours. Religious education did not have much effect: when I became an adolescent, I unwaveringly decided that religion was a figment of the mind, based on a human need to control the fear inherent to life. It does not offer consolation to people who are not interested in such fantasies; throughout the ages, religion has proved to be incapable of reducing worldwide acts of terror. Religion does not have a positive influence on man.</p>
 
@@ -111,9 +117,11 @@ const SeriousArtPiecePage = () => {
       <p>Very soon the painting ‘Mother wins’ was given a permanent place in my new home, and it has not been moved for 34 years. After all those years the painting still fascinates me, and I have never regretted the hasty purchase. This piece of art really appeals to me because it not only shows the typical jagged unpredictable Lucebert forms of heads and bodies, in black and dark purple outlines, but it also has many soft pastel shades.</p>
 
       {artworkMotherWins && (
-        <figure className="my-6">
-          <Image src={artworkMotherWins.imagePath} alt={artworkMotherWins.alt} width={600} height={700} className="mx-auto" /> {/* Adjusted height slightly based on image aspect */}
-          <figcaption className="text-center text-sm mt-2">{artworkMotherWins.title} {artworkMotherWins.year}, {artworkMotherWins.medium}, {artworkMotherWins.dimensions}</figcaption>
+        <figure className="float-right ml-6 mb-6 w-64 md:w-72">
+          <div className="border border-gray-300 rounded shadow-sm overflow-hidden mb-2">
+            <Image src={artworkMotherWins.imagePath} alt={artworkMotherWins.alt} width={350} height={400} className="mx-auto" />
+          </div>
+          <figcaption className="text-center text-sm">{artworkMotherWins.title} {artworkMotherWins.year}, {artworkMotherWins.medium}, {artworkMotherWins.dimensions}</figcaption>
         </figure>
       )}
 
@@ -140,19 +148,25 @@ const SeriousArtPiecePage = () => {
 
       <p>From 1990 to 1996, I collected many works by another artist well-known to Lucebert. In the early 1950s they would meet in the café frequented by the Cobra artists (Café Eijlders in Amsterdam), they became good friends and in February 1952 they travelled to Paris together. This artist was the aforementioned Frank Lodeizen, whom I will feature in more detail. Frank had not shared the same degree of success that was enjoyed by Lucebert and the Cobra artists for a variety of reasons. I got to know Frank’s work well and appreciated the beauty and sensitivity of his work from the period between1986 and 1996. And because Frank had not been successful in the art market, I had been able to buy some of his beautiful paintings at very reasonable prices, including 29 unique pieces of art. Later I added 48 reproductive works (etchings, lithographs, prints, lithographs, screen prints). Coincidentally Frank Lodeizen’s early works included two portraits of his friend Lucebert.</p>
 
-      {artworkLucebertWoodcut && (
-        <figure className="my-6">
-          <Image src={artworkLucebertWoodcut.imagePath} alt={artworkLucebertWoodcut.alt} width={400} height={500} className="mx-auto" />
-          <figcaption className="text-center text-sm mt-2">{artworkLucebertWoodcut.year} {artworkLucebertWoodcut.title}</figcaption>
-        </figure>
-      )}
+      <div className="flex flex-wrap justify-center gap-6 my-8">
+        {artworkLucebertWoodcut && (
+          <figure className="w-56 md:w-64 mb-4">
+            <div className="border border-gray-300 rounded shadow-sm overflow-hidden mb-2">
+              <Image src={artworkLucebertWoodcut.imagePath} alt={artworkLucebertWoodcut.alt} width={250} height={320} className="mx-auto" />
+            </div>
+            <figcaption className="text-center text-sm">{artworkLucebertWoodcut.year} {artworkLucebertWoodcut.title}</figcaption>
+          </figure>
+        )}
 
-      {artworkLucebertPaper && (
-        <figure className="my-6">
-          <Image src={artworkLucebertPaper.imagePath} alt={artworkLucebertPaper.alt} width={400} height={500} className="mx-auto" />
-          <figcaption className="text-center text-sm mt-2">{artworkLucebertPaper.year} {artworkLucebertPaper.title} {artworkLucebertPaper.dimensions}</figcaption>
-        </figure>
-      )}
+        {artworkLucebertPaper && (
+          <figure className="w-56 md:w-64 mb-4">
+            <div className="border border-gray-300 rounded shadow-sm overflow-hidden mb-2">
+              <Image src={artworkLucebertPaper.imagePath} alt={artworkLucebertPaper.alt} width={250} height={320} className="mx-auto" />
+            </div>
+            <figcaption className="text-center text-sm">{artworkLucebertPaper.year} {artworkLucebertPaper.title} {artworkLucebertPaper.dimensions}</figcaption>
+          </figure>
+        )}
+      </div>
 
       <p>The portrait on the left is beautiful, consisting of just a few black lines and dots, and some coffee stains, and several touches of brown, and a little dash of blue. And although I don’t know why it is there, it adds interest to the work. The portrait was created on 6 February 1992, and Lucebert had probably lost his hair due to cancer and chemotherapy. Jaap added the portrait to Frank Lodeizen’s best pieces of work and soon it became a feature on my living room wall.</p>
 
@@ -161,9 +175,11 @@ const SeriousArtPiecePage = () => {
       <p>In June 1995 I bought a third piece of art associated with the relationship between Lucebert and Frank Lodeizen. This is the work of art from 1994, Lucebert’s funeral, mixed media on paper, 100x70cm. If you study it closely, you will recognise the random letters of LUCEBERT in the abstract, although the letters B and R are missing. It is a strong piece of work, and it complements the memory of Lucebert, together with the two Lucebert portraits made by Frank Lodeizen.</p>
 
       {artworkLucebertFuneral && (
-        <figure className="my-6">
-          <Image src={artworkLucebertFuneral.imagePath} alt={artworkLucebertFuneral.alt} width={700} height={500} className="mx-auto" />
-          <figcaption className="text-center text-sm mt-2">{artworkLucebertFuneral.year} {artworkLucebertFuneral.title}, {artworkLucebertFuneral.medium}, {artworkLucebertFuneral.dimensions}</figcaption>
+        <figure className="my-8 max-w-lg mx-auto">
+          <div className="border border-gray-300 rounded shadow-sm overflow-hidden mb-2">
+            <Image src={artworkLucebertFuneral.imagePath} alt={artworkLucebertFuneral.alt} width={500} height={350} className="mx-auto" />
+          </div>
+          <figcaption className="text-center text-sm">{artworkLucebertFuneral.year} {artworkLucebertFuneral.title}, {artworkLucebertFuneral.medium}, {artworkLucebertFuneral.dimensions}</figcaption>
         </figure>
       )}
 
@@ -205,4 +221,3 @@ const SeriousArtPiecePage = () => {
 };
 
 export default SeriousArtPiecePage;
-
