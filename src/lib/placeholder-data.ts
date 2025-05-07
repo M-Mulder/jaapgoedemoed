@@ -503,16 +503,6 @@ export const exhibitions: Exhibition[] = [
     endDate: '1997-11-30',
     type: 'group',
     description: 'Group exhibition at Montague Art Gallery, 54 Greene Street, New York.'
-  },
-  {
-    id: '7',
-    title: 'Exhibition',
-    venue: 'Hommage Gallery',
-    location: 'Amsterdam, Netherlands',
-    startDate: '1997-11-16',
-    endDate: '1997-12-20',
-    type: 'group',
-    description: 'Group exhibition at Hommage Gallery, Cornelis Schuytstraat 9, Amsterdam.'
   }
 ];
 
