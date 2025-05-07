@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { Space_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -50,6 +51,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-W4V4V4PCCM"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-W4V4V4PCCM');
+        `}
+      </Script>
       <body
         className={`${manrope.variable} ${playfair.variable} ${spaceMono.variable} min-h-screen flex flex-col text-[#e6e6e6] bg-[#0f0f0f]`}
       >
