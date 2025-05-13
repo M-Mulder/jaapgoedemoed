@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { artworks, Artwork } from "@/lib/simplified-artwork-data"; // Added import
 
 export const metadata = {
   title: 'The Making of Porcupine Artworks (2020-2022) | Jaap Goedemoed',
@@ -307,7 +308,48 @@ export default function PorcupineArtworksPage() {
               Translated from dutch by Rosemary Mitchell-Schuitevoerder.
             </p>
           </div>
-          
+        </div>
+      </div>
+
+      {/* Section for Composition 2025 */}
+      {(() => {
+        const composition2025 = artworks.find(art => art.slug === 'composition-2025');
+        if (!composition2025) return null;
+
+        return (
+          <div className="bg-background py-16">
+            <div className="container-narrow">
+              <h2 className="text-3xl font-serif text-center mb-12 text-text-accent">A New Direction: Composition 2025</h2>
+              <div className="prose prose-invert mx-auto">
+                <p>
+                  Continuing the exploration of three-dimensional forms and intricate material interplay, "Composition 2025" marks a significant evolution, integrating porcupine quills with a diverse array of found objects and artistic tributes.
+                </p>
+                <div className="relative aspect-square my-8 shadow-lg">
+                  <Image 
+                    src={composition2025.imagePath}
+                    alt={composition2025.title}
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 800px"
+                  />
+                </div>
+                <h3 className="text-2xl font-serif mt-8 mb-4">{composition2025.title} ({composition2025.year})</h3>
+                <p><strong>Medium:</strong> {composition2025.medium}</p>
+                <p><strong>Dimensions:</strong> {composition2025.dimensions}</p>
+                <p>{composition2025.description}</p>
+                <div className="mt-8 text-center">
+                  <Link href={`/artworks/${composition2025.slug}`} className="btn-outline">
+                    View Details of Composition 2025
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
+      
+      <div className="bg-background-light py-12"> {/* Ensure consistent background for the final link */}
+        <div className="container-narrow">
           <div className="mt-12 text-center">
             <Link href="/artworks" className="btn">
               Return to Gallery
@@ -318,4 +360,3 @@ export default function PorcupineArtworksPage() {
     </div>
   );
 }
-

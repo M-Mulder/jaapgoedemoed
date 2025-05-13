@@ -73,10 +73,29 @@ const SeriousArtPiecePage = () => {
   const artworkLucebertFuneral = findArtwork('Lucebert’s funeral');
 
   return (
-    <div className="container mx-auto px-4 py-8 prose lg:prose-xl max-w-4xl">
-      <h1>A serious piece of art on my wall</h1>
+    <div className="bg-[#0f0f0f] text-white"> {/* Added bg color to match other info pages */}
+      {/* Hero Section */}
+      <section className="relative h-[40vh] mb-16 overflow-hidden"> {/* Keeping 40vh for now, can adjust if needed */}
+        <Image 
+          src={artworkMotherWins?.imagePath || "/2021/04/Lucebert-1984-ΓÇô-Mother-wins-oil-painting-on-canvas-72x82cm.jpg"} // Fallback just in case
+          alt="Lucebert - Mother wins, a serious piece of art"
+          fill
+          className="object-cover object-center brightness-[0.7]" // Matched object-center and brightness
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/90"></div> {/* Matched gradient */}
+        <div className="container mx-auto relative z-10 h-full flex flex-col justify-center items-center text-center px-4"> {/* Matched container and flex properties */}
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6">A Serious Piece of Art on My Wall</h1> {/* Matched text styling */}
+          <p className="text-white/80 md:text-lg max-w-2xl">
+            Reflections on acquiring a significant artwork by Lucebert and its place among personal collections and artistic influences.
+          </p>
+          <div className="w-20 h-1 bg-[#d4af37] mt-8"></div> {/* Added decorative line */}
+        </div>
+      </section>
 
-      <p>On Saturday 22 February 2020, a feature about my purchase of a first piece of art was published in My favourite item in the Dutch NRC newspaper. I submitted 680 words and some photos, but I had exceeded the word limit of 240 words for this regular feature. Despite some deletions, Gretha Pama, the editor, wrote a good article. I will post the longer version on my website and add several interesting facts about the Dutch artists Lucebert and Frank Lodeizen.</p>
+      <div className="container-narrow mx-auto px-4 py-8 prose lg:prose-xl prose-invert max-w-4xl">
+        {/* Removed original h1, content starts here */}
+        <p>On Saturday 22 February 2020, a feature about my purchase of a first piece of art was published in My favourite item in the Dutch NRC newspaper. I submitted 680 words and some photos, but I had exceeded the word limit of 240 words for this regular feature. Despite some deletions, Gretha Pama, the editor, wrote a good article. I will post the longer version on my website and add several interesting facts about the Dutch artists Lucebert and Frank Lodeizen.</p>
 
       <p>Although I had the third-highest academic grade in my peer group, it took 7.5 years to complete my long uninspiring studies of pharmacy (currently it is a five-year degree course) in the northern student city of Groningen. It was a long way from Amsterdam, and rather parochial in the 1970s. After receiving my degree, I returned to the west of the country, where I hoped I would experience some cultural rejuvenation. I had found a job at a pharmaceutical company between Amsterdam and Haarlem (immediately west of Amsterdam), and I could not have wished for more attractive living quarters in Amsterdam: for one year I was the caretaker of a beautiful floor in an old historic building on the Amstel river, diagonally across from the famous theatre Carré, not far from the sluice gates in the Amstel.</p>
 
@@ -130,6 +149,37 @@ const SeriousArtPiecePage = () => {
       <p>I am not sure about Lucebert’s colour blindness: for example, I love the colours (and the composition) of his gouaches in his beautiful poetry publication Van de maltentige losbol.</p>
 
       <p>The empty wall around Lucebert’s work of art has changed significantly over the past thirty-four years. In the immediate years after the introduction of Lucebert’s work, the wall around the painting, and the mantelpiece were filled with ethnographic objects (masks and statues mainly from Africa), predominantly collected in Amsterdam. I liked the combination of Lucebert’s painting and ethnographic art, and his painting held up well among all the ethnographic busyness.</p>
+
+      <div className="my-12 flex flex-col md:flex-row gap-8 justify-center items-start">
+        <figure className="w-full md:w-1/2">
+          <div className="relative w-full h-72 overflow-hidden rounded-lg shadow-md"> {/* Added h-72 for fixed height */}
+            <Image 
+              src="/Website Assets/Hero Images/Living room Jaap in 1996.jpg" 
+              alt="Living room in 1996 with Lucebert painting and ethnographic art" 
+              fill
+              className="object-cover" 
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <figcaption className="text-center text-sm mt-2 text-text-muted">
+            The Lucebert painting surrounded more and more by ethnographic objects in 1996.
+          </figcaption>
+        </figure>
+        <figure className="w-full md:w-1/2">
+          <div className="relative w-full h-72 overflow-hidden rounded-lg shadow-md"> {/* Added h-72 for fixed height */}
+            <Image 
+              src="/Website Assets/Hero Images/woonkamer 10 juli 2020 IMG_6089.jpg" 
+              alt="Living room in 2020 with Lucebert painting" 
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <figcaption className="text-center text-sm mt-2 text-text-muted">
+            The Lucebert painting in 2020 with few ethnographic objects.
+          </figcaption>
+        </figure>
+      </div>
 
       <p>Apparently Lucebert did not approve of ethnographic art, he would not buy or collect it because he did not want ‘ethnographic art removed from its cultural context’. I did not share his sentiment, my urge to collect was based on my feeling or awareness that all these beautiful cultures and their expressions are disappearing across the world and just to have several of these cultural expressions in my limited living environment gives me great comfort. Unfortunately, ethnography is no longer available in Africa and can now be seen mainly in collections and museums in the West. More than eleven years after hanging up Lucebert’s painting, my wife was sharing the living quarters with me, we had children, and inevitably the ethnographic content in the living room was reduced after we moved it to our upper floors. Only Lucebert could stay, and gradually found himself in a more ‘gentrified’, much emptier living room among many interesting objects.</p>
 
@@ -216,7 +266,8 @@ const SeriousArtPiecePage = () => {
         <figcaption className="text-center text-sm mt-2">At the artist’s home in 1996. Ethnographic influences</figcaption>
       </figure> */}
 
-    </div>
+      </div> {/* This closes the inner container-narrow div */}
+    </div> // This closes the main bg-[#0f0f0f] text-white div
   );
 };
 

@@ -16,25 +16,36 @@ export default function WelcomePage() {
           Welcome at the website of Jaap Goedemoed Artworks!
         </p>
         
+        <figure className="w-1/2 md:w-1/3 float-right ml-6 mb-4 clear-none">
+          <Image
+            src="/Website Assets/Hero Images/The studio - 28 October 2022 at early evening.jpg"
+            alt="The studio - 28 October 2022"
+            width={400} 
+            height={267} // Maintaining 3:2 aspect ratio
+            className="object-cover rounded-lg shadow-md"
+          />
+          <figcaption className="text-sm italic text-right mt-1 text-text-muted">
+            The studio – 28 Oct 2022
+          </figcaption>
+        </figure>
+
         <p>
           In May 2025, the website was updated with new pictures of recent artworks and underwent a thorough technical overhaul. As part of this rebuild using modern technology (Next.js instead of WordPress), the response time for obtaining (enlarged) pictures of artworks has been considerably improved. This change also means you'll experience faster loading times when viewing artwork images and navigating the site. Furthermore, the new technology makes the website more secure and better prepared for future updates.
         </p>
         <p>
           The recent large artworks will be described in more detail at a later stage. In the near future also photographs of the travels of the artist are to be expected.
         </p>
+        
         <p>
           The website jaapgoedemoed.com is becoming more and more unique, I am not aware of the existence of another artist's website revealing so much info on the arising of artworks, the ideas behind these artworks, the treatment of important moments for taking decisions during the making process, and interaction with artworks from other related artists. Also the impact of ethnographic objects and purchased artworks on my own artworks are frankly discussed.
         </p>
-        
         
         <p>
           Thank you for visiting my website!
           It will be highly appreciated if you could leave comments (via the comment button or in the guest book) after your visit.
         </p>
-        
-        <p className="italic text-right">
-          The studio – 28 October 2022 at early evening
-        </p>
+        {/* The paragraph below will ensure the float is cleared before the div ends if content is short */}
+        <div style={{ clear: 'both' }}></div>
       </div>
       
       <div className="border-t border-border my-12 pt-12">
@@ -154,7 +165,7 @@ export default function WelcomePage() {
                       className="object-cover border border-border rounded"
                     />
                   </div>
-                  <p className="text-sm text-center text-text-muted">5, 15</p>
+                  <p className="text-sm text-center text-text-muted">5</p>
                 </div>
               </div>
               {/* Image 6 */}
@@ -199,7 +210,7 @@ export default function WelcomePage() {
                       className="object-cover border border-border rounded"
                     />
                   </div>
-                  <p className="text-sm text-center text-text-muted">8, 12</p>
+                  <p className="text-sm text-center text-text-muted">8</p>
                 </div>
               </div>
               {/* Image 9, 10 */}
@@ -214,19 +225,19 @@ export default function WelcomePage() {
                       className="object-cover border border-border rounded"
                     />
                   </div>
-                  <p className="text-sm text-center text-text-muted">9, 10</p>
+                  <p className="text-sm text-center text-text-muted">9</p>
                 </div>
               </div>
               {/* Image 11 */}
-              <div className="w-48">
+              <div className="w-48 group">
                 <div className="flex flex-col">
-                  <div className="relative mb-2">
+                  <div className="relative mb-2 aspect-square overflow-hidden rounded border border-border">
                     <Image 
                       src="/Large abstract Artworks 1990 - 20/Division of the plane with various elements 1997, 160 x 160 cm.jpg" 
-                      alt="Cigar boxes and prints by other artists (11)" 
-                      width={192}
-                      height={192}
-                      className="object-cover border border-border rounded"
+                      alt="Cigar boxes and prints by other artists (11) - Zoomed Detail" 
+                      fill
+                      className="object-cover transform scale-[2] group-hover:scale-[2.25] transition-transform duration-300"
+                      sizes="(max-width: 640px) 50vw, 192px"
                     />
                   </div>
                   <p className="text-sm text-center text-text-muted">11</p>
@@ -235,7 +246,7 @@ export default function WelcomePage() {
             </div>
           </div>
           <p>
-            The artists made a joint visit to the Tuscan village of Montescudaio for three weeks during the summer of 1994. Goedemoed found old agricultural tax papers complete with seals and stamps in a garbage heap in a backyard. They can be seen, sometimes combined with the batik method, in certain works of that year, for example Tuscan tiling I (Montescudaio) (5, 15). The new technique and use of structural elements do not appear to be a problem for Jaap. In other works, he explores patterns with open (6) and closed (7) structures to which he adds used paper items: fragments of newspapers, old banknotes, Coptic healing scrolls (parchment) (8, 12), Japanese prints (9, 10), cigar boxes (11), handwritten Islamic texts, prints by other artists (11), yellowed and stained materials harmonizing well with the 'washing' gum technique.
+            The artists made a joint visit to the Tuscan village of Montescudaio for three weeks during the summer of 1994. Goedemoed found old agricultural tax papers complete with seals and stamps in a garbage heap in a backyard. They can be seen, sometimes combined with the batik method, in certain works of that year, for example Tuscan tiling I (Montescudaio) (5). The new technique and use of structural elements do not appear to be a problem for Jaap. In other works, he explores patterns with open (6) and closed (7) structures to which he adds used paper items: fragments of newspapers, old banknotes, Coptic healing scrolls (parchment) (8), Japanese prints (9), cigar boxes (11), handwritten Islamic texts, prints by other artists (11), yellowed and stained materials harmonizing well with the 'washing' gum technique.
           </p>
           <div className="clear-both"></div>
 
@@ -246,13 +257,13 @@ export default function WelcomePage() {
               <div className="relative mb-2">
                 <Image 
                   src="/Large abstract Artworks 1990 - 20/Composition with open structure 1999, 150 x 150 cm.jpg" 
-                  alt="Composition with open structure (13, 16)" 
+                  alt="Composition with open structure (13)" 
                   width={250}
                   height={250}
                   className="object-cover border border-border rounded"
                 />
               </div>
-              <p className="text-sm text-center text-text-muted">13, 16</p>
+              <p className="text-sm text-center text-text-muted">13</p>
             </div>
           </div>
           <div className="float-left mr-6 mb-6 w-64">
@@ -270,8 +281,8 @@ export default function WelcomePage() {
             </div>
           </div>
           <p>
-            During the nineties, we see a move towards his first large works, often with spatial divisions. From a distance they are compositions with a strong central focal point, movement or a harmonious whole. Close-up, we see the mathematical precision with which the small spaces are painted and combined with other materials. This development culminated in "Composition with open structure" (150 x 150 cm) (13, 16) in which the artist combines many experiences. The composition is calming without being dull. The separate elements, painted in acrylics and arabic gum, invite the viewer to come closer. And close up, this second layer is fascinating! Jaap enjoys working in these large formats. The planning and the patience necessary to work with these sizes suit him. In this period, we also see a diversity emerge from his work: many things can always be seen in Jaap's work. It may be movement or a color pattern, or possibly unexpected vistas into a second or third layer.
-            A Byzantine saint (9, 10, 14) , a Japanese garden (10), a newspaper photograph (14) of a leader from the Balkan Wars. They don't intrude upon an attentive viewer but form an indispensable part of the overall image.
+            During the nineties, we see a move towards his first large works, often with spatial divisions. From a distance they are compositions with a strong central focal point, movement or a harmonious whole. Close-up, we see the mathematical precision with which the small spaces are painted and combined with other materials. This development culminated in "Composition with open structure" (150 x 150 cm) (13) in which the artist combines many experiences. The composition is calming without being dull. The separate elements, painted in acrylics and arabic gum, invite the viewer to come closer. And close up, this second layer is fascinating! Jaap enjoys working in these large formats. The planning and the patience necessary to work with these sizes suit him. In this period, we also see a diversity emerge from his work: many things can always be seen in Jaap's work. It may be movement or a color pattern, or possibly unexpected vistas into a second or third layer.
+            A Byzantine saint (9), a Japanese garden (9), a newspaper photograph (14) of a leader from the Balkan Wars. They don't intrude upon an attentive viewer but form an indispensable part of the overall image.
             These were inspiring years for the artist and his work demands to be seen. With a substantial degree of confidence, daring and ambition, during a visit to New York Goedemoed succeeded in attracting the interest of the Montague Gallery in Soho where he showed his large multi-colored mosaics at group exhibition in the fall of 1997.
           </p>
           <div className="clear-both"></div>
@@ -312,6 +323,24 @@ export default function WelcomePage() {
           </svg>
         </Link>
       </div>
+
+      {/* Selfie Image Section */}
+      <div className="mt-16 pt-12 border-t border-border">
+        <h2 className="text-2xl md:text-3xl font-serif mb-8 text-accent text-center">A Glimpse from the Artist</h2>
+        <div className="relative w-full max-w-3xl mx-auto aspect-[4/3] overflow-hidden rounded-lg shadow-xl group">
+          <Image
+            src="/Website Assets/Hero Images/Selfie voor nieuw werk 25 april 2025 IMG_6710.jpg"
+            alt="Selfie voor nieuw werk 25 april 2025"
+            fill
+            className="object-cover transform scale-[1.0] group-hover:scale-[1.1] transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 75vw, 66vw"
+          />
+        </div>
+        <p className="text-center italic text-text-muted mt-4">
+          Selfie with a new work in progress - April 25, 2025
+        </p>
+      </div>
+
     </div>
   );
 }

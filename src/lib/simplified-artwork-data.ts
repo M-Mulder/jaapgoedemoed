@@ -46,7 +46,7 @@ export const artworks: Artwork[] = [
     dimensions: '145 x 145 cm',
     imagePath: '/2025/composition_2025_140x145cm.png',
     featured: true,
-    category: 'abstract'
+    category: 'porcupine'
   },
   {
     id: '107',
