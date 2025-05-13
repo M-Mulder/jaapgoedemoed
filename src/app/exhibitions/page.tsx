@@ -95,47 +95,11 @@ export default function ExhibitionsPage() {
         </div>
       </section>
 
-      {/* Atelier Section */}
-      <section className="pt-8 px-8 md:px-12 bg-[#121212] rounded-xl">
-        <div className="mb-12">
-          <h2 className="text-3xl font-medium text-[#f0f0f0] mb-6" style={{fontFamily: "var(--font-playfair), Georgia, serif"}}>
-            {atelierInfo.title}
-          </h2>
-          
-          <div className="prose prose-lg text-[#e6e6e6] mb-8">
-            <p>{atelierInfo.description}</p>
-          </div>
-          
-          <div className="prose prose-lg text-[#e6e6e6] mb-6">
-            <p>{atelierInfo.visitInfo}</p>
-          </div>
-
-          <div className="flex justify-end">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-5 py-2.5 bg-[#d4af37] hover:bg-[#c19b28] text-black font-medium rounded-md transition-colors"
-            >
-              Request a Visit
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                className="ml-2"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </Link>
-          </div>
-        </div>
-        
-        {/* Atelier Images Gallery */}
+      {/* Atelier Impressions Section */}
+      <section className="mt-20">
+        <h2 className="text-3xl font-medium text-[#f0f0f0] mb-8 text-center" style={{fontFamily: "var(--font-playfair), Georgia, serif"}}>
+          Atelier Impressions
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-12">
           {atelierInfo.images.map((image, index) => (
             <div key={image.id} className={`group ${index === 0 || index === 3 || index === 6 ? 'lg:col-span-2' : ''}`}>
@@ -150,8 +114,6 @@ export default function ExhibitionsPage() {
                     "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   }
                 />
-                
-                {/* Hover overlay with caption */}
                 <div className="absolute inset-0 bg-black/60 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="p-4 text-white">{image.caption}</p>
                 </div>

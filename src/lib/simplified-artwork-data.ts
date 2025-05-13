@@ -116,7 +116,7 @@ export const artworks: Artwork[] = [
     description: 'A complex composition exploring the concept of time and aging through varied visual rhythms and textures, creating a meditation on the passage of time.',
     medium: 'Mixed media on canvas',
     dimensions: '113 x 113 cm',
-    imagePath: '/2021/04/Composition-2018-100x100-cm.jpg',
+    imagePath: '/Large abstract Artworks 1990 - 20/2019 Composition 2019 Different speeds of ageing - 2.png',
     featured: false,
     category: 'abstract'
   },
@@ -573,7 +573,7 @@ export const artworks: Artwork[] = [
     description: 'Old stock paper from 1895 on canvas, acrylic paint with Arabic gum. Both inside the stock paper as well as outside the paper, an interesting pentagonal rotating pattern can be observed.',
     medium: 'Old stock paper on canvas, acrylic with Arabic gum',
     dimensions: '50 x 70 cm',
-    imagePath: '/2024/banque_Bulgare_De_Commerce_1895_Roustchouk 2024 50x70cm other_version.png',
+    imagePath: '/2024/Banque_Bulgare_De_Commerce_a_Roustchouk 50x70cm_2024.png',
     featured: true,
     category: 'paper'
   },
@@ -585,7 +585,7 @@ export const artworks: Artwork[] = [
     description: 'Old stock paper from 1895 on canvas, acrylic paint with Arabic gum. On the inside an intriguing pattern is present derived from an Asmat shield. Outside the paper other Asmat patterns are visible, derived from a shield and a canoe model, with additional colored dots.',
     medium: 'Old stock paper on canvas, acrylic with Arabic gum',
     dimensions: '50 x 70 cm',
-    imagePath: '/2024/Banque_Bulgare_De_Commerce_a_Roustchouk 50x70cm_2024.png',
+    imagePath: '/2024/banque_Bulgare_De_Commerce_1895_Roustchouk 2024 50x70cm other_version.png',
     featured: true,
     category: 'paper'
   },
@@ -934,6 +934,30 @@ export const artworks: Artwork[] = [
     medium: 'Mixed media on paper',
     dimensions: '30 x 20 cm',
     imagePath: '/Old stock paper Artworks 2005 - 20/Les tramways de Kiew DMB60 2005, 30 x 20 cm.jpg',
+    featured: false,
+    category: 'paper'
+  },
+  {
+    id: '38',
+    title: 'Loterij mei 1870 met Frank Lodeizen',
+    slug: 'loterij-mei-1870-frank-lodeizen',
+    year: 2021,
+    description: 'Artwork incorporating historical lottery ticket from May 1870, featuring elements related to Frank Lodeizen.',
+    medium: 'Mixed media on paper',
+    dimensions: 'Dimensions not specified',
+    imagePath: '/Old stock paper Artworks 2005 - 20/Loterij mei 1870 met Frank Lodeizen IMG_6772.png',
+    featured: false,
+    category: 'paper'
+  },
+  {
+    id: '39',
+    title: 'Grieks Aandeelkunstwerk Oktober 2022',
+    slug: 'grieks-aandeelkunstwerk-oktober-2022',
+    year: 2022,
+    description: 'Artwork based on a Greek share certificate, created in October 2022.',
+    medium: 'Mixed media on paper',
+    dimensions: 'Dimensions not specified',
+    imagePath: '/Old stock paper Artworks 2005 - 20/Grieks aandeelkunstwerk 1 okt 2022 IMG_6403.png',
     featured: false,
     category: 'paper'
   },

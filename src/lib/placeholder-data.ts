@@ -338,6 +338,30 @@ export const artworks: Artwork[] = [
     featured: false,
     category: 'paper'
   },
+  {
+    id: '38',
+    title: 'Loterij mei 1870 met Frank Lodeizen',
+    slug: 'loterij-mei-1870-frank-lodeizen',
+    year: 1870,
+    description: 'Artwork incorporating historical lottery ticket from May 1870, featuring elements related to Frank Lodeizen.',
+    medium: 'Mixed media on paper',
+    dimensions: 'Dimensions not specified',
+    imagePath: '/Old stock paper Artworks 2005 - 20/Loterij mei 1870 met Frank Lodeizen IMG_6772.png',
+    featured: false,
+    category: 'paper'
+  },
+  {
+    id: '39',
+    title: 'Grieks Aandeelkunstwerk Oktober 2022',
+    slug: 'grieks-aandeelkunstwerk-oktober-2022',
+    year: 2022,
+    description: 'Artwork based on a Greek share certificate, created in October 2022.',
+    medium: 'Mixed media on paper',
+    dimensions: 'Dimensions not specified',
+    imagePath: '/Old stock paper Artworks 2005 - 20/Grieks aandeelkunstwerk 1 okt 2022 IMG_6403.png',
+    featured: false,
+    category: 'paper'
+  },
 
   // Figurative Artworks 1980-1989
   {
