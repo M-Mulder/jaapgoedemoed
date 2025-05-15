@@ -36,6 +36,18 @@ export interface Photograph {
 // Comprehensive Artworks Collection - Using actual file paths from public directory
 export const artworks: Artwork[] = [
 // Abstract Artworks 1990 - Present
+ {
+    id: '107',
+    title: 'Composition 2025',
+    slug: 'composition-2025',
+    year: 2025,
+    description: 'Three-dimensional work with balsa wooded slats on canvas. The main layout is determined by irregular porcupine quills elongated with straw reeds to obtain rectangular shapes. Includes 3 Persian miniatures (19th century), 3 carved wooden panels from Dutch standing watches, 9 original \'Cobra-like\' artworks from Björn T. Hansen (Danish, 1942-2007) and 9 Saul Steinberg landscapes (lithographs, Derriere le Miroir, Maeght Edition 1971). Also features tributes to Kurt Schwitters, Edgar P. Jacobs, Stéphane Heuet, and George Braque, along with Japanese prints, Coptic and Islamic handwritings, Soviet banknotes, a Venetian carnival mask, ethnographic items, fossils, and the artist\'s photographs from various locations.',
+    medium: 'Mixed media with balsa wood slats on canvas',
+    dimensions: '145 x 145 cm',
+    imagePath: '/2025/composition_2025_140x145cm.png',
+    featured: true,
+    category: 'abstract'
+  },
   {
     id: '106',
     title: 'Composition 2025',
@@ -85,6 +97,30 @@ export const artworks: Artwork[] = [
     category: 'porcupine'
   },
   {
+    id: '222',
+    title: 'Porcupine Boogie Woogie II',
+    slug: 'porcupine-boogie-woogie-ii',
+    year: 2022,
+    description: 'A work inspired by the geometric abstraction of Mondrian\'s Boogie Woogie series, reinterpreted through the unique material properties of porcupine quills.',
+    medium: 'Porcupine quills on panel',
+    dimensions: '163 x 163 cm',
+    imagePath: '/2022/03/Composition-2022-Procupine-Boogie-Woogie-II-scaled.jpg',
+    featured: true,
+    category: 'porcupine'
+  },
+  {
+    id: '333',
+    title: 'Porcupine Boogie Woogie I',
+    slug: 'porcupine-boogie-woogie-i',
+    year: 2021,
+    description: 'The first in a series exploring the intersection of Mondrian\'s geometric principles with the textural qualities of porcupine quills, creating a unique tactile and visual experience.',
+    medium: 'Porcupine quills on panel',
+    dimensions: '113 x 113 cm',
+    imagePath: '/2022/03/Porcupine-I-5-March-2021-finale-werk-2048x2039.jpg',
+    featured: true,
+    category: 'abstract'
+  },
+  {
     id: '3',
     title: 'Porcupine Boogie Woogie I',
     slug: 'porcupine-boogie-woogie-i',
@@ -94,7 +130,7 @@ export const artworks: Artwork[] = [
     dimensions: '113 x 113 cm',
     imagePath: '/2022/03/Porcupine-I-5-March-2021-finale-werk-2048x2039.jpg',
     featured: true,
-    category: 'porcupine'
+    category: 'abstract'
   },
   {
     id: '4',
