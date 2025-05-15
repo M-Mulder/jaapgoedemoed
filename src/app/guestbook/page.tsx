@@ -40,16 +40,21 @@ const GuestbookPage = () => {
     setChallenge(generateMathChallenge());
   }, []);
 
+  // State to trigger refetching entries
+  const [refreshKey, setRefreshKey] = useState(0);
+
   // Fetch entries from API
   useEffect(() => {
     const fetchEntries = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('/api/guestbook');
+        // Add a cache-busting query parameter to avoid cached responses
+        const response = await fetch(`/api/guestbook?timestamp=${Date.now()}`);
         if (!response.ok) {
           throw new Error('Failed to fetch entries');
         }
         const data = await response.json();
+        console.log('Fetched entries:', data);
         setEntries(data);
       } catch (err) {
         console.error('Error fetching entries:', err);
@@ -60,7 +65,7 @@ const GuestbookPage = () => {
     };
 
     fetchEntries();
-  }, []);
+  }, [refreshKey]); // Re-fetch when refreshKey changes
 
   // Generate a new challenge when the form is submitted
   const refreshChallenge = () => {
@@ -121,7 +126,10 @@ const GuestbookPage = () => {
       // Show success message
       setSuccess("Thank you for signing the guestbook!");
       
-      // Refresh the page to ensure data is updated with the Next.js cache
+      // Trigger a refresh of the entries by incrementing the refreshKey
+      setRefreshKey(prevKey => prevKey + 1);
+      
+      // Also use Next.js router refresh to ensure any server components are updated
       router.refresh();
       
       // Scroll to the top of entries after submission
