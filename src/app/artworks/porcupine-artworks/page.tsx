@@ -36,13 +36,13 @@ export default function PorcupineArtworksPage() {
             But at the time I had no idea that after around six to seven years I would be creating two artworks in which dashes were to be a significant component. Or rather, dashes in the form of three-dimensional quills, so not a flat line on paper, but something quite physical and tangible, which makes a huge difference. You cannot accuse my style of flat faux art which I accredited to Jasper John: I am not aware of any works of art by other artists that contain arrangements of porcupine quills as applied to my applications. In fact, Marian Bijlenga used porcupine quills to create very loose, graceful compositions, in contrast to my rather densely packed quills and tight structures.
           </p>
 
-          <div className="relative aspect-square my-8 shadow-lg">
+          <div className="relative aspect-square my-8 shadow-lg max-w-md mx-auto">
             <Image 
               src="/2022/03/Porcupine-I-17-Nov-2020.jpg"
               alt="The making of the first porcupine artwork"
               fill
               className="object-cover rounded-md"
-              sizes="(max-width: 768px) 100vw, 800px"
+              sizes="(max-width: 768px) 100vw, 500px"
             />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
               <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">

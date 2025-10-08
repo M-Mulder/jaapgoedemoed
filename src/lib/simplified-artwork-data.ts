@@ -97,30 +97,6 @@ export const artworks: Artwork[] = [
     category: 'porcupine'
   },
   {
-    id: '222',
-    title: 'Porcupine Boogie Woogie II',
-    slug: 'porcupine-boogie-woogie-ii',
-    year: 2022,
-    description: 'A work inspired by the geometric abstraction of Mondrian\'s Boogie Woogie series, reinterpreted through the unique material properties of porcupine quills.',
-    medium: 'Porcupine quills on panel',
-    dimensions: '163 x 163 cm',
-    imagePath: '/2022/03/Composition-2022-Procupine-Boogie-Woogie-II-scaled.jpg',
-    featured: true,
-    category: 'porcupine'
-  },
-  {
-    id: '333',
-    title: 'Porcupine Boogie Woogie I',
-    slug: 'porcupine-boogie-woogie-i',
-    year: 2021,
-    description: 'The first in a series exploring the intersection of Mondrian\'s geometric principles with the textural qualities of porcupine quills, creating a unique tactile and visual experience.',
-    medium: 'Porcupine quills on panel',
-    dimensions: '113 x 113 cm',
-    imagePath: '/2022/03/Porcupine-I-5-March-2021-finale-werk-2048x2039.jpg',
-    featured: true,
-    category: 'abstract'
-  },
-  {
     id: '3',
     title: 'Porcupine Boogie Woogie I',
     slug: 'porcupine-boogie-woogie-i',
@@ -130,7 +106,7 @@ export const artworks: Artwork[] = [
     dimensions: '113 x 113 cm',
     imagePath: '/2022/03/Porcupine-I-5-March-2021-finale-werk-2048x2039.jpg',
     featured: true,
-    category: 'abstract'
+    category: 'porcupine'
   },
   {
     id: '4',

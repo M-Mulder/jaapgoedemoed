@@ -23,7 +23,6 @@ const Navigation = () => {
     { title: "Exhibitions", href: "/exhibitions" },
     { title: "Photographs", href: "/photographs" },
     { title: "Contact", href: "/contact" },
-    { title: "Guestbook", href: "/guestbook" },
   ];
 
   // Submenu items for artworks dropdown - only showing pages that exist
@@ -35,8 +34,8 @@ const Navigation = () => {
   // Only showing special artworks pages that exist
   const specialArtworks = [
     { title: "Composition 2017", href: "/artworks/composition-2017" },
-    { title: "Porcupine Artworks", href: "/artworks/porcupine-artworks" },
-    { title: "Composition No. 2 – 2022", href: "/artworks/composition-no-2-2022" },
+    { title: "Making of 2 Porcupine Artworks", href: "/artworks/porcupine-artworks" },
+    { title: "The making of Composition no. 2 - 2022", href: "/artworks/composition-no-2-2022" },
   ];
 
   // Only showing information pages that exist
