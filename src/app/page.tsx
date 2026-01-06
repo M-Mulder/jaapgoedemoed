@@ -34,7 +34,7 @@ export default function Home() {
       title: 'Composition 2025',
       slug: 'composition-2025',
       year: 2025,
-      imagePath: '/2025/composition_2025_140x145cm.png',
+      imagePath: '/2025/Nieuw werk 6 april 2025 van USB stick_cropped.jpg',
     },
     {
       id: 'porcupine1',
@@ -174,6 +174,7 @@ export default function Home() {
   
   const [currentArtworkIndex, setCurrentArtworkIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   
   // Function to change the displayed artwork
   const changeArtwork = useCallback((newIndex: number) => {
@@ -210,16 +211,31 @@ export default function Home() {
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') {
+      if (e.key === 'Escape' && isFullscreen) {
+        setIsFullscreen(false);
+      } else if (e.key === 'ArrowLeft' && !isFullscreen) {
         prevArtwork();
-      } else if (e.key === 'ArrowRight') {
+      } else if (e.key === 'ArrowRight' && !isFullscreen) {
         nextArtwork();
       }
     };
     
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [prevArtwork, nextArtwork]);
+  }, [prevArtwork, nextArtwork, isFullscreen]);
+  
+  // Prevent scroll when fullscreen is active
+  useEffect(() => {
+    if (isFullscreen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isFullscreen]);
   
   // Featured works for the Selected Works section
   const featuredWorks = [
@@ -269,14 +285,36 @@ export default function Home() {
                 : 'opacity-0 scale-105'
             }`}
           >
+            <div 
+              className="relative w-full h-full cursor-zoom-in group"
+              onClick={() => index === currentArtworkIndex && setIsFullscreen(true)}
+            >
             <Image
               src={artwork.imagePath}
               alt={artwork.title}
               fill
               priority={index === 0}
-              className="object-cover"
+              className="object-cover scale-110"
               sizes="100vw"
             />
+              
+              {/* Zoom indicator that appears on hover - only for current image */}
+              {index === currentArtworkIndex && (
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+                  <div className="bg-black/60 backdrop-blur-sm rounded-full p-4 transform transition-transform group-hover:scale-110 duration-300">
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className="h-8 w-8 text-white" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m4-3H6" />
+                    </svg>
+                  </div>
+                </div>
+              )}
+            </div>
             {/* Bottom shadow overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" style={{ height: '40%', bottom: 0, top: 'auto' }}></div>
             
@@ -490,6 +528,57 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Fullscreen Image Overlay */}
+      {isFullscreen && (
+        <div 
+          className="fixed inset-0 z-50 bg-black flex items-center justify-center animate-in fade-in duration-300"
+          onClick={() => setIsFullscreen(false)}
+        >
+          {/* Close button */}
+          <button 
+            className="absolute top-6 right-6 z-50 text-white hover:text-accent p-3 bg-black/30 backdrop-blur-sm rounded-full transition-colors"
+            onClick={() => setIsFullscreen(false)}
+            aria-label="Close fullscreen view"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-6 w-6" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          
+          {/* Info bar */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 items-center bg-black/50 backdrop-blur-sm rounded-full px-6 py-3 text-white">
+            <div className="text-sm">
+              <span className="font-serif text-accent">{sliderImages[currentArtworkIndex].title}</span>
+              <span className="mx-2 text-white/50">•</span>
+              <span className="text-white/80">{sliderImages[currentArtworkIndex].year}</span>
+            </div>
+          </div>
+          
+          {/* Fullscreen Image */}
+          <div 
+            className="w-full h-full flex items-center justify-center p-8 md:p-16"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src={sliderImages[currentArtworkIndex].imagePath}
+                alt={sliderImages[currentArtworkIndex].title}
+                fill
+                className="object-contain cursor-default"
+                quality={100}
+                sizes="100vw"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

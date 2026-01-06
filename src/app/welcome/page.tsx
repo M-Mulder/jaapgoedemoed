@@ -1,10 +1,21 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function WelcomePage() {
+  const [fullscreenImage, setFullscreenImage] = useState<{ src: string; alt: string } | null>(null);
+
+  const openFullscreen = (src: string, alt: string) => {
+    setFullscreenImage({ src, alt });
+  };
+
+  const closeFullscreen = () => {
+    setFullscreenImage(null);
+  };
+
   return (
     <div className="container-narrow mx-auto py-16 px-4">
       <h1 className="text-3xl md:text-4xl font-serif mb-8 text-accent">Welcome – Introduction</h1>
@@ -71,13 +82,16 @@ export default function WelcomePage() {
           <div className="flex flex-wrap my-8 gap-6 justify-center">
             <div className="float-left mr-6 mb-4 w-48 md:w-64">
               <div className="flex flex-col">
-                <div className="relative mb-2">
+                <div 
+                  className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                  onClick={() => openFullscreen("/Figurative Artworks 1980 -1989/Egyptian scene, flat 1984, 120 x 85 cm.jpg", "1984 - Flat scenery")}
+                >
                   <Image 
                     src="/Figurative Artworks 1980 -1989/Egyptian scene, flat 1984, 120 x 85 cm.jpg" 
                     alt="1984 - Flat scenery" 
                     width={250}
                     height={176}
-                    className="object-cover border border-border rounded"
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <p className="text-sm text-center text-text-muted">1</p>
@@ -85,13 +99,16 @@ export default function WelcomePage() {
             </div>
             <div className="float-right ml-6 mb-4 w-48 md:w-64">
               <div className="flex flex-col">
-                <div className="relative mb-2">
+                <div 
+                  className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                  onClick={() => openFullscreen("/Figurative Artworks 1980 -1989/Egyptian scene, with depth 1985, 125 x 90 cm.jpg", "1985 - Deep perspective")}
+                >
                   <Image 
                     src="/Figurative Artworks 1980 -1989/Egyptian scene, with depth 1985, 125 x 90 cm.jpg" 
                     alt="1985 - Deep perspective" 
                     width={250}
                     height={180}
-                    className="object-cover border border-border rounded"
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
                 <p className="text-sm text-center text-text-muted">2</p>
@@ -107,13 +124,16 @@ export default function WelcomePage() {
           
           <div className="float-left mr-6 mb-6 w-full md:w-80 lg:w-96">
             <div className="flex flex-col">
-              <div className="relative mb-2">
+              <div 
+                className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Changing tiling on a wooden plank 1990, 60 x 200 cm.png", "Wooden plank (60x200cm) from 1990")}
+              >
                 <Image 
                   src="/Large abstract Artworks 1990 - 20/Changing tiling on a wooden plank 1990, 60 x 200 cm.png" 
                   alt="Wooden plank (60x200cm) from 1990" 
                   width={380}
                   height={126}
-                  className="border border-border rounded"
+                  className="transform group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <p className="text-sm text-center text-text-muted">3</p>
@@ -133,13 +153,16 @@ export default function WelcomePage() {
           
           <div className="float-right ml-6 mb-6 w-48 md:w-56">
             <div className="flex flex-col">
-              <div className="relative mb-2">
+              <div 
+                className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Changing pattern with opening I 1990, 90 x 95 cm.jpg", "Changing pattern with opening I (1990)")}
+              >
                 <Image 
                   src="/Large abstract Artworks 1990 - 20/Changing pattern with opening I 1990, 90 x 95 cm.jpg" 
                   alt="Changing pattern with opening I (1990)" 
                   width={220}
                   height={232}
-                  className="border border-border rounded"
+                  className="transform group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <p className="text-sm text-center text-text-muted">4</p>
@@ -153,16 +176,19 @@ export default function WelcomePage() {
           
           <div className="float-left mr-6 mb-6" style={{ maxWidth: 'calc(2 * 12rem + 1.5rem)' }}> {/* Max width for 2 w-48 items + gap-6 */}
             <div className="flex flex-wrap gap-6">
-              {/* Image 5, 15 */}
+              {/* Image 5 */}
               <div className="w-48">
                 <div className="flex flex-col">
-                  <div className="relative mb-2">
+                  <div 
+                    className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                    onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Tuscan tiling I 1994, 165 x 165 cm.jpg", "Tuscan tiling I (Montescudaio) (1994)")}
+                  >
                     <Image 
                       src="/Large abstract Artworks 1990 - 20/Tuscan tiling I 1994, 165 x 165 cm.jpg" 
                       alt="Tuscan tiling I (Montescudaio) (1994)" 
                       width={192} 
                       height={192}
-                      className="object-cover border border-border rounded"
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <p className="text-sm text-center text-text-muted">5</p>
@@ -171,13 +197,16 @@ export default function WelcomePage() {
               {/* Image 6 */}
               <div className="w-48">
                 <div className="flex flex-col">
-                  <div className="relative mb-2">
+                  <div 
+                    className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                    onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Composition with open structure 1999, 150 x 150 cm.jpg", "Open structure")}
+                  >
                     <Image 
                       src="/Large abstract Artworks 1990 - 20/Composition with open structure 1999, 150 x 150 cm.jpg" 
                       alt="Open structure (6)" 
                       width={192}
                       height={192}
-                      className="object-cover border border-border rounded"
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <p className="text-sm text-center text-text-muted">6</p>
@@ -186,67 +215,79 @@ export default function WelcomePage() {
               {/* Image 7 */}
               <div className="w-48">
                 <div className="flex flex-col">
-                  <div className="relative mb-2">
+                  <div 
+                    className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                    onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Composition with fixed center 1998, 100 x 100 cm.jpg", "Closed structure")}
+                  >
                     <Image 
                       src="/Large abstract Artworks 1990 - 20/Composition with fixed center 1998, 100 x 100 cm.jpg" 
                       alt="Closed structure (7)" 
                       width={192}
                       height={192}
-                      className="object-cover border border-border rounded"
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <p className="text-sm text-center text-text-muted">7</p>
                 </div>
               </div>
-              {/* Image 8, 12 */}
+              {/* Image 8 */}
               <div className="w-48">
                 <div className="flex flex-col">
-                  <div className="relative mb-2">
+                  <div 
+                    className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                    onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Disconnected Coptic tiling 1996, 150 x 150 cm.jpg", "Coptic healing scrolls")}
+                  >
                     <Image 
                       src="/Large abstract Artworks 1990 - 20/Disconnected Coptic tiling 1996, 150 x 150 cm.jpg" 
-                      alt="Coptic healing scrolls (8, 12)" 
+                      alt="Coptic healing scrolls (8)" 
                       width={192}
                       height={192}
-                      className="object-cover border border-border rounded"
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <p className="text-sm text-center text-text-muted">8</p>
                 </div>
               </div>
-              {/* Image 9, 10 */}
+              {/* Image 9 */}
               <div className="w-48">
                 <div className="flex flex-col">
-                  <div className="relative mb-2">
+                  <div 
+                    className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                    onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Detail of Tiling with handwritings 1997.jpg", "Japanese prints")}
+                  >
                     <Image 
                       src="/Large abstract Artworks 1990 - 20/Detail of Tiling with handwritings 1997.jpg" 
-                      alt="Japanese prints (9, 10)" 
+                      alt="Japanese prints (9)" 
                       width={192}
                       height={192}
-                      className="object-cover border border-border rounded"
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <p className="text-sm text-center text-text-muted">9</p>
                 </div>
               </div>
-              {/* Image 11 */}
-              <div className="w-48 group">
+              {/* Image 10 (was 11) */}
+              <div className="w-48">
                 <div className="flex flex-col">
-                  <div className="relative mb-2 aspect-square overflow-hidden rounded border border-border">
+                  <div 
+                    className="relative mb-2 aspect-square overflow-hidden rounded border border-border cursor-pointer group"
+                    onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Division of the plane with various elements 1997, 160 x 160 cm.jpg", "Cigar boxes and prints by other artists - Zoomed Detail")}
+                  >
                     <Image 
                       src="/Large abstract Artworks 1990 - 20/Division of the plane with various elements 1997, 160 x 160 cm.jpg" 
-                      alt="Cigar boxes and prints by other artists (11) - Zoomed Detail" 
+                      alt="Cigar boxes and prints by other artists (10) - Zoomed Detail" 
                       fill
                       className="object-cover transform scale-[2] group-hover:scale-[2.25] transition-transform duration-300"
                       sizes="(max-width: 640px) 50vw, 192px"
                     />
                   </div>
-                  <p className="text-sm text-center text-text-muted">11</p>
+                  <p className="text-sm text-center text-text-muted">10</p>
                 </div>
               </div>
             </div>
           </div>
           <p>
-            The artists made a joint visit to the Tuscan village of Montescudaio for three weeks during the summer of 1994. Goedemoed found old agricultural tax papers complete with seals and stamps in a garbage heap in a backyard. They can be seen, sometimes combined with the batik method, in certain works of that year, for example Tuscan tiling I (Montescudaio) (5). The new technique and use of structural elements do not appear to be a problem for Jaap. In other works, he explores patterns with open (6) and closed (7) structures to which he adds used paper items: fragments of newspapers, old banknotes, Coptic healing scrolls (parchment) (8), Japanese prints (9), cigar boxes (11), handwritten Islamic texts, prints by other artists (11), yellowed and stained materials harmonizing well with the 'washing' gum technique.
+            The artists made a joint visit to the Tuscan village of Montescudaio for three weeks during the summer of 1994. Goedemoed found old agricultural tax papers complete with seals and stamps in a garbage heap in a backyard. They can be seen, sometimes combined with the batik method, in certain works of that year, for example Tuscan tiling I (Montescudaio) (5). The new technique and use of structural elements do not appear to be a problem for Jaap. In other works, he explores patterns with open (6) and closed (7) structures to which he adds used paper items: fragments of newspapers, old banknotes, Coptic healing scrolls (parchment) (8), Japanese prints (9), cigar boxes (10), handwritten Islamic texts, prints by other artists (10), yellowed and stained materials harmonizing well with the 'washing' gum technique.
           </p>
           <div className="clear-both"></div>
 
@@ -254,35 +295,41 @@ export default function WelcomePage() {
           
           <div className="float-left mr-6 mb-6 w-64">
             <div className="flex flex-col">
-              <div className="relative mb-2">
+              <div 
+                className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Composition with open structure 1999, 150 x 150 cm.jpg", "Composition with open structure")}
+              >
                 <Image 
                   src="/Large abstract Artworks 1990 - 20/Composition with open structure 1999, 150 x 150 cm.jpg" 
-                  alt="Composition with open structure (13)" 
+                  alt="Composition with open structure (11)" 
                   width={250}
                   height={250}
-                  className="object-cover border border-border rounded"
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <p className="text-sm text-center text-text-muted">13</p>
+              <p className="text-sm text-center text-text-muted">11</p>
             </div>
           </div>
           <div className="float-left mr-6 mb-6 w-64">
             <div className="flex flex-col">
-              <div className="relative mb-2">
+              <div 
+                className="relative mb-2 cursor-pointer group overflow-hidden rounded border border-border"
+                onClick={() => openFullscreen("/Large abstract Artworks 1990 - 20/Detail of Tiling with handwritings 1997, 2.jpg", "Byzantine saint and newspaper photograph of a leader from the Balkan Wars")}
+              >
                 <Image 
                   src="/Large abstract Artworks 1990 - 20/Detail of Tiling with handwritings 1997, 2.jpg" 
-                  alt="Newspaper photograph of a leader from the Balkan Wars (14)" 
+                  alt="Byzantine saint and newspaper photograph of a leader from the Balkan Wars (12)" 
                   width={250}
                   height={250}
-                  className="object-cover border border-border rounded"
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <p className="text-sm text-center text-text-muted">14</p>
+              <p className="text-sm text-center text-text-muted">12</p>
             </div>
           </div>
           <p>
-            During the nineties, we see a move towards his first large works, often with spatial divisions. From a distance they are compositions with a strong central focal point, movement or a harmonious whole. Close-up, we see the mathematical precision with which the small spaces are painted and combined with other materials. This development culminated in "Composition with open structure" (150 x 150 cm) (13) in which the artist combines many experiences. The composition is calming without being dull. The separate elements, painted in acrylics and arabic gum, invite the viewer to come closer. And close up, this second layer is fascinating! Jaap enjoys working in these large formats. The planning and the patience necessary to work with these sizes suit him. In this period, we also see a diversity emerge from his work: many things can always be seen in Jaap's work. It may be movement or a color pattern, or possibly unexpected vistas into a second or third layer.
-            A Byzantine saint (9), a Japanese garden (9), a newspaper photograph (14) of a leader from the Balkan Wars. They don't intrude upon an attentive viewer but form an indispensable part of the overall image.
+            During the nineties, we see a move towards his first large works, often with spatial divisions. From a distance they are compositions with a strong central focal point, movement or a harmonious whole. Close-up, we see the mathematical precision with which the small spaces are painted and combined with other materials. This development culminated in "Composition with open structure" (150 x 150 cm) (11) in which the artist combines many experiences. The composition is calming without being dull. The separate elements, painted in acrylics and arabic gum, invite the viewer to come closer. And close up, this second layer is fascinating! Jaap enjoys working in these large formats. The planning and the patience necessary to work with these sizes suit him. In this period, we also see a diversity emerge from his work: many things can always be seen in Jaap's work. It may be movement or a color pattern, or possibly unexpected vistas into a second or third layer.
+            A Byzantine saint (12), a Japanese garden (9), a newspaper photograph (12) of a leader from the Balkan Wars. They don't intrude upon an attentive viewer but form an indispensable part of the overall image.
             These were inspiring years for the artist and his work demands to be seen. With a substantial degree of confidence, daring and ambition, during a visit to New York Goedemoed succeeded in attracting the interest of the Montague Gallery in Soho where he showed his large multi-colored mosaics at group exhibition in the fall of 1997.
           </p>
           <div className="clear-both"></div>
@@ -340,6 +387,58 @@ export default function WelcomePage() {
           Selfie with a new work in progress - April 25, 2025
         </p>
       </div>
+
+      {/* Fullscreen Image Viewer */}
+      <AnimatePresence>
+        {fullscreenImage && (
+          <motion.div 
+            className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={closeFullscreen}
+          >
+            {/* Close button */}
+            <button 
+              className="absolute top-6 right-6 z-50 text-white hover:text-[#d4af37] p-3 bg-black/30 backdrop-blur-sm rounded-full transition-colors"
+              onClick={closeFullscreen}
+              aria-label="Close fullscreen view"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-6 w-6" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            {/* Fullscreen Image */}
+            <motion.div 
+              className="w-full h-full flex items-center justify-center p-8 md:p-16"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src={fullscreenImage.src}
+                  alt={fullscreenImage.alt}
+                  fill
+                  className="object-contain"
+                  quality={90}
+                  sizes="100vw"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
     </div>
   );

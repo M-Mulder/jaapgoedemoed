@@ -31,12 +31,12 @@ export default function CompositionNo2Page() {
             As noted, on this website, 1994 was a crucial year regarding my contact with the artist Frank Lodeizen (FL): frequent meetings in person, the purchase of many FL artworks and in the summer Jaap Goedemoed (JG) and FL embarked on a holiday together in Montescudaio Tuscany. A comprehensive account will be written about this event in due course. JG would often take art lovers to FL&apos;s studio on Herengracht Amsterdam, which often resulted in purchases of FL&apos;s artworks. On one of these occasions in 1994, Irene Eichholz, married to Tom Swaab, one of JG&apos;s pub mates (between 1982 and 1996 JG and Tom Swaab would regularly visit café Welling), bought a piece of art (25 x 35 cm) by FL from 1993, composed of burnt matches, and fitted on cardboard in such a way that it produced a rhythmic pattern. From 1994 to 1996, Irene, Tom and JG would frequently visit artists&apos; open houses, galleries and Ger Lambregts&apos; &quot;ethnographic basement&quot; on Prinsengracht Amsterdam, which was close to Runstraat where many African &apos;runners&apos; brought their cases full of ethnographic artefacts. It would be the final stop of their city-run from Paris to Brussels and Amsterdam, and if posh ethnographic retail outlets, which they had previously visited, had spurned the content of their cases.
           </p>
           
-          <div className="relative aspect-square my-8 shadow-lg">
+          <div className="relative aspect-[7/5] my-8 shadow-lg">
             <Image 
-              src="/2022/10/FL-werk-1992-zonder-glas-21-okt-2022-2048x849.jpg"
+              src="/artworks/abstract/FL 1993 Werk met afgebrande lucifers 25x35.jpg"
               alt="1993 Frank Lodeizen – 25 x 35 cm"
               fill
-              className="object-cover rounded-md"
+              className="object-contain rounded-md bg-background-light"
               sizes="(max-width: 768px) 100vw, 800px"
             />
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
