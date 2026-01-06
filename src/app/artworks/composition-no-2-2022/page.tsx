@@ -13,7 +13,7 @@ export default function CompositionNo2Page() {
       {/* Header section */}
       <div className="bg-background py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-5 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/2022/10/Composition-no.2-29-sept-2022-om-14-1-scaled.jpg')] bg-no-repeat bg-cover blur-xl"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/artworks/abstract/FL 1993 Werk met afgebrande lucifers 25x35.jpg')] bg-no-repeat bg-cover blur-xl"></div>
         </div>
         
         <div className="container-wide relative z-10">
@@ -28,7 +28,7 @@ export default function CompositionNo2Page() {
       <div className="container-narrow py-12">
         <div className="prose prose-invert mx-auto">
           <p>
-            As noted, on this website, 1994 was a crucial year regarding my contact with the artist Frank Lodeizen (FL): frequent meetings in person, the purchase of many FL artworks and in the summer Jaap Goedemoed (JG) and FL embarked on a holiday together in Montescudaio Tuscany. A comprehensive account will be written about this event in due course. JG would often take art lovers to FL&apos;s studio on Herengracht Amsterdam, which often resulted in purchases of FL&apos;s artworks. On one of these occasions in 1994, Irene Eichholz, married to Tom Swaab, one of JG&apos;s pub mates (between 1982 and 1996 JG and Tom Swaab would regularly visit café Welling), bought a piece of art (25 x 35 cm) by FL from 1993, composed of burnt matches, and fitted on cardboard in such a way that it produced a rhythmic pattern. From 1994 to 1996, Irene, Tom and JG would frequently visit artists&apos; open houses, galleries and Ger Lambregts&apos; &quot;ethnographic basement&quot; on Prinsengracht Amsterdam, which was close to Runstraat where many African &apos;runners&apos; brought their cases full of ethnographic artefacts. It would be the final stop of their city-run from Paris to Brussels and Amsterdam, and if posh ethnographic retail outlets, which they had previously visited, had spurned the content of their cases.
+            As noted elsewhere on this website, 1994 was a crucial year regarding my contact with the artist Frank Lodeizen (FL): frequent meetings in person, the purchase of many FL artworks, and in the summer Jaap Goedemoed (JG) and FL embarked on a holiday together in Montescudaio, Tuscany. A comprehensive account will be written about this event in due course. JG would often take art lovers to FL&apos;s studio on Herengracht Amsterdam, which often resulted in purchases of FL&apos;s artworks. On one of these occasions in 1994, Irene Eichholz, married to Tom Swaab, one of JG&apos;s pub mates (between 1982 and 1996 JG and Tom Swaab would regularly visit café Welling), bought a piece of art (25 x 35 cm) by FL from 1993, composed of burnt matches, and fitted on cardboard in such a way that it produced a rhythmic pattern. From 1994 to 1996, Irene, Tom and JG would frequently visit artists&apos; open houses, galleries and Ger Lambregts&apos; &quot;ethnographic basement&quot; on Prinsengracht Amsterdam, which was close to Runstraat where many African &apos;runners&apos; brought their cases full of ethnographic artefacts. It would be the final stop of their city-run from Paris to Brussels and Amsterdam, and if posh ethnographic retail outlets, which they had previously visited, had spurned the content of their cases.
           </p>
           
           <div className="relative aspect-[7/5] my-8 shadow-lg">
@@ -39,15 +39,16 @@ export default function CompositionNo2Page() {
               className="object-contain rounded-md bg-background-light"
               sizes="(max-width: 768px) 100vw, 800px"
             />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                1993 Frank Lodeizen – Artwork featuring burnt matches, 25 x 35 cm
-              </p>
-            </div>
           </div>
+          <p className="text-center text-text-muted italic text-sm -mt-4 mb-8">
+            1993 Frank Lodeizen – 25 x 35 cm
+          </p>
           
           <p>
-            Irene was a very special person, she was a Germanist with a wonderful flair for art and languages. She worked in Gallery d&apos;Eendt in Amsterdam for many years and she translated poems by the Austrian experimental Ernst Jandl. Irene wrote an essay about it (in Wenen, De Sfinx – 1996, Oog in &apos;t Zeil, Stedenreeks 4, publisher Bas Lubberhuizen).
+            Irene was a very special person, she was a Germanist with a wonderful flair for art and languages. She worked in Gallery d&apos;Eendt in Amsterdam for many years and she translated poems by the Austrian experimental poet Ernst Jandl. Irene wrote an essay about it (in Wenen, De Sfinx – 1996, Oog in &apos;t Zeil, Stedenreeks 4, publisher Bas Lubberhuizen).
+          </p>
+          
+          <p>
             Irene died on 21 August 2020 and in a very special way, I received FL&apos;s artwork from her estate through Tom Swaab, who very generously offered it to me in March 2022, almost 28 years after I had witnessed the purchase.
           </p>
           
@@ -64,61 +65,120 @@ export default function CompositionNo2Page() {
           
           <div className="prose prose-invert mx-auto">
             <p>
-              On 18 March 2022, the first little dividing walls (1 cm thick) of balsa wood were fitted on the pentagonal pattern. These little partitions were at their highest, i.e. 5 cm, in the centre of the work, gradually decreasing towards the periphery. The next three images show the creation of the pentagonal box design, which took more than 40 days of work.
+              On 18 March 2022, the first little dividing walls (1 cm thick) of balsa wood were fitted on the pentagonal pattern. These little partitions were at their highest, i.e. 5 cm, in the centre of the work, gradually decreasing towards the periphery. The next images show the creation of the pentagonal box design, which took more than 40 days of work.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
-              <div className="relative aspect-square shadow-lg">
-                <Image 
-                  src="/2022/10/Nieuw-werk-in-wording-in-atelier-5-april-2022-1-2048x1476.jpg"
-                  alt="Early construction with pentagonal pattern"
-                  fill
-                  className="object-cover rounded-md"
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                    Early construction stage showing the pentagonal pattern with balsa wood dividers.
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+              <div>
+                <div className="relative aspect-[3/4] shadow-lg">
+                  <Image 
+                    src="/2022/10/First-pentagonal-walls-18-march.jpg"
+                    alt="The first pentagonal walls on 18th of March"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  The first pentagonal walls on 18th of March
+                </p>
               </div>
-              <div className="relative aspect-square shadow-lg">
-                <Image 
-                  src="/2022/10/The-studio-28-October-2022-at-early-evening-1-2048x1463.jpg"
-                  alt="Pentagonal boxes painted white"
-                  fill
-                  className="object-cover rounded-md"
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                    The work in progress on 5th of May 2022, with all units and pentagonal walls painted in titanium white.
-                  </p>
+              
+              <div>
+                <div className="relative aspect-[3/4] shadow-lg">
+                  <Image 
+                    src="/2022/10/Wall-progress-9-april.jpg"
+                    alt="More wall progress on 9th of April"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  More wall progress on 9th of April
+                </p>
+              </div>
+              
+              <div>
+                <div className="relative aspect-[3/4] shadow-lg">
+                  <Image 
+                    src="/2022/10/Full-surface-canvas-29-april.jpg"
+                    alt="The full surface of the canvas covered with the pentagonal walls"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  The full surface of the canvas covered with the pentagonal walls on 29th of April. In the centre the walls possess the maximum height of 5 cm.
+                </p>
               </div>
             </div>
+            
+            <div className="relative aspect-[4/3] my-8 shadow-lg">
+              <Image 
+                src="/2022/10/Work-in-progress-5-may-white-walls.jpg"
+                alt="Work in progress with white walls"
+                fill
+                className="object-cover rounded-md"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
+            </div>
+            <p className="text-center text-text-muted italic text-sm -mt-4 mb-8">
+              The work in progress on 5th of May 2022, with all units and pentagonal walls painted in titanium white.
+            </p>
             
             <p>
               The following stage was probably even more labour-intensive. The fireplace matches were used to make little &apos;duckboards&apos;. The principle was simple: small supports of balsa wood in each corner and then slats made from the smaller matches placed along the partitioning walls to support broader fireplace matches.
             </p>
             
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+              <div>
+                <div className="relative aspect-square shadow-lg">
+                  <Image 
+                    src="/2022/10/First-unit-filled-7-may.jpg"
+                    alt="The first unit filled with a platform made from matches"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  The first unit filled with a platform or pallet made from larger sized matches on 7th of May 2022.
+                </p>
+              </div>
+              
+              <div>
+                <div className="relative aspect-square shadow-lg">
+                  <Image 
+                    src="/2022/10/Following-stage-different-directions.jpg"
+                    alt="Following stage with different match directions"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  Following stage with for each unit a different direction of the matches.
+                </p>
+              </div>
+            </div>
+            
             <div className="relative aspect-video my-8 shadow-lg">
               <Image 
-                src="/2022/10/Nieuw-werk-in-wording-in-atelier-23-juli-2022-2048x2048.jpg"
+                src="/2022/10/All-units-filled-23-july.jpg"
                 alt="All boxes filled with match duckboards"
                 fill
                 className="object-cover rounded-md"
                 sizes="(max-width: 768px) 100vw, 800px"
               />
-              <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                  On 23rd of July all the boxes were filled with tiny duckboards made of matches.
-                </p>
-              </div>
             </div>
+            <p className="text-center text-text-muted italic text-sm -mt-4 mb-8">
+              On 23rd of July all units were filled with the platforms made of matches.
+            </p>
             
             <p>
-              There are several variables: the height of the corners (which determine the height and the gradient of the little duckboards) and the direction of the fireplace matches. The aim was to alternate the direction of the fireplace matches in a particular box compared to the surrounding boxes. The duckboards in the boxes were made to size, then removed and painted white and subsequently replaced. Progress is shown in the images above.
+              There are several variables: the height of the corners (which determine the height and the gradient of the little duckboards) and the direction of the fireplace matches. The aim was to alternate the direction of the fireplace matches in a particular box compared to the surrounding boxes. The duckboards in the boxes were made to size, then removed and painted white and subsequently replaced.
             </p>
             
             <p>
@@ -140,61 +200,88 @@ export default function CompositionNo2Page() {
             
             <div className="relative aspect-square my-8 shadow-lg">
               <Image 
-                src="/2022/10/Nieuw-werk-ontwerp-op-papier-28-juli-2022-1320x1321.jpg"
+                src="/2022/10/Study-on-paper-grey-tones.jpg"
                 alt="Study on paper using a print in grey tones"
                 fill
                 className="object-cover rounded-md"
                 sizes="(max-width: 768px) 100vw, 800px"
               />
-              <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                  A study on paper using a print in grey tones. The study uses 4 bright colours on the pentagonal grid, and lines and 8 light colours within the boxes. 28th of July 2022.
+            </div>
+            <p className="text-center text-text-muted italic text-sm -mt-4 mb-8">
+              Study on paper using a print in grey tones. In the study are used 4 bright colours on the pentagonal grid, and lines and 8 soft colours within the units. 28th of July 2022.
+            </p>
+            
+            <p>
+              The four bright colours on 4-cm slats placed on top of the pentagonal grid eventually became blue – yellow – orange – grey blue. The bright colour was achieved by covering the slats in gum arabic and then pouring some pure pigment over. The bright colour remains dull which is appropriate to the work.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+              <div>
+                <div className="relative aspect-square shadow-lg">
+                  <Image 
+                    src="/2022/10/First-coloured-slats-2-august.jpg"
+                    alt="First brightly coloured slats"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  2nd of August – The first brightly coloured 4 cm slats placed on the pentagonal grid.
+                </p>
+              </div>
+              
+              <div>
+                <div className="relative aspect-square shadow-lg">
+                  <Image 
+                    src="/2022/10/All-coloured-slats-3-august.jpg"
+                    alt="All brightly coloured slats placed"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  3rd of August – All brightly coloured 4 cm slats placed on the work in progress.
                 </p>
               </div>
             </div>
-            
-            <p>
-              The four bright colours on 4-cm slats placed on top of the pentagonal grid eventually became blue – yellow – orange – grey blue. The bright colour was achieved by covering the slats in gum arabic and then pouring some pure pigment over. The bright colour remains dull which is appropriate to the work. An image of this intermediate stage with the 4-cm slats placed loosely on the artwork is shown above.
-            </p>
             
             <p>
               After having finished the coloured short slats they were laid aside and a start was made with the colouring in of the boxes. Small lines were drawn from the corners in such a way that the lines were as perpendicular as possible to the direction of the matchsticks. Eight light foundation colours were selected. This also adds to the complexity because it creates competition between the actual shadows (caused by the little duckboards deep down in the relevant boxes) and the light colours which also appear like a kind of shadow. After colouring in the pentagonal boxes, the brightly coloured 4-cm slats were fixed to the pentagonal grid which completed the artwork. All that was left was to create an unobtrusive box frame.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
-              <div className="relative aspect-square shadow-lg">
-                <Image 
-                  src="/2022/10/The-work-was-finalised-on-18th-of-August-2022.-2048x2048.jpg"
-                  alt="The finalized artwork"
-                  fill
-                  className="object-cover rounded-md"
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                    The work was finalised on 18th of August 2022. It required five months to create this complex artwork.
-                  </p>
+              <div>
+                <div className="relative aspect-square shadow-lg">
+                  <Image 
+                    src="/2022/10/Final-work-18-august.jpg"
+                    alt="The finalized artwork"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
                 </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  The final work was finished on 18th of August 2022. Again 5 months were needed for making this complex art work. On first sight the composition looks very regular, however, looking in more detail some irregularities can be seen.
+                </p>
               </div>
-              <div className="relative aspect-square shadow-lg">
-                <Image 
-                  src="/2022/10/Nieuw-werk-in-atelier-2-13-augustus-2022-van-opzij-1536x2048.jpg"
-                  alt="Sideview of the artwork"
-                  fill
-                  className="object-cover rounded-md"
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                    Sideview of the final work showing the depth and dimension of the pentagonal structure.
-                  </p>
+              
+              <div>
+                <div className="relative aspect-square shadow-lg">
+                  <Image 
+                    src="/2022/10/Sideview-final-work.jpg"
+                    alt="Sideview of the artwork"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
                 </div>
+                <p className="text-center text-text-muted text-sm mt-2">
+                  Sideview of the final work showing the relief and the here and there deeper lying boxes.
+                </p>
               </div>
             </div>
-            
-            <p>
-              Another image gives a side view of the artwork bringing out relief and random deeper boxes. At first sight the composition looks very regular, however, a closer look reveals some irregularities.
-            </p>
           </div>
         </div>
       </div>
@@ -206,42 +293,50 @@ export default function CompositionNo2Page() {
           
           <div className="prose prose-invert mx-auto">
             <p>
-              Remnants of the larger matches used for the construction of the little duckboards in the boxes were also used for an artwork that differed slightly to Frank Lodeizen&apos;s &apos;burnt matches&apos; piece mentioned at the beginning. Frank Lodeizen used many matches for his hand-rolled cigarettes to which he might also add some cannabis. JG owns an FL piece of art in which these &apos;rollies&apos; are the main topic: in the vernacular their shaggy curls were often referred to as &apos;the widow&apos;s pubes&apos; because in advertisements strong tobacco was referred to as the &apos;widow&apos;s shag&apos; (and medium tobacco was advertised as the &apos;widow&apos;s daughter&apos;s shag&apos;). (See illustration of a Dutch packet of raw tobacco where &apos;shag&apos; means &apos;raw tobacco&apos;, and the &apos;widow&apos; was Van Nelle&apos;s wife who continued the business after his death.)
+              Remnants of the larger matches used for the construction of the little duckboards in the boxes were also used for an artwork that differed slightly to Frank Lodeizen&apos;s &apos;burnt matches&apos; piece mentioned at the beginning. Frank Lodeizen used many matches for his hand-rolled cigarettes to which he might also add some cannabis. JG owns an FL piece of art in which these &apos;rollies&apos; are the main topic: the shag curls were often referred to in the vernacular as &apos;the widow&apos;s pubes&apos; because in advertisements strong tobacco was referred to as the &apos;widow&apos;s shag&apos; (and medium tobacco was advertised as the &apos;widow&apos;s daughter&apos;s shag&apos;).
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
-              <div className="relative aspect-square shadow-lg">
-                <Image 
-                  src="/2022/10/A-50-gram-packet-of-the-Van-Nelle.jpg"
-                  alt="A 50 gram packet of the Van Nelle"
-                  fill
-                  className="object-cover rounded-md"
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                    Artwork from 1992 by Frank Lodeizen depicting the tobacco curls in Van Nelle&apos;s (hand-rolled) tobacco.
-                  </p>
-                </div>
-              </div>
-              <div className="relative aspect-square shadow-lg">
-                <Image 
-                  src="/2022/10/Nieuw-werk-lucifers-resten-JG-2022-30x40cm-1320x1720.jpg"
-                  alt="JG spin-off artwork with matches"
-                  fill
-                  className="object-cover rounded-md"
-                  sizes="(max-width: 768px) 100vw, 400px"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white text-center max-w-md p-4 bg-black/60 rounded">
-                    Final JG spin-off artwork 30 x 40 cm using the leftovers of both types of matches in the 100 x 100 cm artwork, including the red headed left-overs.
-                  </p>
-                </div>
-              </div>
+            <div className="relative aspect-[4/3] my-8 shadow-lg">
+              <Image 
+                src="/2022/10/Van-Nelle-tobacco-bag.jpg"
+                alt="Frank Lodeizen 1992 tobacco curls artwork"
+                fill
+                className="object-contain rounded-md bg-background"
+                sizes="(max-width: 768px) 100vw, 800px"
+              />
             </div>
+            <p className="text-center text-text-muted italic text-sm -mt-4 mb-8">
+              Artwork from 1992 by Frank Lodeizen depicting the tobacco curls from the (hand-rolling) tobacco shag Van Nelle. The text The Rising Hope is present on each blue bag of Van Nelle tobacco. In the artwork it can also be read buikhaar van de Weduwe; this is slang in Dutch for buikhaar = pubic hair = tobacco curls, and van de Weduwe = from the Widow: the heavy tobacco is from &apos;the widow Van Nelle&apos; (and the medium heavy tobacco is from the daughter of the Widow), i.e., these are known advertisement slogans typical for Dutch shag culture.
+            </p>
+            
+            <div className="relative aspect-[3/4] max-w-md mx-auto my-8 shadow-lg">
+              <Image 
+                src="/2022/10/JG-spinoff-matches-30x40.jpg"
+                alt="A 50 gram packet of Van Nelle tobacco"
+                fill
+                className="object-contain rounded-md bg-background"
+                sizes="(max-width: 768px) 100vw, 448px"
+              />
+            </div>
+            <p className="text-center text-text-muted italic text-sm -mt-4 mb-8">
+              A 50 grams bag of Van Nelle heavy tobacco from &apos;the widow&apos; Van Nelle including the wording The Rising Hope.
+            </p>
             
             <p>
-              JG's piece of art consisting of matches was given an atypical tessellation. The match structure with the red heads was so dense that there was some space left within the given framework. Consequently, some more matches were struck to provide black-headed matches. This red and black balance gave JG's artwork a very distinctive character and made it very different to FL's work with its burnt matches. Obviously, this smaller artwork was an unintentional spin-off of JG's larger pentagonal work.
+              JG&apos;s piece of art consisting of matches was given an atypical tessellation. The match structure with the red heads was so dense that there was some space left within the given framework. Consequently, some more matches were struck to provide black-headed matches. This red and black balance gave JG&apos;s artwork a very distinctive character and made it very different to FL&apos;s work with its burnt matches. Obviously, this smaller artwork was an unintentional spin-off of JG&apos;s larger pentagonal work.
+            </p>
+            
+            <div className="relative aspect-[3/4] max-w-md mx-auto my-8 shadow-lg">
+              <Image 
+                src="/2022/10/FL-1992-tobacco-curls-artwork.jpg"
+                alt="JG spin-off artwork with matches"
+                fill
+                className="object-contain rounded-md bg-background"
+                sizes="(max-width: 768px) 100vw, 448px"
+              />
+            </div>
+            <p className="text-center text-text-muted italic text-sm -mt-4 mb-8">
+              Final JG spin-off artwork 30 x 40 cm of the remnants of the two sizes of matches used of the 100 x 100 cm artwork, i.e., the remnants with the red heads. The burned remnants with the black heads were additionally made for this artwork.
             </p>
             
             <p>
@@ -249,7 +344,7 @@ export default function CompositionNo2Page() {
             </p>
             
             <p className="text-right italic">
-              Translated from dutch by Rosemary Mitchell-Schuitevoerder.
+              Translated from Dutch by Rosemary Mitchell-Schuitevoerder.
             </p>
           </div>
           
@@ -263,4 +358,3 @@ export default function CompositionNo2Page() {
     </div>
   );
 }
-
