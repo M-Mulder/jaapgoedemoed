@@ -75,12 +75,12 @@ export const artworks: Artwork[] = [
   {
     id: '1',
     title: 'Composition No. 2 2022',
-    slug: 'composition-no-2-2022',
+    slug: 'composition-no-2-2022-artwork',
     year: 2022,
     description: 'A sophisticated composition that continues the artist\'s investigation of geometric form and spatial relationships, featuring a balanced arrangement of shapes and colors.',
     medium: 'Mixed media on canvas',
     dimensions: '100 x 100 cm',
-    imagePath: '/artworks/abstract/FL 1993 Werk met afgebrande lucifers 25x35.jpg',
+    imagePath: '/2022/10/Composition-no.2-29-sept-2022-om-14-1-scaled.jpg',
     featured: false,
     category: 'abstract'
   },
