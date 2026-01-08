@@ -765,7 +765,7 @@ export const artworks: Artwork[] = [
     description: 'Part of the tram series, this work documents and artistically interprets the historic tram systems of Eastern Europe, combining documentary and aesthetic approaches.',
     medium: 'Mixed media on paper',
     dimensions: '40 x 50 cm',
-    imagePath: "/Old stock paper Artworks 2005 - 20/Les Tramways katerino 2013, 40 x 50 cm.jpg",
+    imagePath: "/artworks/abstract/IMG_2546_cropped.jpg",
     featured: true,
     category: 'paper'
   },
