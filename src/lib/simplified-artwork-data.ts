@@ -614,18 +614,6 @@ export const artworks: Artwork[] = [
     category: 'paper'
   },
   {
-    id: '44',
-    title: 'Aandeelkunstwerk Donetz II',
-    slug: 'aandeelkunstwerk-donetz-ii-2019',
-    year: 2019,
-    description: 'A second exploration of the Donetz stock certificates, with a different compositional approach that highlights different aspects of the historical documents.',
-    medium: 'Mixed media with stock certificates',
-    dimensions: 'Variable',
-    imagePath: '/Old stock paper Artworks 2005 - 20/Aandeelkunstwerk Donetz IMG_5738 24-01-2019.jpg',
-    featured: false,
-    category: 'paper'
-  },
-  {
     id: '45',
     title: 'Nieuw Werk',
     slug: 'nieuw-werk-2018',
@@ -765,7 +753,7 @@ export const artworks: Artwork[] = [
     description: 'Part of the tram series, this work documents and artistically interprets the historic tram systems of Eastern Europe, combining documentary and aesthetic approaches.',
     medium: 'Mixed media on paper',
     dimensions: '40 x 50 cm',
-    imagePath: "/artworks/abstract/IMG_2546_cropped.jpg",
+    imagePath: '/Old stock paper Artworks 2005 - 20/Les Tramways katerino 2013, 40 x 50 cm.jpg',
     featured: true,
     category: 'paper'
   },
@@ -969,7 +957,7 @@ export const artworks: Artwork[] = [
     description: 'Artwork based on a Greek share certificate, created in October 2022.',
     medium: 'Mixed media on paper',
     dimensions: 'Dimensions not specified',
-    imagePath: '/Old stock paper Artworks 2005 - 20/Grieks aandeelkunstwerk 1 okt 2022 IMG_6403.png',
+    imagePath: '/artworks/abstract/IMG_2546_proper_crop.jpeg',
     featured: false,
     category: 'paper'
   },
