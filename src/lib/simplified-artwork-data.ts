@@ -957,7 +957,7 @@ export const artworks: Artwork[] = [
     description: 'Artwork based on a Greek share certificate, created in October 2022.',
     medium: 'Mixed media on paper',
     dimensions: 'Dimensions not specified',
-    imagePath: '/artworks/abstract/IMG_2546_proper_crop.jpeg',
+    imagePath: '/artworks/abstract/IMG_2546_rotated.jpg',
     featured: false,
     category: 'paper'
   },
