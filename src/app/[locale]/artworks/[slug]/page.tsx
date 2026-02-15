@@ -4,8 +4,25 @@ import ArtworkDisplay from './ArtworkDisplay';
 import { Locale } from '@/lib/localeData';
 import { getArtworkTranslation } from '@/lib/localizedArtworks';
 import { generateLocalizedMetadata } from '@/lib/metadata';
+import { i18n } from '@/i18n/config';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://jaapgoedemoed.com';
+
+// Generate static params for all artwork pages in all locales
+export async function generateStaticParams() {
+  const params: { locale: string; slug: string }[] = [];
+  
+  for (const locale of i18n.locales) {
+    for (const artwork of artworks) {
+      params.push({
+        locale,
+        slug: artwork.slug,
+      });
+    }
+  }
+  
+  return params;
+}
 
 export async function generateMetadata({
   params,

@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { generateLocalizedMetadata } from '@/lib/metadata';
 import { Locale } from '@/i18n/config';
+import { getLocaleData } from '@/lib/localeData';
 
 export async function generateMetadata({
   params,
@@ -9,13 +10,14 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const localeData = getLocaleData(locale as Locale);
+  const artworksContent = localeData.artworks;
 
   return generateLocalizedMetadata({
     locale: locale as Locale,
     path: 'artworks',
-    title: 'Artworks',
-    description:
-      'Browse the collection of artworks by Dutch contemporary artist Jaap Goedemoed — geometric compositions, abstract art, mixed media collages, and works on old stock paper.',
+    title: artworksContent.title,
+    description: artworksContent.description,
   });
 }
 

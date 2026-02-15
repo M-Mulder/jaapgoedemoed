@@ -3,7 +3,23 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { photographs } from '@/lib/placeholder-data';
 import { generateLocalizedMetadata } from '@/lib/metadata';
-import { Locale } from '@/i18n/config';
+import { Locale, i18n } from '@/i18n/config';
+
+// Generate static params for all photograph pages in all locales
+export async function generateStaticParams() {
+  const params: { locale: string; slug: string }[] = [];
+  
+  for (const locale of i18n.locales) {
+    for (const photo of photographs) {
+      params.push({
+        locale,
+        slug: photo.slug,
+      });
+    }
+  }
+  
+  return params;
+}
 
 export async function generateMetadata({
   params,
