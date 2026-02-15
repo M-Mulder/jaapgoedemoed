@@ -1,9 +1,13 @@
 import Link from "next/link";
-import { useLocale } from "@/context/LocaleContext";
+import { LocaleContent } from "@/lib/localeData";
 
-const Footer = () => {
+interface FooterProps {
+  locale: string;
+  localeData: LocaleContent;
+}
+
+const Footer = ({ locale, localeData }: FooterProps) => {
   const currentYear = new Date().getFullYear();
-  const { locale, data } = useLocale();
   const quickLinks = [
     { label: data.footer.quickLinks[0], href: "/artworks" },
     { label: data.footer.quickLinks[1], href: "/exhibitions" },

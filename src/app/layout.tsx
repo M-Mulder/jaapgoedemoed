@@ -72,11 +72,11 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
       <body
         className={`${manrope.variable} ${playfair.variable} ${spaceMono.variable} min-h-screen flex flex-col text-[#e6e6e6] bg-[#0f0f0f]`}
       >
-        <LocaleProvider locale={locale} data={localeData}>
-          <Navigation locale={locale} localeData={localeData} />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </LocaleProvider>
+          <LocaleProvider locale={locale} data={localeData}>
+            <Navigation locale={locale} localeData={localeData} />
+            <main className="flex-grow">{children}</main>
+            <Footer locale={locale} localeData={localeData} />
+          </LocaleProvider>
       </body>
     </html>
   );
