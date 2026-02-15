@@ -8,6 +8,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { getLocaleData, Locale } from "@/lib/localeData";
 import { LocaleProvider } from "@/context/LocaleContext";
+import { cookies } from "next/headers";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -44,15 +45,14 @@ export const metadata: Metadata = {
   },
 };
 
-interface RootLayoutProps {
+export default async function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
-  params: {
-    locale?: string;
-  };
-}
-
-export default function RootLayout({ children, params }: RootLayoutProps) {
-  const locale = (params.locale as Locale) ?? "en";
+}) {
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get("NEXT_LOCALE")?.value as Locale | undefined;
+  const locale = localeCookie ?? "en";
   const localeData = getLocaleData(locale);
   return (
     <html lang={locale} className="dark">

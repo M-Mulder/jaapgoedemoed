@@ -3,6 +3,7 @@ import { artworks } from '@/lib/simplified-artwork-data';
 import ArtworkDisplay from './ArtworkDisplay';
 import { Locale } from '@/lib/localeData';
 import { getArtworkTranslation } from '@/lib/localizedArtworks';
+import { cookies } from 'next/headers';
 
 export async function generateMetadata(props: any) {
   const { params } = props;
@@ -14,7 +15,8 @@ export async function generateMetadata(props: any) {
     };
   }
   
-  const locale = (params.locale as Locale) ?? "en";
+  const cookieStore = await cookies();
+  const locale = (cookieStore.get("NEXT_LOCALE")?.value as Locale) ?? "en";
   const translation = getArtworkTranslation(artwork.slug, locale);
   const title = translation?.title ?? artwork.title;
   const description = translation?.description ?? artwork.description;

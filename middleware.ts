@@ -3,6 +3,17 @@ import type { NextRequest } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
 
+const detectLocale = (acceptLanguage: string): string => {
+  const language = acceptLanguage.split(",")[0].toLowerCase();
+  if (language.includes("zh")) {
+    return "zh";
+  }
+  if (language.includes("nl")) {
+    return "nl-NL";
+  }
+  return "en";
+};
+
 export function middleware(request: NextRequest) {
   const { nextUrl, headers } = request;
   const pathname = nextUrl.pathname;
@@ -15,21 +26,18 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const currentLocale = nextUrl.locale;
+  const cookieLocale = request.cookies.get("NEXT_LOCALE")?.value;
+  let locale = cookieLocale ?? detectLocale(headers.get("accept-language") ?? "");
 
-  if (currentLocale === "nl-NL" || currentLocale === "zh") {
-    return NextResponse.next();
+  const response = NextResponse.next();
+  if (cookieLocale !== locale) {
+    response.cookies.set("NEXT_LOCALE", locale, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+    });
   }
 
-  const acceptLanguage = headers.get("accept-language") ?? "";
-  if (acceptLanguage.toLowerCase().includes("nl")) {
-    const redirectUrl = nextUrl.clone();
-    const base = pathname.replace(/^\/(en|zh|nl-NL)/, "");
-    redirectUrl.pathname = base === "" ? "/nl-NL" : `/nl-NL${base}`;
-    return NextResponse.redirect(redirectUrl);
-  }
-
-  return NextResponse.next();
+  return response;
 }
 
 export const config = {

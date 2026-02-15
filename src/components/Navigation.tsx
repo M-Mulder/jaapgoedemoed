@@ -63,7 +63,7 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
       <div className="container-wide relative">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" locale={locale} className="inline-block group">
+            <Link href="/" className="inline-block group">
               <div className="py-2">
                 <h1 className="font-serif text-3xl tracking-wide">
                   <span className="text-accent font-semibold mr-1 transition-all duration-300 ease-in-out group-hover:opacity-90">
@@ -131,7 +131,6 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                                   <Link
                                     key={item.href}
                                     href={item.href}
-                                    locale={locale}
                                     onClick={() => setOpenDropdown(null)}
                                     className={`block px-4 py-2 ${
                                       pathname === item.href
@@ -149,7 +148,6 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                                   <Link
                                     key={item.href}
                                     href={item.href}
-                                    locale={locale}
                                     onClick={() => setOpenDropdown(null)}
                                     className={`block px-4 py-2 ${
                                       pathname === item.href
@@ -167,7 +165,6 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                                 <Link
                                   key={item.href}
                                   href={item.href}
-                                  locale={locale}
                                   onClick={() => setOpenDropdown(null)}
                                   className={`block px-4 py-2 ${
                                     pathname === item.href
@@ -189,7 +186,6 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                   <Link
                     key={link.href}
                     href={link.href}
-                    locale={locale}
                     className={`${
                       isActive ? "text-accent font-medium" : "text-text-muted hover:text-text"
                     } transition-colors`}
@@ -238,20 +234,19 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                                 {localeData.sections.galleryOptions}
                               </div>
                               {artworksSubMenu.map((item) => (
-                                <Link
-                                  key={item.href}
-                                  href={item.href}
-                                  locale={locale}
-                                  onClick={() => {
-                                    setOpenDropdown(null);
-                                    setIsMenuOpen(false);
-                                  }}
-                                  className={`block py-2 ${
-                                    pathname === item.href ? "text-accent" : "text-text-muted hover:text-text"
-                                  }`}
-                                >
-                                  {item.title}
-                                </Link>
+                                  <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    onClick={() => {
+                                      setOpenDropdown(null);
+                                      setIsMenuOpen(false);
+                                    }}
+                                    className={`block py-2 ${
+                                      pathname === item.href ? "text-accent" : "text-text-muted hover:text-text"
+                                    }`}
+                                  >
+                                    {item.title}
+                                  </Link>
                               ))}
                               <div className="text-sm font-medium text-text-muted py-2 mt-2">
                                 {localeData.sections.featuredWorks}
@@ -260,7 +255,6 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                                 <Link
                                   key={item.href}
                                   href={item.href}
-                                  locale={locale}
                                   onClick={() => {
                                     setOpenDropdown(null);
                                     setIsMenuOpen(false);
@@ -279,7 +273,6 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                               <Link
                                 key={item.href}
                                 href={item.href}
-                                locale={locale}
                                 onClick={() => {
                                   setOpenDropdown(null);
                                   setIsMenuOpen(false);
@@ -301,7 +294,6 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                   <Link
                     key={link.href}
                     href={link.href}
-                    locale={locale}
                     onClick={() => setIsMenuOpen(false)}
                     className={`${
                       isActive ? "text-accent font-medium" : "text-text-muted hover:text-text"

@@ -9,10 +9,10 @@ interface FooterProps {
 const Footer = ({ locale, localeData }: FooterProps) => {
   const currentYear = new Date().getFullYear();
   const quickLinks = [
-    { label: data.footer.quickLinks[0], href: "/artworks" },
-    { label: data.footer.quickLinks[1], href: "/exhibitions" },
-    { label: data.footer.quickLinks[2], href: "/photographs" },
-    { label: data.footer.quickLinks[3], href: "/biography" },
+    { label: localeData.footer.quickLinks[0], href: "/artworks" },
+    { label: localeData.footer.quickLinks[1], href: "/exhibitions" },
+    { label: localeData.footer.quickLinks[2], href: "/photographs" },
+    { label: localeData.footer.quickLinks[3], href: "/biography" },
   ];
 
   return (
@@ -20,19 +20,19 @@ const Footer = ({ locale, localeData }: FooterProps) => {
       <div className="container-wide">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl mb-4 font-serif">{data.footer.title}</h3>
+            <h3 className="text-xl mb-4 font-serif">{localeData.footer.title}</h3>
             <p className="text-text-muted">
-              {data.footer.copyright.replace("{year}", currentYear.toString())}
+              {localeData.footer.copyright.replace("{year}", currentYear.toString())}
               <br />
               All rights reserved.
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl mb-4 font-serif">{data.footer.exploreTitle}</h3>
+            <h3 className="text-xl mb-4 font-serif">{localeData.footer.exploreTitle}</h3>
             <nav className="flex flex-col space-y-2">
               {quickLinks.map((link) => (
-                <Link key={link.href} href={link.href} locale={locale} className="text-text-muted hover:text-text">
+                <Link key={link.href} href={link.href} className="text-text-muted hover:text-text">
                   {link.label}
                 </Link>
               ))}
@@ -40,7 +40,7 @@ const Footer = ({ locale, localeData }: FooterProps) => {
           </div>
 
           <div>
-            <h3 className="text-xl mb-4 font-serif">{data.footer.contactTitle}</h3>
+            <h3 className="text-xl mb-4 font-serif">{localeData.footer.contactTitle}</h3>
             <p className="text-text-muted mb-2">info@goedemoed.com</p>
             <div className="flex space-x-4 mt-4">
               <a href="#" className="text-text-muted hover:text-accent" aria-label="Instagram">

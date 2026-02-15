@@ -1,6 +1,8 @@
 "use client";
 
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { Locale } from "@/lib/localeData";
 import { useLocale } from "@/context/LocaleContext";
 
@@ -8,17 +10,16 @@ const locales: Locale[] = ["en", "nl-NL", "zh"];
 
 const LocaleSwitcher = () => {
   const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
   const { locale, data } = useLocale();
 
-  const gotoLocale = (target: Locale) => {
-    const query: Record<string, string> = {};
-    searchParams.forEach((value, key) => {
-      query[key] = value;
-    });
+  const storeLocaleCookie = (target: Locale) => {
+    document.cookie = `NEXT_LOCALE=${target}; path=/; max-age=${60 * 60 * 24 * 365}`;
+  };
 
-    router.push({ pathname, query }, undefined, { locale: target });
+  const gotoLocale = (target: Locale) => {
+    if (target === locale) return;
+    storeLocaleCookie(target);
+    router.refresh();
   };
 
   return (
