@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LocaleContent } from "@/lib/localeData";
+import { getLocalizedPath } from "@/lib/i18n";
 
 interface FooterProps {
   locale: string;
@@ -9,10 +10,10 @@ interface FooterProps {
 const Footer = ({ locale, localeData }: FooterProps) => {
   const currentYear = new Date().getFullYear();
   const quickLinks = [
-    { label: localeData.footer.quickLinks[0], href: "/artworks" },
-    { label: localeData.footer.quickLinks[1], href: "/exhibitions" },
-    { label: localeData.footer.quickLinks[2], href: "/photographs" },
-    { label: localeData.footer.quickLinks[3], href: "/biography" },
+    { label: localeData.footer.quickLinks[0], href: getLocalizedPath(locale as any, "artworks") },
+    { label: localeData.footer.quickLinks[1], href: getLocalizedPath(locale as any, "exhibitions") },
+    { label: localeData.footer.quickLinks[2], href: getLocalizedPath(locale as any, "photographs") },
+    { label: localeData.footer.quickLinks[3], href: getLocalizedPath(locale as any, "biography") },
   ];
 
   return (

@@ -1,0 +1,16 @@
+{
+  "name": "Jaap Goedemoed — Artist",
+  "short_name": "Goedemoed",
+  "description": "Portfolio of Dutch contemporary artist Jaap Goedemoed — geometric compositions, abstract art, and mixed media.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

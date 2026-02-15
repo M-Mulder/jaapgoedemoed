@@ -1,12 +1,86 @@
 import { en } from "@/locales/en";
+import { nl } from "@/locales/nl";
 import { zh } from "@/locales/zh";
+import { Locale } from "@/i18n/config";
 
-export type Locale = "en" | "zh" | "nl-NL";
+export type { Locale };
 
 export interface LocaleContent {
   nav: Record<string, string>;
-  hero: Record<string, string>;
+  navDropdowns: {
+    allArtworks: string;
+    howToOrder: string;
+    composition2017: string;
+    porcupineArtworks: string;
+    composition2022: string;
+    composition2025: string;
+    interview2015: string;
+    russianInterview: string;
+    gypsiesAmsterdam: string;
+    taxationGlerum: string;
+    seriousArtPiece: string;
+  };
+  hero: {
+    title: string;
+    description: string;
+    explore: string;
+    introduction: string;
+  };
   sections: Record<string, string>;
+  home: {
+    aboutTitle: string;
+    aboutParagraphs: string[];
+    aboutLink: string;
+    featured: {
+      viewArtwork: string;
+      readStory: string;
+      viewCollection: string;
+    };
+  };
+  welcome: {
+    heroTitle: string;
+    subtitle: string;
+    paragraphs: string[];
+    introductionTitle: string;
+    introductionSections: { title: string; text: string }[];
+    section2Para1: string;
+    section3Title: string;
+    section3Para1: string;
+    section3Para2: string;
+    section3Para3: string;
+    section4Title: string;
+    section4Para1: string;
+    section4Para2: string;
+    cta: string;
+    snapshotTitle: string;
+    snapshotCaption: string;
+    creditAuthorLabel: string;
+    creditAuthor: string;
+    creditTranslatorLabel: string;
+    creditTranslator: string;
+    additionalCommentTitle: string;
+    additionalCommentParagraphs: string[];
+  };
+  biography: {
+    title: string;
+    intro: string;
+    sections: {
+      earlyLife: string;
+      artisticDevelopment: string;
+      careerHighlights: string;
+      currentPractice: string;
+    };
+    sectionTitles: {
+      earlyLife: string;
+      artisticDevelopment: string;
+      careerHighlights: string;
+      currentPractice: string;
+    };
+    timelineTitle: string;
+    timeline: { year: string; text: string }[];
+    publicationsTitle: string;
+    publications: { year: string; title: string; detail: string }[];
+  };
   footer: {
     title: string;
     copyright: string;
@@ -14,13 +88,349 @@ export interface LocaleContent {
     quickLinks: string[];
     contactTitle: string;
   };
+  contact: {
+    title: string;
+    contactInfo: string;
+    email: string;
+    description: string[];
+    sendMessage: string;
+    formLabels: {
+      name: string;
+      email: string;
+      subject: string;
+      message: string;
+    };
+    formPlaceholders: {
+      name: string;
+      email: string;
+      subject: string;
+      message: string;
+    };
+    sendButton: string;
+  };
+  artworks: {
+    title: string;
+    description: string;
+    categories: string;
+    categoriesDescription: string;
+    allCategories: string;
+    featuredWorks: string;
+    latestAdditions: string;
+    abstractTitle: string;
+    paperTitle: string;
+    joyceTitle: string;
+    figurativeTitle: string;
+    porcupineTitle: string;
+    youthTitle: string;
+    otherTitle: string;
+    studioProcess: string;
+    studioDescription: string;
+    visitStudio: string;
+    showingCount: string;
+  };
+  exhibitions: {
+    title: string;
+    description: string;
+    pastExhibitions: string;
+    atelierImpressions: string;
+    soloExhibition: string;
+    groupExhibition: string;
+  };
+  photographs: {
+    title: string;
+    description: string;
+    workInProgressTitle: string;
+    workInProgressMessage: string[];
+  };
+  info: {
+    title: string;
+    artistStatement: string;
+    artistStatementText: string;
+    artisticProcess: string;
+    artisticProcessText: string;
+    ethnographicInfluence: string;
+    ethnographicInfluenceText: string;
+    articlesAndDocuments: string;
+    studioEnvironment: string;
+    studioEnvironmentText: string;
+  };
+  infoPages: {
+    interview2015: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    russianInterview: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    gypsiesAmsterdam: {
+      title: string;
+      subtitle: string;
+      description: string;
+      para1: string;
+      para2: string;
+      para3: string;
+      para4: string;
+      para5: string;
+      para6: string;
+      para7: string;
+      galleryTitle: string;
+      artworkTitle: string;
+      artworkMedium: string;
+      returnButton: string;
+      techniqueTitle: string;
+      techniquePara1: string;
+      techniqueProcess: string;
+      techniqueStep1: string;
+      techniqueStep2: string;
+      techniqueStep3: string;
+      techniqueStep4: string;
+      techniquePara2: string;
+      techniquePara3: string;
+      techniquePara4: string;
+    };
+    taxationGlerum: {
+      title: string;
+      subtitle: string;
+      description: string;
+      intro: string;
+      appraiserTitle: string;
+      appraiserText: string;
+      documentTitle: string;
+      documentText: string;
+      documentCaption: string;
+      disclaimer: string;
+    };
+    seriousArtPiece: {
+      title: string;
+      subtitle: string;
+      description: string;
+      intro1: string;
+      intro2: string;
+      intro3: string;
+      artworkCaption1: string;
+      artworkCaption2: string;
+      para1: string;
+      para2: string;
+      para3: string;
+      para4: string;
+      para5: string;
+      para6: string;
+      para7: string;
+      motherWinsCaption: string;
+      para8: string;
+      para9: string;
+      para10: string;
+      livingRoomCaption1: string;
+      livingRoomCaption2: string;
+      para11: string;
+      para12: string;
+      lucebertWoodcutCaption: string;
+      lucebertPaperCaption: string;
+      para13: string;
+      para14: string;
+      para15: string;
+      lucebertFuneralCaption: string;
+      para16: string;
+      poem: string;
+      para17: string;
+      para18: string;
+      para19: string;
+    };
+  };
+  artworkPages: {
+    composition2017: {
+      title: string;
+      subtitle: string;
+      description: string;
+      medium: string;
+      mediumValue: string;
+      dimensions: string;
+      dimensionsValue: string;
+      year: string;
+      yearValue: string;
+      intro: string;
+      commentsTitle: string;
+      para1: string;
+      para2: string;
+      para3: string;
+      para4: string;
+      para5: string;
+      sideViewCaption: string;
+      returnButton: string;
+    };
+    porcupineArtworks: {
+      title: string;
+      subtitle: string;
+      description: string;
+      introPara1: string;
+      introPara2: string;
+      introPara3: string;
+      introPara4: string;
+      introPara5: string;
+      firstWorkTitle: string;
+      firstWorkPara1: string;
+      firstWorkPara2: string;
+      firstWorkPara3: string;
+      firstWorkPara4: string;
+      firstWorkPara5: string;
+      firstWorkPara6: string;
+      firstWorkPara7: string;
+      firstWorkPara8: string;
+      firstWorkPara9: string;
+      firstWorkPara10: string;
+      secondWorkTitle: string;
+      secondWorkPara1: string;
+      secondWorkPara2: string;
+      secondWorkPara3: string;
+      secondWorkPara4: string;
+      secondWorkPara5: string;
+      secondWorkPara6: string;
+      secondWorkPara7: string;
+      secondWorkPara8: string;
+      finalStagesTitle: string;
+      finalPara1: string;
+      finalPara2: string;
+      finalPara3: string;
+      finalPara4: string;
+      finalPara5: string;
+      finalPara6: string;
+      translationCredit: string;
+      composition2025Title: string;
+      composition2025Intro: string;
+      composition2025ViewDetails: string;
+      imageCaption1: string;
+      imageCaption2: string;
+      imageCaption3: string;
+      imageCaption4: string;
+      imageCaption5: string;
+      imageCaption6: string;
+      imageCaption7: string;
+      imageCaption8: string;
+      imageCaption9: string;
+      imageCaption10: string;
+      returnButton: string;
+    };
+    compositionNo2: {
+      title: string;
+      subtitle: string;
+      description: string;
+    };
+    composition2025: {
+      title: string;
+      subtitle: string;
+      description: string;
+      introPara1: string;
+      introPara2: string;
+      imageCaption1: string;
+      imageCaption2: string;
+      chanceTitle: string;
+      chancePara1: string;
+      chancePara2: string;
+      imageCaption3: string;
+      chancePara3: string;
+      imageCaption4: string;
+      chancePara4: string;
+      chancePara5: string;
+      imageCaption6: string;
+      fillingTitle: string;
+      fillingPara1: string;
+      fillingPara2: string;
+      fillingPara3: string;
+      fillingPara4: string;
+      imageCaption7a: string;
+      imageCaption7b: string;
+      fillingPara5: string;
+      imageCaption8: string;
+      steinbergTitle: string;
+      steinbergPara1: string;
+      imageCaption9: string;
+      steinbergPara2: string;
+      imageCaption10a: string;
+      imageCaption10b: string;
+      imageCaption10c: string;
+      imageCaption10d: string;
+      imageCaption10e: string;
+      imageCaption10f: string;
+      imageCaption10g: string;
+      imageCaption10h: string;
+      photoPara1: string;
+      photoPara2: string;
+      photoPara3: string;
+      photoPara4: string;
+      photoPara5: string;
+      photoPara6: string;
+      photoPara7: string;
+      photoPara8: string;
+      finalTitle: string;
+      imageCaption11a: string;
+      imageCaption11b: string;
+      imageCaption11c: string;
+      imageCaption11d: string;
+      imageCaption11e: string;
+      imageCaption11f: string;
+      finalPara1: string;
+      finalPara2: string;
+      finalPara3: string;
+      finalPara4: string;
+      finalPara5: string;
+      finalPara6: string;
+      completedTitle: string;
+      imageCaption12: string;
+      completedPara1: string;
+      completedPara2: string;
+      returnButton: string;
+    };
+  };
+  order: {
+    title: string;
+    description: string;
+    purchasingTitle: string;
+    purchasingText: string;
+    originalArtworksTitle: string;
+    originalArtworksIntro: string;
+    steps: {
+      inquiry: string;
+      inquiryText: string;
+      availability: string;
+      availabilityText: string;
+      viewing: string;
+      viewingText: string;
+      purchase: string;
+      purchaseText: string;
+      shipping: string;
+      shippingText: string;
+    };
+    availableWorksTitle: string;
+    availableWorksText: string;
+    printsTitle: string;
+    printsIntro: string;
+    printsEdition: string;
+    printSizes: {
+      small: string;
+      medium: string;
+      large: string;
+    };
+    printsOrder: string;
+    commissionsTitle: string;
+    commissionsText: string;
+    commissionsInquiry: string;
+    galleryTitle: string;
+    galleryIntro: string;
+    galleries: string[];
+    galleryText: string;
+    contactTitle: string;
+    contactText: string;
+  };
   languages: Record<Locale, string>;
 }
 
 const localeMap: Record<Locale, LocaleContent> = {
   en,
   zh,
-  "nl-NL": en,
+  nl,
 };
 
 export const getLocaleData = (locale: Locale): LocaleContent => {

@@ -10,7 +10,7 @@ interface ArtworkTranslation {
 
 const translations: Record<Locale, Record<string, ArtworkTranslation>> = {
   en: {},
-  "nl-NL": {},
+  nl: {},
   zh,
 };
 

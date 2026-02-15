@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LocaleSwitcher from "./LocaleSwitcher";
 import { LocaleContent } from "@/lib/localeData";
+import { getLocalizedPath, removeLocaleFromPathname } from "@/lib/i18n";
 
 interface NavigationProps {
   locale: string;
@@ -15,39 +16,40 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const pathnameWithoutLocale = removeLocaleFromPathname(pathname);
 
   const navLinks = useMemo(
     () => [
-      { title: localeData.nav.home, href: "/" },
-      { title: localeData.nav.welcome, href: "/welcome" },
-      { title: localeData.nav.artworks, href: "/artworks" },
-      { title: localeData.nav.biography, href: "/biography" },
-      { title: localeData.nav.information, href: "/info" },
-      { title: localeData.nav.exhibitions, href: "/exhibitions" },
-      { title: localeData.nav.photographs, href: "/photographs" },
-      { title: localeData.nav.contact, href: "/contact" },
+      { title: localeData.nav.home, href: getLocalizedPath(locale as any, "") },
+      { title: localeData.nav.welcome, href: getLocalizedPath(locale as any, "welcome") },
+      { title: localeData.nav.artworks, href: getLocalizedPath(locale as any, "artworks") },
+      { title: localeData.nav.biography, href: getLocalizedPath(locale as any, "biography") },
+      { title: localeData.nav.information, href: getLocalizedPath(locale as any, "info") },
+      { title: localeData.nav.exhibitions, href: getLocalizedPath(locale as any, "exhibitions") },
+      { title: localeData.nav.photographs, href: getLocalizedPath(locale as any, "photographs") },
+      { title: localeData.nav.contact, href: getLocalizedPath(locale as any, "contact") },
     ],
-    [localeData.nav]
+    [localeData.nav, locale]
   );
 
   const artworksSubMenu = [
-    { title: "All Artworks", href: "/artworks" },
-    { title: "How to Order", href: "/artworks/order" },
+    { title: localeData.navDropdowns.allArtworks, href: getLocalizedPath(locale as any, "artworks") },
+    { title: localeData.navDropdowns.howToOrder, href: getLocalizedPath(locale as any, "artworks/order") },
   ];
 
   const specialArtworks = [
-    { title: "Composition 2017", href: "/artworks/composition-2017" },
-    { title: "Making of 2 Porcupine Artworks", href: "/artworks/porcupine-artworks" },
-    { title: "The making of Composition no. 2 - 2022", href: "/artworks/composition-no-2-2022" },
-    { title: "The Making of Composition 2025", href: "/artworks/composition-2025" },
+    { title: localeData.navDropdowns.composition2017, href: getLocalizedPath(locale as any, "artworks/composition-2017") },
+    { title: localeData.navDropdowns.porcupineArtworks, href: getLocalizedPath(locale as any, "artworks/porcupine-artworks") },
+    { title: localeData.navDropdowns.composition2022, href: getLocalizedPath(locale as any, "artworks/composition-no-2-2022") },
+    { title: localeData.navDropdowns.composition2025, href: getLocalizedPath(locale as any, "artworks/composition-2025") },
   ];
 
   const additionalInfo = [
-    { title: "Interview with JG 2015", href: "/info/interview-2015" },
-    { title: "JG Interview in Russian", href: "/info/russian-interview" },
-    { title: "Gypsies in Amsterdam", href: "/info/gypsies-amsterdam" },
-    { title: "Taxation by J.P. Glerum 1991", href: "/info/taxation-glerum-1991" },
-    { title: "A Serious Piece of Art", href: "/info/serious-art-piece" },
+    { title: localeData.navDropdowns.interview2015, href: getLocalizedPath(locale as any, "info/interview-2015") },
+    { title: localeData.navDropdowns.russianInterview, href: getLocalizedPath(locale as any, "info/russian-interview") },
+    { title: localeData.navDropdowns.gypsiesAmsterdam, href: getLocalizedPath(locale as any, "info/gypsies-amsterdam") },
+    { title: localeData.navDropdowns.taxationGlerum, href: getLocalizedPath(locale as any, "info/taxation-glerum-1991") },
+    { title: localeData.navDropdowns.seriousArtPiece, href: getLocalizedPath(locale as any, "info/serious-art-piece") },
   ];
 
   const toggleMenu = () => {
@@ -56,6 +58,13 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
 
   const handleDropdownToggle = (section: string) => {
     setOpenDropdown(openDropdown === section ? null : section);
+  };
+  
+  // Check if path is active (comparing without locale prefix)
+  const isPathActive = (href: string) => {
+    const hrefWithoutLocale = removeLocaleFromPathname(href);
+    return pathnameWithoutLocale === hrefWithoutLocale || 
+           pathnameWithoutLocale.startsWith(hrefWithoutLocale + "/");
   };
 
   return (
@@ -92,14 +101,14 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
             </svg>
           </button>
 
-          <div className="hidden md:flex items-center space-x-6">
-            <div className="flex space-x-6">
+          <div className="hidden md:flex items-center space-x-8">
+            <div className="flex space-x-7 ml-12">
               {navLinks.map((link) => {
-                const isDropdown = link.href === "/artworks" || link.href === "/info";
-                const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+                const isDropdown = link.href.endsWith("/artworks") || link.href.endsWith("/info");
+                const isActive = isPathActive(link.href);
 
                 if (isDropdown) {
-                  const dropdownKey = link.href === "/artworks" ? "artworks" : "information";
+                  const dropdownKey = link.href.endsWith("/artworks") ? "artworks" : "information";
                   return (
                     <div key={link.href} className="relative group">
                       <button
@@ -133,7 +142,7 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                                     href={item.href}
                                     onClick={() => setOpenDropdown(null)}
                                     className={`block px-4 py-2 ${
-                                      pathname === item.href
+                                      isPathActive(item.href)
                                         ? "text-accent"
                                         : "text-text-muted hover:text-text hover:bg-background"
                                     }`}
@@ -150,7 +159,7 @@ const Navigation = ({ locale, localeData }: NavigationProps) => {
                                     href={item.href}
                                     onClick={() => setOpenDropdown(null)}
                                     className={`block px-4 py-2 ${
-                                      pathname === item.href
+                                      isPathActive(item.href)
                                         ? "text-accent"
                                         : "text-text-muted hover:text-text hover:bg-background"
                                     }`}

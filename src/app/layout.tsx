@@ -2,13 +2,9 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { Space_Mono } from "next/font/google";
+import { headers } from "next/headers";
 import Script from "next/script";
 import "./globals.css";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
-import { getLocaleData, Locale } from "@/lib/localeData";
-import { LocaleProvider } from "@/context/LocaleContext";
-import { cookies } from "next/headers";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -29,10 +25,28 @@ const spaceMono = Space_Mono({
   display: "swap",
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://jaapgoedemoed.com";
+
 export const metadata: Metadata = {
-  title: "Jaap Goedemoed | Artist",
-  description: "Portfolio website for artist Jaap Goedemoed, showcasing artworks, exhibitions, and more.",
-  keywords: ["artist", "art", "portfolio", "Jaap Goedemoed", "paintings", "exhibitions"],
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: "Jaap Goedemoed | Artist — Geometric Allegories",
+    template: "%s | Jaap Goedemoed",
+  },
+  description:
+    "Portfolio of Dutch contemporary artist Jaap Goedemoed (b. 1956). Geometric compositions, abstract art, mixed media collages, and works on old stock paper. Exhibited internationally since 1984.",
+  keywords: [
+    "Jaap Goedemoed",
+    "Dutch artist",
+    "contemporary art",
+    "geometric art",
+    "abstract art",
+    "mixed media",
+    "collage",
+    "old stock paper art",
+    "Amsterdam artist",
+    "geometric compositions",
+  ],
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: "/favicon.svg",
@@ -43,6 +57,23 @@ export const metadata: Metadata = {
       color: "#D4AF37",
     },
   },
+  manifest: "/site.webmanifest",
+  openGraph: {
+    type: "website",
+    siteName: "Jaap Goedemoed",
+    images: [
+      {
+        url: "/2020/05/6-Composition-2017-Final-state-003-1320x1320.jpg",
+        width: 1320,
+        height: 1320,
+        alt: "Composition 2017 by Jaap Goedemoed",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/2020/05/6-Composition-2017-Final-state-003-1320x1320.jpg"],
+  },
 };
 
 export default async function RootLayout({
@@ -50,10 +81,10 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = await cookies();
-  const localeCookie = cookieStore.get("NEXT_LOCALE")?.value as Locale | undefined;
-  const locale = localeCookie ?? "en";
-  const localeData = getLocaleData(locale);
+  // Read locale from middleware-injected header for correct <html lang>
+  const headersList = await headers();
+  const locale = headersList.get("x-locale") || "en";
+
   return (
     <html lang={locale} className="dark">
       {/* Google Analytics */}
@@ -72,11 +103,7 @@ export default async function RootLayout({
       <body
         className={`${manrope.variable} ${playfair.variable} ${spaceMono.variable} min-h-screen flex flex-col text-[#e6e6e6] bg-[#0f0f0f]`}
       >
-          <LocaleProvider locale={locale} data={localeData}>
-            <Navigation locale={locale} localeData={localeData} />
-            <main className="flex-grow">{children}</main>
-            <Footer locale={locale} localeData={localeData} />
-          </LocaleProvider>
+        {children}
       </body>
     </html>
   );

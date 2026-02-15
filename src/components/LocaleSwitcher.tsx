@@ -1,15 +1,14 @@
 "use client";
 
-"use client";
-
-import { useRouter } from "next/navigation";
-import { Locale } from "@/lib/localeData";
+import { useRouter, usePathname } from "next/navigation";
+import { Locale } from "@/i18n/config";
 import { useLocale } from "@/context/LocaleContext";
-
-const locales: Locale[] = ["en", "nl-NL", "zh"];
+import { i18n } from "@/i18n/config";
+import { removeLocaleFromPathname } from "@/lib/i18n";
 
 const LocaleSwitcher = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const { locale, data } = useLocale();
 
   const storeLocaleCookie = (target: Locale) => {
@@ -18,13 +17,18 @@ const LocaleSwitcher = () => {
 
   const gotoLocale = (target: Locale) => {
     if (target === locale) return;
+    
+    // Remove current locale from pathname and add new locale
+    const pathnameWithoutLocale = removeLocaleFromPathname(pathname);
+    const newPath = `/${target}${pathnameWithoutLocale}`;
+    
     storeLocaleCookie(target);
-    router.refresh();
+    router.push(newPath);
   };
 
   return (
-    <div className="flex items-center space-x-2 text-sm">
-      {locales.map((loc) => (
+    <div className="flex items-center space-x-3 text-sm">
+      {i18n.locales.map((loc) => (
         <button
           key={loc}
           onClick={() => gotoLocale(loc)}
