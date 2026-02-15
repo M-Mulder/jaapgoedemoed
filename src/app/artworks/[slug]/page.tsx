@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import { artworks } from '@/lib/simplified-artwork-data';
 import ArtworkDisplay from './ArtworkDisplay';
+import { Locale } from '@/lib/localeData';
+import { getArtworkTranslation } from '@/lib/localizedArtworks';
 
 export async function generateMetadata(props: any) {
   const { params } = props;
@@ -12,9 +14,14 @@ export async function generateMetadata(props: any) {
     };
   }
   
+  const locale = (params.locale as Locale) ?? "en";
+  const translation = getArtworkTranslation(artwork.slug, locale);
+  const title = translation?.title ?? artwork.title;
+  const description = translation?.description ?? artwork.description;
+
   return {
-    title: `${artwork.title} (${artwork.year}) | Jaap Goedemoed`,
-    description: artwork.description,
+    title: `${title} (${artwork.year}) | Jaap Goedemoed`,
+    description,
   };
 }
 

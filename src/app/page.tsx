@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLocale } from "@/context/LocaleContext";
 
 export default function Home() {
   // Slider images based on user's specifications
@@ -172,6 +173,8 @@ export default function Home() {
     }
   ];
   
+  const { locale, data: localeData } = useLocale();
+  const hero = localeData.hero;
   const [currentArtworkIndex, setCurrentArtworkIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -377,15 +380,17 @@ export default function Home() {
         <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 flex space-x-8">
           <Link 
             href="/artworks" 
+            locale={locale}
             className="px-8 py-2 text-white hover:text-accent transition-all duration-300 uppercase tracking-widest text-sm font-light border-b border-accent/40 hover:border-accent"
           >
-            Explore Works
+            {hero.explore}
           </Link>
           <Link 
             href="/welcome" 
+            locale={locale}
             className="px-8 py-2 text-white hover:text-accent transition-all duration-300 uppercase tracking-widest text-sm font-light border-b border-accent/40 hover:border-accent"
           >
-            Artist Introduction
+            {hero.introduction}
           </Link>
         </div>
         
@@ -421,7 +426,7 @@ export default function Home() {
           {/* Artistic section title with line decoration */}
           <div className="flex items-center justify-center mb-16">
             <div className="h-px w-16 bg-accent-hover opacity-70"></div>
-            <h2 className="section-title px-6 mb-0">Selected Works</h2>
+            <h2 className="section-title px-6 mb-0">{localeData.sections.selectedWorks}</h2>
             <div className="h-px w-16 bg-accent-hover opacity-70"></div>
           </div>
           

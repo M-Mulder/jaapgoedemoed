@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { useLocale } from '@/context/LocaleContext';
+import { getArtworkTranslation } from '@/lib/localizedArtworks';
 
 // Dynamically import the FullscreenImageViewer component
 const FullscreenImageViewer = dynamic(() => import('@/components/FullscreenImageViewer'), {
@@ -32,6 +34,12 @@ const ArtworkDisplay = ({
   totalCount 
 }: ArtworkDisplayProps) => {
   const [showDescription, setShowDescription] = useState(false);
+  const { locale } = useLocale();
+  const translation = getArtworkTranslation(artwork.slug, locale);
+  const title = translation?.title ?? artwork.title;
+  const description = translation?.description ?? artwork.description;
+  const medium = translation?.medium ?? artwork.medium;
+  const dimensions = translation?.dimensions ?? artwork.dimensions;
   return (
     <main className="bg-black">
       {/* Artwork Viewer */}
@@ -60,6 +68,7 @@ const ArtworkDisplay = ({
           {prevArtwork && (
             <Link 
               href={`/artworks/${prevArtwork.slug}`}
+              locale={locale}
               className="bg-black/30 backdrop-blur-sm text-white hover:text-[#d4af37] hover:bg-black/50 p-3 rounded-full transition-colors"
               aria-label="Previous artwork"
             >
@@ -78,6 +87,7 @@ const ArtworkDisplay = ({
           {nextArtwork && (
             <Link 
               href={`/artworks/${nextArtwork.slug}`}
+              locale={locale}
               className="bg-black/30 backdrop-blur-sm text-white hover:text-[#d4af37] hover:bg-black/50 p-3 rounded-full transition-colors"
               aria-label="Next artwork"
             >
@@ -110,9 +120,9 @@ const ArtworkDisplay = ({
             <div className="flex flex-col md:flex-row md:items-baseline md:justify-between">
               <div className="md:max-w-2xl">
                 <div className="mb-1 text-sm text-[#d4af37]">{artwork.year}</div>
-                <h1 className="text-2xl md:text-4xl font-serif text-white mb-2">{artwork.title}</h1>
+                <h1 className="text-2xl md:text-4xl font-serif text-white mb-2">{title}</h1>
                 <div className="text-white/70 mb-4">
-                  {artwork.medium} • {artwork.dimensions}
+                  {medium} • {dimensions}
                 </div>
                 
                 <button 
@@ -125,7 +135,7 @@ const ArtworkDisplay = ({
                 {showDescription && (
                   <div className="mt-6 animate-fade-in">
                     <p className="text-white/90 text-base md:text-lg max-w-3xl leading-relaxed py-6 border-t border-b border-white/10">
-                      {artwork.description}
+                      {description}
                     </p>
                   </div>
                 )}
@@ -155,6 +165,7 @@ const ArtworkDisplay = ({
                 <Link 
                   key={relatedArtwork.id}
                   href={`/artworks/${relatedArtwork.slug}`}
+                  locale={locale}
                   className="group"
                 >
                   <div className="aspect-square relative overflow-hidden rounded-md mb-3">

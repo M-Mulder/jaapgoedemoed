@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Artwork } from '@/lib/placeholder-data';
+import { useLocale } from '@/context/LocaleContext';
+import { getArtworkTranslation } from '@/lib/localizedArtworks';
 
 interface ArtworkCardProps {
   artwork: Artwork;
@@ -8,6 +10,13 @@ interface ArtworkCardProps {
 }
 
 const ArtworkCard = ({ artwork, featured = false }: ArtworkCardProps) => {
+  const { locale } = useLocale();
+  const translation = getArtworkTranslation(artwork.slug, locale);
+
+  const title = translation?.title ?? artwork.title;
+  const medium = translation?.medium ?? artwork.medium;
+  const dimensions = translation?.dimensions ?? artwork.dimensions;
+  const description = translation?.description ?? artwork.description;
   return (
     <Link 
       href={`/artworks/${artwork.slug}`}
@@ -45,16 +54,16 @@ const ArtworkCard = ({ artwork, featured = false }: ArtworkCardProps) => {
       {/* Artwork information */}
       <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
         <h3 className={`${featured ? 'text-2xl' : 'text-xl'} font-serif text-white group-hover:text-[#d4af37] transition-colors duration-300`}>
-          {artwork.title}
+          {title}
         </h3>
         
         <p className="text-white/70 text-sm mt-1 line-clamp-1">
-          {artwork.medium} · {artwork.dimensions}
+          {medium} · {dimensions}
         </p>
         
         {featured && (
           <p className="text-white/80 mt-3 line-clamp-2 text-sm">
-            {artwork.description}
+            {description}
           </p>
         )}
         
