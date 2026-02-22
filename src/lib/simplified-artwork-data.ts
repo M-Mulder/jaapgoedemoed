@@ -39,9 +39,9 @@ export const artworks: Artwork[] = [
  {
     id: '107',
     title: 'Composition 2025',
-    slug: 'composition-2025',
+    slug: 'composition-2025-artwork',
     year: 2025,
-    description: 'Three-dimensional work with balsa wooded slats on canvas. The main layout is determined by irregular porcupine quills elongated with straw reeds to obtain rectangular shapes. Includes 3 Persian miniatures (19th century), 3 carved wooden panels from Dutch standing watches, 9 original \'Cobra-like\' artworks from Björn T. Hansen (Danish, 1942-2007) and 9 Saul Steinberg landscapes (lithographs, Derriere le Miroir, Maeght Edition 1971). Also features tributes to Kurt Schwitters, Edgar P. Jacobs, Stéphane Heuet, and George Braque, along with Japanese prints, Coptic and Islamic handwritings, Soviet banknotes, a Venetian carnival mask, ethnographic items, fossils, and the artist\'s photographs from various locations.',
+    description: 'Three-dimensional work with balsa wooded slats on canvas. The main layout is determined by irregular porcupine quills elongated with straw reeds to obtain rectangular shapes. Includes 3 Persian miniatures (19th century), 3 carved wooden panels from Dutch standing watches, 9 original \'Cobra-like\' artworks from Björn T. Hansen (Danish, 1942-2007) and 9 Saul Steinberg landscapes (lithographs, Derriere le Miroir, Maeght Edition 1271). Also features tributes to Kurt Schwitters, Edgar P. Jacobs, Stéphane Heuet, and George Braque, along with Japanese prints, Coptic and Islamic handwritings, Soviet banknotes, a Venetian carnival mask, ethnographic items, fossils, and the artist\'s photographs from various locations.',
     medium: 'Mixed media with balsa wood slats on canvas',
     dimensions: '145 x 145 cm',
     imagePath: '/2025/Nieuw werk 6 april 2025 van USB stick_cropped.jpg',
@@ -51,7 +51,7 @@ export const artworks: Artwork[] = [
   {
     id: '106',
     title: 'Composition 2025',
-    slug: 'composition-2025',
+    slug: 'composition-2025-artwork',
     year: 2025,
     description: 'Three-dimensional work with balsa wooded slats on canvas. The main layout is determined by irregular porcupine quills elongated with straw reeds to obtain rectangular shapes. Includes 3 Persian miniatures (19th century), 3 carved wooden panels from Dutch standing watches, 9 original \'Cobra-like\' artworks from Björn T. Hansen (Danish, 1942-2007) and 9 Saul Steinberg landscapes (lithographs, Derriere le Miroir, Maeght Edition 1971). Also features tributes to Kurt Schwitters, Edgar P. Jacobs, Stéphane Heuet, and George Braque, along with Japanese prints, Coptic and Islamic handwritings, Soviet banknotes, a Venetian carnival mask, ethnographic items, fossils, and the artist\'s photographs from various locations.',
     medium: 'Mixed media with balsa wood slats on canvas',

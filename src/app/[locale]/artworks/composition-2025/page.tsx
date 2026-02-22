@@ -274,7 +274,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-10b-trouville-sur-mer.png`}
+                    src={`${basePath}/fig-10b-trouville-sur-mer.jpg`}
                     alt={content.imageCaption10b}
                     fill
                     className="object-cover rounded-md"
@@ -349,7 +349,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-10g-neva-bridge-st-petersburg.png`}
+                    src={`${basePath}/fig-10g-neva-bridge-st-petersburg.jpg`}
                     alt={content.imageCaption10g}
                     fill
                     className="object-cover rounded-md"
