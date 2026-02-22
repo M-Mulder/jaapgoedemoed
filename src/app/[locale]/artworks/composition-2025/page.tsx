@@ -192,7 +192,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-[3/4] shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-07b-morning-waves-kabamatsu.png`}
+                    src={`${basePath}/fig-07b-morning-waves-kabamatsu.jpg`}
                     alt={content.imageCaption7b}
                     fill
                     className="object-contain rounded-md bg-background-light"
@@ -259,7 +259,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-10a-rear-view-amsterdam.png`}
+                    src={`${basePath}/fig-10a-rear-view-amsterdam.jpg`}
                     alt={content.imageCaption10a}
                     fill
                     className="object-cover rounded-md"
@@ -289,7 +289,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-10c-venice-castello.png`}
+                    src={`${basePath}/fig-10c-venice-castello.jpg`}
                     alt={content.imageCaption10c}
                     fill
                     className="object-cover rounded-md"
@@ -304,7 +304,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-10d-san-michele-venice.png`}
+                    src={`${basePath}/fig-10d-san-michele-venice.jpg`}
                     alt={content.imageCaption10d}
                     fill
                     className="object-cover rounded-md"
@@ -319,7 +319,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-10e-murano-church-floor.png`}
+                    src={`${basePath}/fig-10e-murano-church-floor.jpg`}
                     alt={content.imageCaption10e}
                     fill
                     className="object-cover rounded-md"
@@ -334,7 +334,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-10f-san-giorgio-cloister.png`}
+                    src={`${basePath}/fig-10f-san-giorgio-cloister.jpg`}
                     alt={content.imageCaption10f}
                     fill
                     className="object-cover rounded-md"
@@ -364,7 +364,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-10h-fontanka-st-petersburg.png`}
+                    src={`${basePath}/fig-10h-fontanka-st-petersburg.jpg`}
                     alt={content.imageCaption10h}
                     fill
                     className="object-cover rounded-md"
@@ -431,7 +431,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-11b-george-braque.png`}
+                    src={`${basePath}/fig-11b-george-braque.jpg`}
                     alt={content.imageCaption11b}
                     fill
                     className="object-contain rounded-md bg-background-light"
@@ -476,7 +476,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-11e-roman-head-mosaic.png`}
+                    src={`${basePath}/fig-11e-roman-head-mosaic.jpg`}
                     alt={content.imageCaption11e}
                     fill
                     className="object-contain rounded-md bg-background-light"
@@ -491,7 +491,7 @@ export default async function Composition2025Page({ params }: { params: Promise<
               <div>
                 <div className="relative aspect-square shadow-lg">
                   <Image 
-                    src={`${basePath}/fig-11f-arabic-handwriting.png`}
+                    src={`${basePath}/fig-11f-arabic-handwriting.jpg`}
                     alt={content.imageCaption11f}
                     fill
                     className="object-contain rounded-md bg-background-light"
